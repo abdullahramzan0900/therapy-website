@@ -1,0 +1,278 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(72, 213, 196, 1),  rgba(167, 207, 255, 1), rgba(36, 126, 192, 1));
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+  
+    .topbarLeft {
+      display: flex;
+      gap: 20px;
+  
+      span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  
+    .topbarRight {
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 5px 10px;
+        border-radius: 20px;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+  
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  
+  .appointmentBtnDiv{
+    display: flex;
+    // padding: 10px;
+    justify-content: center;
+  }
+  .appointmentBtn {
+    background: linear-gradient(90deg, rgba(36, 126, 192, 1),rgba(72, 213, 196, 1));
+    color: white;
+    padding: 16px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: flex;
+    // margin: 20px;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+  
+    
+  &:hover {
+  background: linear-gradient(90deg,  rgb(72, 213, 196) 0%, rgb(36, 126, 192) 100%); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  &:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 150, 229, 0.3); 
+  }
+  }
+  .navbar {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  
+    .logo a {
+      font-size: 24px;
+      font-weight: bolder;
+      color: #00b3ff;
+      background: linear-gradient(to right, #5ce1e6, #8a9ce6, #3399cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    
+    }
+  
+    .links {
+      display: flex;
+      a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+  
+        &:hover {
+          color: #00b3ff;
+        }
+      }
+    }
+    .activeLink {
+        color: #00b3ff;
+        font-weight: bold;
+        border-bottom: 2px solid #00b3ff; 
+        // width: fit-content;
+      }
+  
+    .contact {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        i {
+          margin-right: 5px;
+        }
+  
+        &:hover {
+          color: #00b3ff;
+        }
+  
+        &.appointmentBtn {
+            background: linear-gradient(90deg, rgba(36, 126, 192, 1),rgba(72, 213, 196, 1));
+          color: white;
+          padding: 10px 20px;
+          border-radius: 20px;
+          font-weight: bold;
+          transition: background-color 0.3s;
+  
+          
+    &:hover {
+      background: linear-gradient(90deg,  rgb(72, 213, 196) 0%, rgb(36, 126, 192) 100%); 
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(0, 150, 229, 0.3); 
+    }
+        }
+      }
+    }
+  }
+  
+
+  @media (max-width: 884px) {
+    .navbar {
+      flex-direction: row;
+      text-align: center;
+      gap: 15px;
+  
+    
+      .links {
+        display: none; 
+  
+        &.showMenu {
+        z-index: 999;
+        position: absolute;
+        right: 16%;
+        top: 61%;
+        background: linear-gradient(180deg, white 0%, rgb(209, 244, 255) 50%, rgb(215, 226, 250) 100%);
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          padding: 20px; 
+          border-radius: 10px; 
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .logo {
+     display: flex;
+     gap: 10px;
+
+      }
+      .contact {
+       .phone{
+        display: none;
+       }
+      }
+      
+  
+  
+      .contact {
+    a{
+    span{
+        display: none;
+      }
+    }
+      }
+      .hamburger {
+        display: block;
+        background: linear-gradient(to right, #5ce1e6, #8a9ce6, #3399cc);
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+ 
+
+     
+      
+    }
+    .appointmentBtn{
+      display: none;
+    }
+
+    .topbar {
+      flex-direction: column;
+      align-items: center;
+  
+      .topbarLeft {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+  
+      .topbarRight {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 10px;
+  
+      .logo a {
+        font-size: 20px;
+      }
+  
+      .links a {
+        font-size: 14px;
+      }
+  
+      .contact a {
+        font-size: 14px;
+      }
+    }
+  
+    .topbar {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+  

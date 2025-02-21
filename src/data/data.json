@@ -1,0 +1,249 @@
+{
+    "routes":[
+        {
+            "path": "/",
+            "component": "Home",
+            "location": "./routes/home/Home"
+          },
+          {
+            "path": "/services",
+            "component": "Services",
+            "location": "./routes/services/Services"
+          },
+          {
+            "path": "/about-us",
+            "component": "AboutUs",
+            "location": "./routes/about-us/AboutUs"
+          },
+          {
+            "path": "/contact-us",
+            "component": "ContactUs",
+            "location": "./routes/contact-us/ContactUs"
+          }
+ 
+    ],
+    "pages":{
+        "aboutUs":{},
+        "contactUs":{},
+        "home":{},
+        "services":{}
+    },
+    "components":{
+      "guidingPrinciples":{
+        "title": "Guiding Principles",
+        "images": {
+          "left": "../../../src/assets/leftDoctorImage.png",
+          "right": "../../../src/assets/rightDoctorImage.png"
+        },
+        "principles": [
+          {
+            "icon": "faHandsHelping",
+            "title": "Compassion",
+            "description": "We create a warm, supportive space where clients feel heard, valued, and respected."
+          },
+          {
+            "icon": "faUniversalAccess",
+            "title": "Inclusivity",
+            "description": "We welcome individuals from all backgrounds, cultures, genders, and identities, ensuring that therapy is a safe space for all."
+          },
+          {
+            "icon": "faUserShield",
+            "title": "Confidentiality",
+            "description": "We prioritize client privacy and trust, following strict ethical guidelines to ensure a safe and secure therapeutic environment."
+          },
+          {
+            "icon": "faChartLine",
+            "title": "Growth",
+            "description": "Our goal is to help individuals build resilience, confidence, and emotional well-being through personalized therapy."
+          }
+        ]
+      },
+      "HomeCareData":
+      {
+        "title": "",
+        "titleHighlight": "Welcome to Nova Counselling & Psychotherapy",
+        "description": "Struggling with life’s challenges? You don’t have to go through it alone. At Nova, we provide affordable, professional, and compassionate therapy to support you on your journey toward healing and personal growth.",
+        "emailPlaceholder": "Enter Your Email",
+        "buttonText": "Let's Talk",
+        "imageAlt": "Nurse helping elderly",
+        "imageSrc": "../../../src/assets/mansitting.jpg"
+      },
+      "aboutUs": {
+        "title": "Our Vision & Ethos",
+        "subtitle": "Healing, Growth, and Transformation",
+        "mainText": "At Nova, we believe in the power of healing, growth, and transformation. Our goal is to make therapy accessible and supportive for everyone, regardless of background or financial situation. We take an integrated approach, combining different therapeutic techniques to tailor support that meets your unique needs.",
+        "missionTitle": "Our Core Values",
+        "missionText": "Compassion – We provide a warm, supportive space where you feel heard and valued.\nInclusivity – We welcome individuals from all ethnicities, cultures, genders, and backgrounds.\nAffordability – We believe mental health support should be accessible to everyone.\nConfidentiality – Your privacy and trust are at the heart of our work.\nGrowth & Empowerment – Therapy is about helping you build resilience, confidence, and emotional well-being.",
+        "buttonText": "Learn More →",
+        "stats": {
+          "tagline": "Committed to Mental Well-being",
+          "patientsCount": "Empowering Lives Every Day"
+        }
+      },
+      
+      
+      "services": {
+        "heading": "Our Services",
+        "subHeading": "Personalized Support for Your Well-being",
+        "buttonText": "Explore More",
+        "services": [
+          {
+            "icon": "faComments",
+            "title": "Free 15-Minute Consultation",
+            "description": "A no-obligation chat with a therapist to explore your needs and determine the right support for you.",
+            "link": "#"
+          },
+          {
+            "icon": "faLaptop",
+            "title": "Online & In-Person Sessions",
+            "description": "Flexible therapy options to fit your schedule, offering professional support wherever you are.",
+            "link": "#"
+          },
+          {
+            "icon": "faUsers",
+            "title": "Couples & Relationship Therapy",
+            "description": "Helping couples strengthen communication, resolve conflicts, and build healthier relationships.",
+            "link": "#"
+          },
+          {
+            "icon": "faChild",
+            "title": "Youth & Family Counseling",
+            "description": "Supporting children, teens, and families in navigating emotional challenges and life transitions.",
+            "link": "#"
+          },
+          {
+            "icon": "faHeartbeat",
+            "title": "Trauma & PTSD Therapy",
+            "description": "Specialized therapy to help individuals process and heal from past trauma in a supportive environment.",
+            "link": "#"
+          },
+          {
+            "icon": "faBrain",
+            "title": "Cognitive Behavioral Therapy (CBT)",
+            "description": "A structured approach to addressing negative thoughts and behaviors, promoting positive mental well-being.",
+            "link": "#"
+          },
+          {
+            "icon": "faUser",
+            "title": "Individual Therapy",
+            "description": "One-on-one counseling tailored to your needs, providing a safe space to explore your thoughts and emotions.",
+            "link": "#"
+          }
+        ]
+      },
+      
+      "testimonials":{
+        "heading": "What Our Clients Say",
+        "subHeading": "Testimonials",
+        "mainImage": "../../../src/assets/pointingdown.jpg",
+        "testimonials": [
+          {
+            "name": "Thomas Daniel",
+            "image": "../../../src/assets/profilePic1.png",
+            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
+            "rating": 5
+          },
+          {
+            "name": "Alena Alex",
+            "image": "../../../src/assets/profilePic2.jpeg",
+            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
+            "rating": 5
+          },
+          {
+            "name": "Thomas Edison",
+            "image": "../../../src/assets/profilePic3.jpeg",
+            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
+            "rating": 5
+          },
+          {
+            "name": "John Smith",
+            "image": "../../../src/assets/profilePic4.jpeg",
+            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
+            "rating": 5
+          },
+          {
+            "name": "Mary Jones",
+            "image": "../../../src/assets/profilePic3.jpeg",
+            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
+            "rating": 5
+          },
+          {
+            "name": "John Smith",
+            "image": "../../../src/assets/profilePic4.jpeg",
+            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
+            "rating": 5
+          }
+        ]
+      },
+      "header":{
+        "topbar": {
+          "locationText": "Lorem Ipsum Dolor",
+          "emailText": "Lorem Lorem dolor dolor",
+          "whatsappText": "Connect on Whatsapp",
+          "whatsappLink": "#"
+        },
+        "navbar": {
+          "logoText": "NovaTherapy ",
+          "phone": "0000-000-000"
+        },
+        "links": [
+          { "name": "Home", "path": "/" },
+          { "name": "About", "path": "/about-us" },
+          { "name": "Services", "path": "/services" },
+          { "name": "Contact", "path": "/contact-us" }
+      
+        ]
+      },
+      "footer":{
+        "companyName": "Call a Doctor",
+        "companyLinks": [
+          { "name": "Home", "path": "/" },
+          { "name": "Services", "path": "/services" },
+          { "name": "About Us", "path": "/about-us" },
+          { "name": "Contact Us", "path": "/contact-us" }
+        ],
+        "address": {
+          "heading": "Address",
+          "lines": [
+            "Lorem ipsum dolor sit amet,",
+            "consectetur adipiscing elit."
+          ],
+          "mapLinkText": "View on Maps",
+          "mapLink": "https://maps.google.com",
+          "inquiriesHeading": "Inquiries",
+          "inquiries": {
+            "phone": "(000) 000-000",
+            "email": "info@calladoctor.com"
+          }
+        },
+        "newsletter": {
+          "title": "Newsletter",
+          "description": "Stay Updated with our Latest News",
+          "placeholder": "Your Email"
+        },
+        "social": {
+          "heading": "Follow Us",
+          "socialLinks": [
+            { "icon": "faFacebookF", "link": "#" },
+            { "icon": "faTwitter", "link": "#" },
+            { "icon": "faYoutube", "link": "#" },
+            { "icon": "faLinkedinIn", "link": "#" },
+            { "icon": "faInstagram", "link": "#" },
+            { "icon": "faPinterest", "link": "#" },
+            { "icon": "faTiktok", "link": "#" }
+          ]
+        }
+      },
+      "appointmentData":
+      { "Header":"Book an Appointment",
+        "para1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type specimen book",
+        "para2":"Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book.",
+        "stepLabels":[
+            "Start",
+            "Patient Info",
+            "Insurance Info",
+            "Appointment Booking"
+          ]
+      }
+    }
+}
