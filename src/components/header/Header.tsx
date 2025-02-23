@@ -8,26 +8,28 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import data from '../../data/data.json'
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const {header}=data.components
+  const navigate=useNavigate()
 
   useEffect(() => {
-    const navLinks = document.querySelectorAll(`.${styles.links} a`);
-
-    navLinks.forEach((link) => {
+    // Remove active class from all links
+    document.querySelectorAll(`.${styles.links} p`).forEach((link) => {
       link.classList.remove(styles.activeLink);
     });
 
-    navLinks.forEach((link) => {
-      if (link.getAttribute("href") === location.pathname) {
-        link.classList.add(styles.activeLink);
+    // Find the matching path and add active class
+    header.links.forEach((link, index) => {
+      if (link.path === location.pathname) {
+        document.querySelectorAll(`.${styles.links} p`)[index]?.classList.add(styles.activeLink);
       }
     });
   }, [location.pathname]);
+
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -61,9 +63,11 @@ const Header = () => {
         </div>
         <div className={`${styles.links} ${menuOpen ? styles.showMenu : ""}`}>
         {header.links.map((link, index) => (
-            <a key={index} href={link.path}>
+            <p key={index}  onClick={(()=>{
+              navigate(link.path)
+            })}  >
               {link.name}
-            </a>
+            </p>
           ))}
         </div>
         <div className={styles.contact}>
@@ -73,7 +77,10 @@ const Header = () => {
           <div className={styles.appointmentBtnDiv}> 
             <button
               className={styles.appointmentBtn}
-              // onClick={(e) => openForm(e)}
+
+              onClick={(()=>{
+                navigate('/contact-us')
+              })}
             >
               Book an appointment
             </button>

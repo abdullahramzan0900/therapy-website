@@ -18,9 +18,11 @@ const AboutSection = () => {
       </div>
 
       <div className={styles.textContainer}>
-        <h2>{aboutUs.title}</h2>
+        {/* <h2>{aboutUs.title}</h2>
         <h3>{aboutUs.subtitle}</h3>
-        <p>{aboutUs.mainText}</p>
+        <p>{aboutUs.mainText}</p> */}
+        <h2>{aboutUs.title}</h2>
+        <p>{aboutUs.whoweare}</p>
         <h4>{aboutUs.missionTitle}</h4>
         <p>{aboutUs.missionText}</p>
           {/* <a href='/about-us' className={styles.learnMoreButton}>Learn More &rarr;</a> */}

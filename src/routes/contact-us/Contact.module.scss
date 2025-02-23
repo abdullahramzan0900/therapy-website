@@ -9,7 +9,7 @@
         justify-content: space-between;
      
         padding: 50px;
-        width: 93%;
+        width: 100%;
         background: linear-gradient(180deg, white 0%,rgba(209, 244, 255, 1)
         50%,rgba(215, 226, 250, 1)
       
@@ -24,9 +24,9 @@
       width: 67%;
       padding: 15px 0px 0px 1px;
   
-      @media (min-width: 922px) { 
-        width: 100%;
-        grid-template-columns: 1fr 1fr;
+      @media (max-width: 1115px) { 
+        display: flex;
+        flex-direction: column;
       }
       
       @media (max-width: 914px) { 
@@ -115,7 +115,7 @@
         }
       }
     .content{
-      width: 78%;
+      width: 100%;
     }
     .thankYouMessage {
       display: flex;

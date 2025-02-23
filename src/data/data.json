@@ -61,7 +61,7 @@
       "HomeCareData":
       {
         "title": "",
-        "titleHighlight": "Welcome to Nova Counselling & Psychotherapy",
+        "titleHighlight": "Affordable, Compassionateand Professional Online Therapy",
         "description": "Struggling with life’s challenges? You don’t have to go through it alone. At Nova, we provide affordable, professional, and compassionate therapy to support you on your journey toward healing and personal growth.",
         "emailPlaceholder": "Enter Your Email",
         "buttonText": "Let's Talk",
@@ -69,9 +69,10 @@
         "imageSrc": "../../../src/assets/mansitting.jpg"
       },
       "aboutUs": {
-        "title": "Our Vision & Ethos",
+        "title": "Who We Are",
         "subtitle": "Healing, Growth, and Transformation",
         "mainText": "At Nova, we believe in the power of healing, growth, and transformation. Our goal is to make therapy accessible and supportive for everyone, regardless of background or financial situation. We take an integrated approach, combining different therapeutic techniques to tailor support that meets your unique needs.",
+        "whoweare":"Nova Counselling & Psychotherapy At Nova Counselling & Psychotherapy, we are a team of three dedicated professionals committed to providing accessible, affordable, and high-quality mental health support. Our mission is to break barriers to therapy by offering low-cost, confidential online counselling to individuals from all walks of life.  We believe that mental well-being should not be a luxury—everyone deserves the opportunity to heal, grow, and thrive. With a client-centered approach, we create a safe and supportive space where you can explore your thoughts, emotions, and challenges without judgment.Let us help you take the first step toward a healthier, happier you.💚",
         "missionTitle": "Our Core Values",
         "missionText": "Compassion – We provide a warm, supportive space where you feel heard and valued.\nInclusivity – We welcome individuals from all ethnicities, cultures, genders, and backgrounds.\nAffordability – We believe mental health support should be accessible to everyone.\nConfidentiality – Your privacy and trust are at the heart of our work.\nGrowth & Empowerment – Therapy is about helping you build resilience, confidence, and emotional well-being.",
         "buttonText": "Learn More →",
@@ -225,12 +226,8 @@
           "heading": "Follow Us",
           "socialLinks": [
             { "icon": "faFacebookF", "link": "#" },
-            { "icon": "faTwitter", "link": "#" },
-            { "icon": "faYoutube", "link": "#" },
             { "icon": "faLinkedinIn", "link": "#" },
-            { "icon": "faInstagram", "link": "#" },
-            { "icon": "faPinterest", "link": "#" },
-            { "icon": "faTiktok", "link": "#" }
+            { "icon": "faInstagram", "link": "#" }
           ]
         }
       },

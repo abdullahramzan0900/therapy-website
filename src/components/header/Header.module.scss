@@ -115,12 +115,13 @@
   
     .links {
       display: flex;
-      a {
+      p {
         margin: 0 15px;
         text-decoration: none;
         color: black;
         font-weight: bold;
         font-size: 16px;
+        cursor: pointer;
   
         &:hover {
           color: #00b3ff;

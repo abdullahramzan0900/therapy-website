@@ -24,30 +24,30 @@ const ContactUs = () => {
         Email: email,
         Phone: phone,
         MessageUs: message,
-        Address: address,
       },
       pageInformation: [],
     };
 
     try {
-      const res = await caseService.getCaseView(caseTypeIds.CONTACT_US);
-      const caseUpdateId = res.data?.caseInfo?.assignments?.[0]?.ID;
-
-      const assignmentResponse = await assignmentService.createAssignment(
-        caseUpdateId,
-        actions.CREATE,
-        reqBody,
-        res.etag
-      );
-      if (assignmentResponse) {
-        setMessageResponse(assignmentResponse.confirmationNote)
-        toast.success("Your message has been successfully sent!", {
-          autoClose: 5000,
-        });
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(reqBody),
+      });
+      
+      const data = await response.json();
+      if (response.ok) {
+        setMessageResponse(data.success);
+   
         setIsSubmitted(true);
+      } else {
+      
       }
     } catch (err) {
-      console.log(err);
+      console.error("Error sending email:", err);
+      toast.error("An error occurred. Please try again later.");
     }
   };
   return (
@@ -70,7 +70,7 @@ const ContactUs = () => {
                     <input
                       type="text"
                       id="name"
-                      placeholder="Enter your name"
+                      placeholder="Name"
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
@@ -84,22 +84,10 @@ const ContactUs = () => {
                     <input
                       type="email"
                       required
-                      placeholder="Enter your email"
+                      placeholder="Email"
                       id="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="address">Address</label>
-                    <input
-                      type="text"
-                      id="address"
-                      placeholder="Address"
-                      value={address}
-                      required
-                      onChange={(e) => setAddress(e.target.value)}
                       className={styles.inputField}
                     />
                   </div>
@@ -108,7 +96,7 @@ const ContactUs = () => {
                     <input
                       type="number"
                       id="phone"
-                      placeholder="Phone number"
+                      placeholder="Phone"
                       value={phone}
                       required
                       onChange={(e) => setPhone(e.target.value)}
@@ -117,7 +105,7 @@ const ContactUs = () => {
                   </div>
 
                   <div>
-                    <label>Message</label>
+                    <label>⁠Reason for Therapy</label>
                     <textarea
                       id="textarea"
                       required

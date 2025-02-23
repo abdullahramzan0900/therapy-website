@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <div className={styles.newsletter}>
+            {/* <div className={styles.newsletter}>
             <h3>{footer.newsletter.title}</h3>
             <p>{footer.newsletter.description}</p>
               <div className={styles.newsletterInput}>
@@ -67,7 +67,7 @@ const Footer = () => {
                   <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </div>
-            </div>
+            </div> */}
 
             <div className={styles.social}>
             <h3>{footer.social.heading}</h3>
