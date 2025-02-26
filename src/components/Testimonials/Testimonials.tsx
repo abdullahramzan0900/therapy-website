@@ -63,7 +63,7 @@ const Testimonials: React.FC = () => {
           {testimonials.testimonials.map((testimonial, index) => (
             <div className={styles.testimonialCard} key={index}>
               <div className={styles.imageContainer}   >
-                <img src={testimonial.image} alt={testimonial.name}  />
+                {/* <img src={testimonial.image} alt={testimonial.name}  /> */}
               </div>
               <div>
               <h4 >{testimonial.name}</h4>
