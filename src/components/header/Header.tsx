@@ -2,6 +2,7 @@ import styles from "./Header.module.scss";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon, } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes,faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
+import headerlogo from '../../assets/header-logo.svg'
 import {
   faMapMarkerAlt,
   faEnvelope,
@@ -59,7 +60,7 @@ const Header = () => {
     </header>
       <nav className={styles.navbar}>
         <div className={styles.logo}>
-        <a href="/">{header.navbar.logoText}</a>
+        <img alt="logo" src={headerlogo} />
         </div>
         <div className={`${styles.links} ${menuOpen ? styles.showMenu : ""}`}>
         {header.links.map((link, index) => (

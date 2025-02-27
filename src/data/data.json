@@ -185,7 +185,8 @@
         },
         "navbar": {
           "logoText": "NovaTherapy ",
-          "phone": "0000-000-000"
+          "phone": "0000-000-000",
+          "HeaderLogo":"../../../src/assets/header-logo.svg"
         },
         "links": [
           { "name": "Home", "path": "/" },
@@ -240,6 +241,15 @@
             "Patient Info",
             "Insurance Info",
             "Appointment Booking"
+          ],
+          "colors":[
+           "#C47800",
+           "#4B8E71",
+           "#10312C",
+           "#CABEA1",
+           "#b3720473 for golden",
+           "#4A8E72 for green text and icons" ,
+           "#122D28 for dark green background"
           ]
       }
     }

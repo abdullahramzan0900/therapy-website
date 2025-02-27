@@ -13,6 +13,10 @@
       max-width: 1200px;
       width: 100%;
     }
+    .footerlogo{
+      width: 110px;
+      height: auto;
+    }
   
     h3 {
       font-size: 18px;
@@ -110,9 +114,6 @@
       }
     }
 
-
-
-    
     .social {
       flex: 1;
       
@@ -122,11 +123,11 @@
         
         a {
           font-size: 18px;
-          color: #0073e6;
+          color: #4A8E72;
           transition: color 0.3s ease;
           
           &:hover {
-            color: #005bb5;
+            color: rgb(74, 142, 114);
           }
         }
       }
@@ -149,6 +150,6 @@
   .bottomFotter {
     height: 40px;
     width: 100%;
-    background: #fdab9f;
+    background: #b3720473;
     
   }

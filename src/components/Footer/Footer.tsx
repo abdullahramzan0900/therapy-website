@@ -12,6 +12,7 @@ import {
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import  data from '../../data/data.json'
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import footerlogo from '../../assets/footer-logo.svg'
 const iconMap: Record<string, IconProp> = {
   faFacebookF,
   faTwitter,
@@ -28,7 +29,10 @@ const Footer = () => {
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.company}>
-         <h3>{footer.companyName}</h3>
+            <div className={styles.footerlogo}>
+
+         <img alt="logo" src={footerlogo}/>
+            </div>
             <ul>
             {footer.companyLinks.map((link, index) => (
                 <li key={index}>
