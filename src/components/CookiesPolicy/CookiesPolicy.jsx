@@ -1,9 +1,8 @@
 import React from 'react';
-import '../styles/CookiesPolicy.scss'; // Import specific SCSS file
-
+import styles from './CookiesPolicy.module.scss';
 const CookiesPolicy = () => {
   return (
-    <div className="cookies-policy">
+    <div className={styles.cookiespolicy}>
       <h2>Cookies Policy</h2>
       <p><strong>Last Updated:</strong> 05/04/225</p>
       <p>Nova Counselling & Psychotherapy ("we", "our", "us") uses cookies to improve your experience on our website and ensure compliance with the UK GDPR and the Privacy and Electronic Communications Regulations (PECR).</p>

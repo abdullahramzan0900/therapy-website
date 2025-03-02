@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/policies.scss';
+import styles from  './TermsAndConditions.module.scss';
 
 const TermsAndConditions = () => {
   return (
-    <div className="policy-section">
+    <div className={styles.TermsAndConditions}>
       <h2>Terms & Conditions</h2>
       <p><strong>Last Updated:</strong> [Insert Date]</p>
       <p>By accessing Nova Counselling & Psychotherapy’s website, you agree to the following terms:</p>

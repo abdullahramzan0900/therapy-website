@@ -5,7 +5,7 @@ import GuidingPrinciples from "../../components/GuidingPrinciples/GuidingPrincip
 import ServicesSection from "../../components/ServiceSection/ServiceSecxtion";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import JourneySection from "../../components/JourneySection/JourneySection";
-import Policies  from "../../components/Policies/Policies"
+
 
 const Home = () => {
   return <>
@@ -16,7 +16,6 @@ const Home = () => {
 <ServicesSection/>
 <Testimonials/>
 <JourneySection/>
-<Policies/>
 
   </>;
 };

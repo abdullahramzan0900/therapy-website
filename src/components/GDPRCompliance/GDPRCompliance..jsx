@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/GDPRCompliance.scss'; // Import specific SCSS file
+import styles from './GDPRCompliance.module.scss'; // Import specific SCSS file
 
 const GDPRCompliance = () => {
   return (
-    <div className="gdpr-compliance">
+    <div className={styles.gdprcompliance}>
       <h2>GDPR Compliance Statement</h2>
       <p>We are committed to protecting your personal data under the UK General Data Protection Regulation (UK GDPR) and Data Protection Act 2018.</p>
       

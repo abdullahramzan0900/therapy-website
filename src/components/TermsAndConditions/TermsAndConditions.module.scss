@@ -1,0 +1,42 @@
+.TermsAndConditions {
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+
+  h2 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem); // Responsive font size
+    text-align: center;
+    color: rgba(179, 114, 4, 0.9);
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(179, 114, 4, 0.3);
+    padding-bottom: 10px;
+  }
+
+  h3 {
+    font-size: clamp(1.4rem, 4vw, 1.6rem); // Responsive font size
+    color: rgba(179, 114, 4, 0.8);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: clamp(0.9rem, 3vw, 1rem); // Responsive font size
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+
+    li {
+      font-size: clamp(0.9rem, 3vw, 1rem); // Responsive font size
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+  }
+}

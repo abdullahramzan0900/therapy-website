@@ -10,9 +10,10 @@ import {
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import  data from '../../data/data.json'
+import data from '../../data/data.json';
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import footerlogo from '../../assets/footer-logo.svg'
+import footerlogo from '../../assets/footer-logo.svg';
+
 const iconMap: Record<string, IconProp> = {
   faFacebookF,
   faTwitter,
@@ -22,19 +23,20 @@ const iconMap: Record<string, IconProp> = {
   faPinterest,
   faTiktok
 };
+
 const Footer = () => {
-  const {footer}=data.components
+  const { footer } = data.components;
+
   return (
     <>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.company}>
             <div className={styles.footerlogo}>
-
-         <img alt="logo" src={footerlogo}/>
+              <img alt="logo" src={footerlogo} />
             </div>
             <ul>
-            {footer.companyLinks.map((link, index) => (
+              {footer.companyLinks.map((link, index) => (
                 <li key={index}>
                   <a href={link.path}>{link.name}</a>
                 </li>
@@ -43,12 +45,12 @@ const Footer = () => {
           </div>
 
           <div className={styles.address}>
-          <h3>{footer.address.heading}</h3>
-          {footer.address.lines.map((line, index) => (
+            <h3>{footer.address.heading}</h3>
+            {footer.address.lines.map((line, index) => (
               <p key={index}>{line}<br /></p>
             ))}
             <a
-              href={footer.address.mapLink} 
+              href={footer.address.mapLink}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -56,27 +58,16 @@ const Footer = () => {
             </a>
             <h4>{footer.address.inquiriesHeading}</h4>
             <p>
-            {footer.address.inquiries.phone}
+              {footer.address.inquiries.phone}
               <br /> {footer.address.inquiries.email}
             </p>
           </div>
 
           <div>
-            {/* <div className={styles.newsletter}>
-            <h3>{footer.newsletter.title}</h3>
-            <p>{footer.newsletter.description}</p>
-              <div className={styles.newsletterInput}>
-                <input type="email" placeholder="Your Email" />
-                <button>
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </button>
-              </div>
-            </div> */}
-
             <div className={styles.social}>
-            <h3>{footer.social.heading}</h3>
+              <h3>{footer.social.heading}</h3>
               <div className={styles.socialIcons}>
-              {footer.social.socialLinks.map((social, index) => (
+                {footer.social.socialLinks.map((social, index) => (
                   <a key={index} href={social.link}>
                     <FontAwesomeIcon icon={iconMap[social.icon]} />
                   </a>
@@ -86,8 +77,18 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+
+      {/* Bottom Footer with Privacy Policy Link and Copyright Notice */}
       <div className={styles.bottomFotter}>
-        <h3>Privacy Policy</h3>
+   
+        <div className={styles.bottomFooterContent}>
+          <h3 className={styles.privacyLink}>
+            <a href="/privacy-policy">Privacy Policy</a>
+          </h3>
+          <p className={styles.copyright}>
+            © {new Date().getFullYear()} Nova Counselling & Psychotherapy. All Rights Reserved.
+          </p>
+        </div>
       </div>
     </>
   );

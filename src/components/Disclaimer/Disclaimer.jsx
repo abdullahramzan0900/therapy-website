@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/Disclaimer.scss'; // Import specific SCSS file
+import styles from './Disclaimer.module.scss'; // Import specific SCSS file
 
 const Disclaimer = () => {
   return (
-    <div className="disclaimer">
+    <div className={styles.disclaimer}>
       <h2>Disclaimer</h2>
       <p>Nova Counselling & Psychotherapy provides mental health support but does not offer emergency services. If you are in crisis or need urgent help, please contact:</p>
       <ul>

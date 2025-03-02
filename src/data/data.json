@@ -19,6 +19,16 @@
             "path": "/contact-us",
             "component": "ContactUs",
             "location": "./routes/contact-us/ContactUs"
+          },
+          {
+            "path": "/contact-us",
+            "component": "ContactUs",
+            "location": "./routes/contact-us/ContactUs"
+          },
+          {
+            "path": "/Privacy-Policy",
+            "component": "PrivacySection",
+            "location": "./routes/PrivacySection/PrivacySection"
           }
  
     ],
@@ -61,7 +71,7 @@
       "HomeCareData":
       {
         "title": "",
-        "titleHighlight": "Affordable, Compassionateand Professional Online Therapy",
+        "titleHighlight": "Affordable, Compassionate and Professional Online Therapy",
         "description": "Struggling with life’s challenges? You don’t have to go through it alone. At Nova, we provide affordable, professional, and compassionate therapy to support you on your journey toward healing and personal growth.",
         "emailPlaceholder": "Enter Your Email",
         "buttonText": "Let's Talk",
@@ -139,39 +149,21 @@
         "mainImage": "../../../src/assets/pointingdown.jpg",
         "testimonials": [
           {
-            "name": "Thomas Daniel",
+            "name": "Sarah Johnson",
             "image": "../../../src/assets/profilePic1.png",
-            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
+            "review": "Nova Consultation has been a lifesaver for me. The therapists are compassionate, understanding, and truly helped me navigate through my anxiety. I highly recommend their services!",
             "rating": 5
           },
           {
-            "name": "Alena Alex",
+            "name": "Michael Brown",
             "image": "../../../src/assets/profilePic2.jpeg",
-            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
+            "review": "I was hesitant about therapy at first, but Nova Consultation made me feel comfortable from day one. Their approach is professional yet personal, and I've seen significant progress in my mental health.",
             "rating": 5
           },
           {
-            "name": "Thomas Edison",
-            "image": "../../../src/assets/profilePic3.jpeg",
-            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
-            "rating": 5
-          },
-          {
-            "name": "John Smith",
+            "name": "David Wilson",
             "image": "../../../src/assets/profilePic4.jpeg",
-            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
-            "rating": 5
-          },
-          {
-            "name": "Mary Jones",
-            "image": "../../../src/assets/profilePic3.jpeg",
-            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
-            "rating": 5
-          },
-          {
-            "name": "John Smith",
-            "image": "../../../src/assets/profilePic4.jpeg",
-            "review": "The caregivers from Home Health Services have been absolutely wonderful. They've provided my father with compassionate, personalized care that has allowed him to remain independent in his own home.",
+            "review": "Nova Consultation has been instrumental in helping me manage my stress and improve my relationships. The therapists are knowledgeable and genuinely care about their clients.",
             "rating": 5
           }
         ]
@@ -202,6 +194,7 @@
           { "name": "Home", "path": "/" },
           { "name": "Services", "path": "/services" },
           { "name": "About Us", "path": "/about-us" },
+          { "name": "Contact Us", "path": "/contact-us" },
           { "name": "Contact Us", "path": "/contact-us" }
         ],
         "address": {
@@ -215,7 +208,7 @@
           "inquiriesHeading": "Inquiries",
           "inquiries": {
             "phone": "(000) 000-000",
-            "email": "info@calladoctor.com"
+            "email": "info@ncptherapy.com"
           }
         },
         "newsletter": {

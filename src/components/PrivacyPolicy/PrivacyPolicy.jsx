@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/policies.scss';
+import styles from  './privacyPolicy.module.scss';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="policy-section">
+    <div className={styles.PrivacyPolicy}>
       <h2>Privacy Policy</h2>
       <p><strong>Last Updated:</strong> [Insert Date]</p>
       <p>Nova Counselling & Psychotherapy ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and protect your personal data in compliance with the UK GDPR and Data Protection Act 2018.</p>
