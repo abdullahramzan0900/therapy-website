@@ -86,7 +86,9 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className={styles.bottomFotter}></div>
+      <div className={styles.bottomFotter}>
+        <h3>Privacy Policy</h3>
+      </div>
     </>
   );
 };
