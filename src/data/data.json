@@ -26,7 +26,7 @@
             "location": "./routes/contact-us/ContactUs"
           },
           {
-            "path": "/Privacy-Policy",
+            "path": "/privacy-policy",
             "component": "PrivacySection",
             "location": "./routes/PrivacySection/PrivacySection"
           }
