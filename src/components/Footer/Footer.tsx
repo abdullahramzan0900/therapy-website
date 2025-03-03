@@ -9,10 +9,9 @@ import {
   faPinterest,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import data from '../../data/data.json';
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import footerlogo from '../../assets/footer-logo.svg';
+import footerlogo from '/assets/footer-logo.svg';
 
 const iconMap: Record<string, IconProp> = {
   faFacebookF,

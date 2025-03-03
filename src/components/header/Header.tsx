@@ -1,15 +1,15 @@
 import styles from "./Header.module.scss";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon, } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes,faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
-import headerlogo from '../../assets/header-logo.svg'
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import headerlogo from '/assets/header-logo.svg'
 import {
   faMapMarkerAlt,
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import {  useLocation, useNavigate } from "react-router-dom";
 import data from '../../data/data.json'
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

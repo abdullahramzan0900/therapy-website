@@ -1,5 +1,5 @@
 import styles from "./Appointment.module.scss";
-import appointment from "../../assets/appointment.png";
+import appointment from "/assets/appointment.png";
 import { useState } from "react";
 import DynamicForm from "../DynamicForm/DynamicForm";
 import { caseTypeIds } from "../../auth/global";

@@ -1,9 +1,6 @@
 import styles from "./Contact.module.scss";
-import rightDoctorImage from "../../../src/assets/rightDoctorImage.png";
 import { useState } from "react";
-import { caseService } from "../../services/case.service";
-import { actions, caseTypeIds } from "../../auth/global";
-import { assignmentService } from "../../services/assignment.service";
+
 import { ToastContainer, toast } from "react-toastify";
 import ThankYou from "../../components/ThankYouMessage/ThankYou";
 
@@ -12,7 +9,6 @@ const ContactUs = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [address, setAddress] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [messageResponse,setMessageResponse]=useState("")
 

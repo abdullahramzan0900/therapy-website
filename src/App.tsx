@@ -6,23 +6,23 @@ import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton"
 import Header from "./components/header/Header";
 import Footer from "./components/Footer/Footer";
 import { getToken } from "./auth/oauth.ts";
-import { Suspense, lazy, useEffect } from "react";
+import { Suspense, lazy } from "react";
 import data from "./data/data.json"
 
-const loadComponent = (location:any) => lazy(() => import(`${location}`));
 const routesData = data.routes;
-const preloadComponents = () => {
-  routesData.forEach(route => {
-    import(`${route.location}`);
-  });
+const routeComponents: any = {
+  "/": lazy(() => import("./routes/home/Home")),
+  "/services": lazy(() => import("./routes/services/Services")),
+  "/about-us": lazy(() => import("./routes/about-us/AboutUs")),
+  "/contact-us": lazy(() => import("./routes/contact-us/ContactUs")),
+  "/appointment": lazy(() => import("./components/Appointment/Appoinment"))
 };
-
+ 
+const loadComponent = (path: string) => routeComponents[path] || null;
 function App() {
   getToken();
 
-  useEffect(() => {
-    preloadComponents();
-  }, []);
+
 
   return (
     <BrowserRouter>
@@ -30,10 +30,10 @@ function App() {
       <ScrollToTopButton />
       <Suspense fallback={<div style={{ opacity: 0 }}>Loading...</div>}>
         <Routes>
-          {routesData.map((route, index) => {
-            const Component = loadComponent(route.location);
-            return <Route key={index} path={route.path} element={<Component />} />;
-          })}
+        {routesData.map((route, index) => {
+  const Component = loadComponent(route.path);
+  return Component ? <Route key={index} path={route.path} element={<Component />} /> : null;
+})}
         </Routes>
       </Suspense>
       <Footer />

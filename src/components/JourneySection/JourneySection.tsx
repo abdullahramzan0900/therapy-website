@@ -1,7 +1,6 @@
 
 import styles from './JourneySection.module.scss';
-import group from '../../assets/group.jpg'
-import Healthcareprofessionals from '../../assets/Healthcareprofessionals.jpg'
+import group from '/assets/group.jpg'
 
 const JourneySection = () => {
   return (

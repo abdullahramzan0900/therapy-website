@@ -42,8 +42,8 @@
       "guidingPrinciples":{
         "title": "Guiding Principles",
         "images": {
-          "left": "../../../src/assets/leftDoctorImage.png",
-          "right": "../../../src/assets/rightDoctorImage.png"
+          "left": "assets/leftDoctorImage.png",
+          "right": "assets/rightDoctorImage.png"
         },
         "principles": [
           {
@@ -76,7 +76,7 @@
         "emailPlaceholder": "Enter Your Email",
         "buttonText": "Let's Talk",
         "imageAlt": "Nurse helping elderly",
-        "imageSrc": "../../../src/assets/mansitting.jpg"
+        "imageSrc": "assets/mansitting.jpg"
       },
       "aboutUs": {
         "title": "Who We Are",
@@ -146,11 +146,11 @@
       "testimonials":{
         "heading": "What Our Clients Say",
         "subHeading": "Testimonials",
-        "mainImage": "../../../src/assets/pointingdown.jpg",
+        "mainImage": "assets/pointingdown.jpg",
         "testimonials": [
           {
             "name": "Sarah Johnson",
-            "image": "../../../src/assets/profilePic1.png",
+            "image": "assets/profilePic1.png",
             "review": "Nova Consultation has been a lifesaver for me. The therapists are compassionate, understanding, and truly helped me navigate through my anxiety. I highly recommend their services!",
             "rating": 5
           },
@@ -178,7 +178,7 @@
         "navbar": {
           "logoText": "NovaTherapy ",
           "phone": "0000-000-000",
-          "HeaderLogo":"../../../src/assets/header-logo.svg"
+          "HeaderLogo":"assets/header-logo.svg"
         },
         "links": [
           { "name": "Home", "path": "/" },

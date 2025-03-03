@@ -1,5 +1,5 @@
 import styles from './About.module.scss';
-import image1 from '../../../src/assets/familytherapy.jpg';
+import image1 from '/assets/familytherapy.jpg';
 import data from '../../data/data.json'
 
 const AboutSection = () => {
