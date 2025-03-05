@@ -130,6 +130,14 @@
           font-size: 14px;
         }
       }
+      .checkupTag,
+      .badge {
+display: none;
+      }
+  
+//       .badge {
+//  display: none;
+//       }
     }
   
     @media (max-width: 480px) {
