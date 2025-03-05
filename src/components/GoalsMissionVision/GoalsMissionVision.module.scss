@@ -4,13 +4,13 @@
     display: flex;
     justify-content: space-between;
     padding: 40px 20px;
-    background-color: white;
+    background-color: #fff7e8;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   
     .card {
       flex: 1;
-      background-color: #f9f9f9;
+      background-color: #4a8e72;
       border-radius: 20px;
       padding: 20px;
       text-align: center;
@@ -44,13 +44,13 @@
   
       h3 {
         font-size: 22px;
-        color: #333;
+        color: white;
         margin-bottom: 15px;
       }
   
       p {
         font-size: 16px;
-        color: #666;
+        color: white;
         line-height: 1.6;
       }
     }

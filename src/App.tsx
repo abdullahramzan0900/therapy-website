@@ -16,7 +16,7 @@ const routeComponents: any = {
   "/about-us": lazy(() => import("./routes/about-us/AboutUs")),
   "/contact-us": lazy(() => import("./routes/contact-us/ContactUs")),
   "/appointment": lazy(() => import("./components/Appointment/Appoinment")),
-  "/privacy-policy": lazy(() => import("./routes/PrivacySection/PrivacySection.tsx"))
+  "/privacy-policy": lazy(() => import("./routes/PrivacySection/PrivacySection"))
 };
  
 const loadComponent = (path: string) => routeComponents[path] || null;

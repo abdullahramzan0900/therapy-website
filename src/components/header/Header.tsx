@@ -64,8 +64,9 @@ const Header = () => {
         </div>
         <div className={`${styles.links} ${menuOpen ? styles.showMenu : ""}`}>
         {header.links.map((link, index) => (
-            <p key={index}  onClick={(()=>{
+            <p  key={index}  onClick={(()=>{
               navigate(link.path)
+              setMenuOpen(!menuOpen);
             })}  >
               {link.name}
             </p>

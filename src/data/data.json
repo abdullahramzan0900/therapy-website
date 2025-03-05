@@ -146,7 +146,7 @@
       "testimonials":{
         "heading": "What Our Clients Say",
         "subHeading": "Testimonials",
-        "mainImage": "assets/pointingdown.jpg",
+        "mainImage": "assets/pointingdown.png",
         "testimonials": [
           {
             "name": "Sarah Johnson",
@@ -177,7 +177,7 @@
         },
         "navbar": {
           "logoText": "NovaTherapy ",
-          "phone": "0000-000-000",
+          "phone": "07984628017",
           "HeaderLogo":"assets/header-logo.svg"
         },
         "links": [
@@ -207,7 +207,7 @@
           "mapLink": "https://maps.google.com",
           "inquiriesHeading": "Inquiries",
           "inquiries": {
-            "phone": "(000) 000-000",
+            "phone": "07984628017",
             "email": "info@ncptherapy.com"
           }
         },
@@ -221,11 +221,11 @@
           "socialLinks": [
             { "icon": "faFacebookF", "link": "#" },
             { "icon": "faLinkedinIn", "link": "#" },
-            { "icon": "faInstagram", "link": "#" }
+            { "icon": "faInstagram", "link": "https://www.instagram.com/ncptherapy?igsh=amNxN2d5Y2UxeTBs" }
           ]
         }
       },
-      "appointmentData":
+      "appointmentData":  
       { "Header":"Book an Appointment",
         "para1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type specimen book",
         "para2":"Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book.",

@@ -57,8 +57,10 @@ const Footer = () => {
             </a>
             <h4>{footer.address.inquiriesHeading}</h4>
             <p>
-              {footer.address.inquiries.phone}
-              <br /> {footer.address.inquiries.email}
+            <a className="phone" href={`tel:${footer.address.inquiries.phone}`}>{footer.address.inquiries.phone}</a>
+              <br /> <a href="mailto:info@ncptherapy.com?subject=Inquiry&body=Hello," rel="noopener noreferrer">
+  {footer.address.inquiries.email}
+</a>
             </p>
           </div>
 
@@ -67,7 +69,7 @@ const Footer = () => {
               <h3>{footer.social.heading}</h3>
               <div className={styles.socialIcons}>
                 {footer.social.socialLinks.map((social, index) => (
-                  <a key={index} href={social.link}>
+                  <a target="_blank" rel="noopener noreferrer" key={index} href={social.link}>
                     <FontAwesomeIcon icon={iconMap[social.icon]} />
                   </a>
                 ))}

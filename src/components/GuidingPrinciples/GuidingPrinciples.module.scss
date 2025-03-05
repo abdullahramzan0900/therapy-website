@@ -13,7 +13,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      margin-bottom: 40px;
+      // margin-bottom: 40px;
   
       .leftDoctor,
       .rightDoctor {
@@ -25,7 +25,7 @@
     .principlesContainer {
       display: flex;
       justify-content: center;
-      background: rgba(255, 160, 122, 0.1490196078);
+      // background: rgba(255, 160, 122, 0.1490196078);
   
       .principles {
         display: flex;
@@ -35,7 +35,7 @@
         padding: 20px;
   
         .principleCard {
-            background-color: white;
+            background-color: #4a8e72;
           padding: 30px;
           border-radius: 20px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,8 @@
           .icon {
             font-size: 50px;
             // color: #00bfa5;
-            color: #4A8E72;
+            color: white;
+     
             margin-bottom: 20px;
           }
   
@@ -58,12 +59,11 @@
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #2c3e50;
+            color: white;
           }
-  
           p {
             font-size: 16px;
-            color: #6a6a6a;
+            color: white;
             line-height: 1.6;
           }
         }

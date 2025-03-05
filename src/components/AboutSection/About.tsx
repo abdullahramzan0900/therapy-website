@@ -8,7 +8,7 @@ const AboutSection = () => {
     <>
       <section className={styles.aboutSection}>
         <div className={styles.imageContainer}>
-          <img src={image1} alt="Nurse helping elderly" className={styles.mainImage} />
+          <img src={image1} alt="" className={styles.mainImage} />
           <div className={styles.checkupTag}>
           <p>{aboutUs.stats.tagline}</p>
         </div>

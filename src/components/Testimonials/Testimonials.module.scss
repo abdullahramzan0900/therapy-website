@@ -9,7 +9,7 @@
     .headerContainer {
       display: flex;
       padding-left: 33px;
-      background-color: white;
+      background-color: #fff7e8;
       align-items: center;
       
       .mainImage {
@@ -55,9 +55,9 @@
   
     .testimonialCard {
       padding: 20px;
-      background-color: white;
+      background-color: #4a8e72;
       text-align: justify;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow:0 4px 10px #ffffffab;
       text-align: left;
       box-sizing: border-box;
 
@@ -81,10 +81,11 @@
         font-size: 20px;
         margin-bottom: 10px;
         text-align: center;
+        color: white;
       }
   
       .rating {
-        color: #ffbf00;
+        color: white;
         font-size: 18px;
         margin-bottom: 15px;
         text-align: center;
@@ -92,7 +93,7 @@
   
       p {
         font-size: 14px;
-        color: #6a6a6a;
+        color: white;
         line-height: 1.6;
       }
     }

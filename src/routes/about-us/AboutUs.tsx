@@ -11,9 +11,7 @@ const AboutUs = () => {
    <GoalsMissionVision/>
    <AboutSection/>
    <GuidingPrinciples/>
-   < JourneySection/>
-
-  
+   <JourneySection/>
   </>
 };
 export default AboutUs;

@@ -1,7 +1,7 @@
 import styles from "./Contact.module.scss";
 import { useState } from "react";
-
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import styles
 import ThankYou from "../../components/ThankYouMessage/ThankYou";
 
 const ContactUs = () => {
@@ -10,10 +10,13 @@ const ContactUs = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [messageResponse,setMessageResponse]=useState("")
+  const [messageResponse, setMessageResponse] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Loader state
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true); // Start loading
+
     const reqBody = {
       content: {
         YourName: name,
@@ -32,33 +35,40 @@ const ContactUs = () => {
         },
         body: JSON.stringify(reqBody),
       });
-      
+
       const data = await response.json();
       if (response.ok) {
         setMessageResponse(data.success);
-   
         setIsSubmitted(true);
       } else {
-      
+        toast.error("Failed to send message. Please try again later.", {
+          position: "top-left",
+          icon: false, // Remove default cross icon
+          className: "custom-toast",
+        });
       }
     } catch (err) {
       console.error("Error sending email:", err);
-      toast.error("An error occurred. Please try again later.");
+      toast.error("An error occurred. Please try again later.", {
+        position: "top-left",
+        icon: false,
+        className: "custom-toast",
+      });
+    } finally {
+      setIsLoading(false); // Stop loading
     }
   };
+
   return (
     <>
-      <ToastContainer />
-
+      <ToastContainer /> 
       <section className={styles.contactMain}>
         <div className={styles.contatctSection}>
           <div className={styles.content}>
             {isSubmitted ? (
-              <div>
-                <ThankYou message={messageResponse} />
-              </div>
+              <ThankYou message={messageResponse} />
             ) : (
-              <div className="">
+              <div>
                 <h3>Contact Us</h3>
                 <form onSubmit={handleSubmit}>
                   <div>
@@ -113,26 +123,18 @@ const ContactUs = () => {
                   </div>
 
                   <div className={styles.formActions}>
-                    <button type="submit" className={styles.submitButton}>
-                      Submit
+                    <button type="submit" className={styles.submitButton} disabled={isLoading}>
+                      {isLoading ? "Submitting..." : "Submit"} {/* Show loader text */}
                     </button>
                   </div>
                 </form>
               </div>
             )}
           </div>
-          {/* <div className={styles.visuals}>
-            <div className={styles.imageWrapper}>
-              <img
-                src={rightDoctorImage}
-                alt="Contact Us"
-                className={styles.mainImage}
-              />
-            </div>
-          </div> */}
         </div>
       </section>
     </>
   );
 };
+
 export default ContactUs;

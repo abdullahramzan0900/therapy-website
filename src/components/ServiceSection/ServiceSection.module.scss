@@ -27,6 +27,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
       position: relative;
+      color: white;
       text-align: left;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
   
@@ -42,7 +43,7 @@
         width: 60px;
         height: 60px;
         background-color:white;
-        color: lightblue;
+        color: #4a8e72;
      
         display: flex;
         justify-content: center;
@@ -57,7 +58,7 @@
   
       p {
         font-size: 16px;
-        color: #6a6a6a;
+        color: white;
         margin-bottom: 20px;
       }
   
@@ -81,43 +82,44 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    color: white;
     }
   
 
     .serviceCard:nth-child(1) { /* Nursing Care */
-      background-color: #d1e7ff; /* Soft Blue - Represents trust and professionalism */
+      background-color: #4a8e72; /* Soft Blue - Represents trust and professionalism */
     }
     
     .serviceCard:nth-child(2) { /* Personal Care */
-      background-color: #ffe0b2; /* Warm Peach - Represents warmth and assistance */
+      background-color: #4a8e72; /* Warm Peach - Represents warmth and assistance */
     }
     
     .serviceCard:nth-child(3) { /* Therapy Services */
-      background-color: #c8e6c9; /* Light Green - Symbolizes healing and recovery */
+      background-color: #4a8e72; /* Light Green - Symbolizes healing and recovery */
     }
     
     .serviceCard:nth-child(4) { /* Skilled Nursing */
-      background-color: #ffcdd2; /* Soft Pink - Represents care and attentiveness */
+      background-color: #4a8e72; /* Soft Pink - Represents care and attentiveness */
     }
     
     .serviceCard:nth-child(5) { /* Supportive Care */
-      background-color: #fff9c4; /* Pale Yellow - Represents positivity and encouragement */
+      background-color: #4a8e72; /* Pale Yellow - Represents positivity and encouragement */
     }
     
     .serviceCard:nth-child(6) { /* Rehabilitation Therapy */
-      background-color: #b3e5fc; /* Calm Blue - Represents renewal and independence */
+      background-color: #4a8e72; /* Calm Blue - Represents renewal and independence */
     }
     
     .serviceCard:nth-child(7) { /* Rehabilitation Therapy (Duplicate) */
-      background-color: #b3e5fc; /* Same as above for consistency */
+      background-color: #4a8e72; /* Same as above for consistency */
     }
     
     .serviceCard:nth-child(8) { /* Skilled Nursing (Duplicate) */
-      background-color: #ffcdd2; /* Same as above for consistency */
+      background-color: #4a8e72; /* Same as above for consistency */
     }
     
     .serviceCard:nth-child(9) { /* Supportive Care (Duplicate) */
-      background-color: #fff9c4; /* Same as above for consistency */
+      background-color: #4a8e72; /* Same as above for consistency */
     }
     
   
