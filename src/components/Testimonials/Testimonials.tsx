@@ -62,9 +62,9 @@ const Testimonials: React.FC = () => {
         <Slider  ref={sliderRef}  {...settings}>
           {testimonials.testimonials.map((testimonial, index) => (
             <div className={styles.testimonialCard} key={index}>
-              <div className={styles.imageContainer}   >
-                {/* <img src={testimonial.image} alt={testimonial.name}  /> */}
-              </div>
+              {/* <div className={styles.imageContainer}   >
+                <img src={testimonial.image} alt={testimonial.name}  />
+              </div> */}
               <div>
               <h4 >{testimonial.name}</h4>
               <div className={styles.rating} >{'★'.repeat(testimonial.rating)}</div>
