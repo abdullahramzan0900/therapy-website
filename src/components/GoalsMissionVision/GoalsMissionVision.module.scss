@@ -60,11 +60,21 @@
   
       .card {
         margin-bottom: 20px;
-        width: 100%;
         &:last-child {
-          margin-bottom: 0;
-        }
+          margin-bottom: 0; 
+        } 
       }
     }
+    
+    // @media (max-width: 768px) {
+    //  width: ;
+  
+    //   .card {
+        
+    //     &:last-child {
+    //       margin-bottom: 0;
+    //     }
+    //   }
+    // }
   }
   

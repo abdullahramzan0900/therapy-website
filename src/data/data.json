@@ -97,50 +97,49 @@
         "heading": "Our Services",
         "subHeading": "Personalized Support for Your Well-being",
         "buttonText": "Explore More",
-        "services": [
+        "services":  [
           {
-            "icon": "faComments",
-            "title": "Free 15-Minute Consultation",
-            "description": "A no-obligation chat with a therapist to explore your needs and determine the right support for you.",
-            "link": "#"
+            "title": "15-Minute Free Consultation",
+            "description": "Receive a free 15-minute consultation to discuss your concerns.",
+            "icon": "faComments"
           },
           {
-            "icon": "faLaptop",
-            "title": "Online & In-Person Sessions",
-            "description": "Flexible therapy options to fit your schedule, offering professional support wherever you are.",
-            "link": "#"
-          },
-          {
-            "icon": "faUsers",
-            "title": "Couples & Relationship Therapy",
-            "description": "Helping couples strengthen communication, resolve conflicts, and build healthier relationships.",
-            "link": "#"
-          },
-          {
-            "icon": "faChild",
-            "title": "Youth & Family Counseling",
-            "description": "Supporting children, teens, and families in navigating emotional challenges and life transitions.",
-            "link": "#"
-          },
-          {
-            "icon": "faHeartbeat",
-            "title": "Trauma & PTSD Therapy",
-            "description": "Specialized therapy to help individuals process and heal from past trauma in a supportive environment.",
-            "link": "#"
-          },
-          {
-            "icon": "faBrain",
-            "title": "Cognitive Behavioral Therapy (CBT)",
-            "description": "A structured approach to addressing negative thoughts and behaviors, promoting positive mental well-being.",
-            "link": "#"
-          },
-          {
-            "icon": "faUser",
             "title": "Individual Therapy",
-            "description": "One-on-one counseling tailored to your needs, providing a safe space to explore your thoughts and emotions.",
-            "link": "#"
+            "description": "One-to-one therapy sessions tailored to your needs.",
+            "icon": "faUser"
+          },
+          {
+            "title": "Trauma & PTSD",
+            "description": "Specialist therapy for trauma and PTSD-related challenges.",
+            "icon": "faBrain"
+          },
+          {
+            "title": "Anxiety & Depression",
+            "description": "Support and treatment for anxiety and depression.",
+            "icon": "faHeartbeat"
+          },
+          {
+            "title": "Bereavement",
+            "description": "Compassionate support for grief and loss.",
+            "icon": "faUsers"
+          },
+          {
+            "title": "Integrative Approach",
+            "description": "A holistic and personalised therapeutic approach.",
+            "icon": "faHandsHelping"
+          },
+          {
+            "title": "Confidential Online Therapy",
+            "description": "Secure and private therapy sessions online.",
+            "icon": "faLaptop"
+          },
+          {
+            "title": "Low-Cost Sessions",
+            "description": "Affordable therapy options to suit your budget.",
+            "icon": "faStethoscope"
           }
         ]
+  
       },
       
       "testimonials":{
@@ -220,7 +219,7 @@
           "heading": "Follow Us",
           "socialLinks": [
             { "icon": "faFacebookF", "link": "#" },
-            { "icon": "faLinkedinIn", "link": "#" },
+            { "icon": "faLinkedinIn", "link": "https://www.linkedin.com/company/nova-counselling-psychotherapy/" },
             { "icon": "faInstagram", "link": "https://www.instagram.com/ncptherapy?igsh=amNxN2d5Y2UxeTBs" }
           ]
         }

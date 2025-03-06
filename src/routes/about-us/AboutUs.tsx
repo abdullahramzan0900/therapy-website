@@ -8,8 +8,8 @@ import "./AboutUs.scss";
 const AboutUs = () => {
   return <>
    <HomeCareSection/>
-   <GoalsMissionVision/>
    <AboutSection/>
+   <GoalsMissionVision/>
    <GuidingPrinciples/>
    <JourneySection/>
   </>

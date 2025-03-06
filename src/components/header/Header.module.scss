@@ -30,6 +30,17 @@
         display: flex;
         align-items: center;
         gap: 5px;
+        &:hover {
+          color:  rgba(74, 142, 114, 0.8901960784);
+          }
+      }
+      a{
+        color:#f0fff0;
+        text-decoration: none;
+
+        &:hover {
+        color:  rgba(74, 142, 114, 0.8901960784);
+        }
       }
     }
   

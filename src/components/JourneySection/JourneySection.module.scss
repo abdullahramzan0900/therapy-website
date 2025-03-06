@@ -77,18 +77,29 @@
 
     @media (max-width: 768px) {
       .contentContainer {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        // justify-content: space-between;
+        // align-items: center ;
+        
         text-align: center;
   
         .textContainer {
           padding-right: 0;
           margin-bottom: 20px;
+          display: flex;
+              flex-direction: column;
+              align-items: center;
+              h2 {
+                font-size: 21px;
+                margin-top: 20px;
+              }
         }
   
         .imageContainer {
-        display:none;
+        // display:none;
         }
       }
     }
+
   }
   

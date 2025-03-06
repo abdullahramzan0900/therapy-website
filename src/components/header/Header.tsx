@@ -1,21 +1,18 @@
-import styles from "./Header.module.scss";
-import { useEffect, useState } from "react";
-import { FontAwesomeIcon, } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import headerlogo from '/assets/header-logo.svg'
-import {
-  faMapMarkerAlt,
-  faEnvelope,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes, faMapMarkerAlt, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import {  useLocation, useNavigate } from "react-router-dom";
-import data from '../../data/data.json'
+import { useLocation, useNavigate } from "react-router-dom";
+import styles from "./Header.module.scss";
+import headerlogo from "/assets/header-logo.svg";
+import data from "../../data/data.json";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const {header}=data.components
-  const navigate=useNavigate()
+  const navigate = useNavigate();
+  const menuRef = useRef(null);
+  const { header } = data.components;
 
   useEffect(() => {
     // Remove active class from all links
@@ -31,65 +28,86 @@ const Header = () => {
     });
   }, [location.pathname]);
 
-
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
+
   return (
     <>
-    <header className={styles.header}>
-      <div>
+      <header className={styles.header}>
         <div className={styles.topbar}>
           <div className={styles.topbarLeft}>
             <span>
-            <FontAwesomeIcon icon={faMapMarkerAlt} /> {header.topbar.locationText}
+              <FontAwesomeIcon icon={faMapMarkerAlt} /> {header.topbar.locationText}
             </span>
             <span>
-            <FontAwesomeIcon icon={faEnvelope} /> {header.topbar.emailText}   
+            <a href="mailto:info@ncptherapy.com?subject=Inquiry&body=Hello," rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faEnvelope} /> {header.topbar.emailText}
+</a>   
             </span>
           </div>
           <div className={styles.topbarRight}>
             <a href="#">
-            <FontAwesomeIcon icon={faWhatsapp} /> {header.topbar.whatsappText}
+              <FontAwesomeIcon icon={faWhatsapp} /> {header.topbar.whatsappText}
             </a>
           </div>
         </div>
-      </div>
+      </header>
 
-    </header>
-      <nav className={styles.navbar}>
+      <nav className={styles.navbar} ref={menuRef}>
         <div className={styles.logo}>
-        <img alt="logo" src={headerlogo} />
+          <img alt="logo" src={headerlogo} />
         </div>
         <div className={`${styles.links} ${menuOpen ? styles.showMenu : ""}`}>
-        {header.links.map((link, index) => (
-            <p  key={index}  onClick={(()=>{
-              navigate(link.path)
-              setMenuOpen(!menuOpen);
-            })}  >
+          {header.links.map((link, index) => (
+            <p
+              key={index}
+              onClick={() => {
+                navigate(link.path);
+                setMenuOpen(false);
+              }}
+            >
               {link.name}
             </p>
           ))}
         </div>
         <div className={styles.contact}>
           <a className="phone" href={`tel:${header.navbar.phone}`}>
-          <FontAwesomeIcon icon={faPhone} /> <span>{header.navbar.phone}</span>
+            <FontAwesomeIcon icon={faPhone} /> <span>{header.navbar.phone}</span>
           </a>
-          <div className={styles.appointmentBtnDiv}> 
+          <div className={styles.appointmentBtnDiv}>
             <button
               className={styles.appointmentBtn}
-
-              onClick={(()=>{
-                navigate('/contact-us')
-              })}
+              onClick={() => {
+                navigate("/contact-us");
+                setMenuOpen(false);
+              }}
             >
               Book an appointment
             </button>
           </div>
         </div>
         <button className={styles.hamburger} onClick={toggleMenu}>
-        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+          <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
         </button>
       </nav>
     </>
