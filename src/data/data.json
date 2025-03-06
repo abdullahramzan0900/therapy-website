@@ -21,11 +21,6 @@
             "location": "./routes/contact-us/ContactUs"
           },
           {
-            "path": "/contact-us",
-            "component": "ContactUs",
-            "location": "./routes/contact-us/ContactUs"
-          },
-          {
             "path": "/privacy-policy",
             "component": "PrivacySection",
             "location": "./routes/PrivacySection/PrivacySection"
@@ -193,7 +188,6 @@
           { "name": "Home", "path": "/" },
           { "name": "Services", "path": "/services" },
           { "name": "About Us", "path": "/about-us" },
-          { "name": "Contact Us", "path": "/contact-us" },
           { "name": "Contact Us", "path": "/contact-us" }
         ],
         "address": {
