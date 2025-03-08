@@ -5,7 +5,7 @@ import "@fontsource/poppins";
 import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
 import Header from "./components/header/Header";
 import Footer from "./components/Footer/Footer";
-import { getToken } from "./auth/oauth.ts";
+import { getToken } from "./auth/oauth";
 import { Suspense, lazy } from "react";
 import data from "./data/data.json"
 

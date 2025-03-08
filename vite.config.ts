@@ -1,18 +1,10 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
- 
- 
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
 export default defineConfig({
-  plugins: [
-    react(),
-    viteStaticCopy({
-      targets: [
-        { src: 'public/_redirects', dest: '' },
-      ],
-    }),
-  ],
+  plugins: [react()],
+  base: "./",  // ✅ Ensures correct file references
   build: {
-    outDir: 'dist',
+    outDir: "dist",
   },
 });
