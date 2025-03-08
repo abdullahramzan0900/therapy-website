@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./",  // ✅ Ensures correct file references
+  base: "./",  // Ensures correct asset paths
   build: {
     outDir: "dist",
   },
