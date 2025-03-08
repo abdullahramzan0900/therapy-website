@@ -14,7 +14,7 @@
     ],
     "env": {
       "EMAIL_HOST": "smtpout.secureserver.net",
-      "EMAIL_PORT": 587,
+      "EMAIL_PORT": "587",
       "EMAIL_USER": "info@ncptherapy.com",
       "EMAIL_PASS": "Musa2015"
     }
