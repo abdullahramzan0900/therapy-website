@@ -11,16 +11,14 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const menuRef = useRef(null);
+  const menuRef = useRef<HTMLDivElement | null>(null); // ✅ Added correct typing
   const { header } = data.components;
 
   useEffect(() => {
-    // Remove active class from all links
     document.querySelectorAll(`.${styles.links} p`).forEach((link) => {
       link.classList.remove(styles.activeLink);
     });
 
-    // Find the matching path and add active class
     header.links.forEach((link, index) => {
       if (link.path === location.pathname) {
         document.querySelectorAll(`.${styles.links} p`)[index]?.classList.add(styles.activeLink);
@@ -34,8 +32,8 @@ const Header = () => {
 
   // Close menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => { // ✅ Added correct typing
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) { // ✅ Fixed type error
         setMenuOpen(false);
       }
     };
@@ -60,9 +58,9 @@ const Header = () => {
               <FontAwesomeIcon icon={faMapMarkerAlt} /> {header.topbar.locationText}
             </span>
             <span>
-            <a href="mailto:info@ncptherapy.com?subject=Inquiry&body=Hello," rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faEnvelope} /> {header.topbar.emailText}
-</a>   
+              <a href="mailto:info@ncptherapy.com?subject=Inquiry&body=Hello," rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faEnvelope} /> {header.topbar.emailText}
+              </a>   
             </span>
           </div>
           <div className={styles.topbarRight}>
