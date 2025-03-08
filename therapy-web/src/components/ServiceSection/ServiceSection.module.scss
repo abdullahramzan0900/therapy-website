@@ -1,0 +1,174 @@
+.servicesSection {
+    padding: 50px;
+    background-color: #fff7e8;
+    text-align: center;
+  
+    .servicesHeading {
+      font-size: 24px;
+      color: rgba(179, 114, 4, 0.9);
+      margin-bottom: 10px;
+    }
+  
+    .servicesSubHeading {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+  
+    .servicesGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px;
+    }
+  
+    .serviceCard {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+      position: relative;
+      color: white;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+  
+      .serviceIcon {
+        font-size: 32px;
+        border-top-left-radius: 15px;  
+        border-bottom-right-radius: 50px;  
+        width: 60px;
+        height: 60px;
+        background-color:white;
+        color: #4a8e72;
+     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+  
+      p {
+        font-size: 16px;
+        color: white;
+        margin-bottom: 20px;
+      }
+  
+      .readMore {
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 14px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        color: black;
+  
+        &:hover {
+          background-color: #005bb5;
+          color: white;
+        }
+      }
+    }
+    .innerServiceCard{
+        padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    }
+  
+
+    .serviceCard:nth-child(1) { /* Nursing Care */
+      background-color: #4a8e72; /* Soft Blue - Represents trust and professionalism */
+    }
+    
+    .serviceCard:nth-child(2) { /* Personal Care */
+      background-color: #4a8e72; /* Warm Peach - Represents warmth and assistance */
+    }
+    
+    .serviceCard:nth-child(3) { /* Therapy Services */
+      background-color: #4a8e72; /* Light Green - Symbolizes healing and recovery */
+    }
+    
+    .serviceCard:nth-child(4) { /* Skilled Nursing */
+      background-color: #4a8e72; /* Soft Pink - Represents care and attentiveness */
+    }
+    
+    .serviceCard:nth-child(5) { /* Supportive Care */
+      background-color: #4a8e72; /* Pale Yellow - Represents positivity and encouragement */
+    }
+    
+    .serviceCard:nth-child(6) { /* Rehabilitation Therapy */
+      background-color: #4a8e72; /* Calm Blue - Represents renewal and independence */
+    }
+    
+    .serviceCard:nth-child(7) { /* Rehabilitation Therapy (Duplicate) */
+      background-color: #4a8e72; /* Same as above for consistency */
+    }
+    
+    .serviceCard:nth-child(8) { /* Skilled Nursing (Duplicate) */
+      background-color: #4a8e72; /* Same as above for consistency */
+    }
+    
+    .serviceCard:nth-child(9) { /* Supportive Care (Duplicate) */
+      background-color: #4a8e72; /* Same as above for consistency */
+    }
+    
+  
+   
+    @media (max-width: 1024px) {
+      .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      .servicesHeading {
+        font-size: 22px;
+      }
+  
+      .servicesSubHeading {
+        font-size: 28px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .servicesGrid {
+        grid-template-columns: repeat(1, 1fr); 
+      }
+  
+      .servicesHeading {
+        font-size: 20px;
+      }
+  
+      .servicesSubHeading {
+        font-size: 24px;
+      }
+  
+      .serviceCard {
+      }
+  
+      .serviceIcon {
+        font-size: 30px;
+      }
+  
+      h3 {
+        font-size: 18px;
+      }
+  
+      p {
+        font-size: 14px;
+      }
+  
+      .readMore {
+        font-size: 12px;
+      }
+    }
+  }
+  

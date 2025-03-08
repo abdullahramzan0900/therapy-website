@@ -1,0 +1,127 @@
+.guidingPrinciples {
+    text-align: center;
+    padding: 50px 20px;
+    background:#fff7e8;
+  
+    h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: rgba(179, 114, 4, 0.9);
+    }
+  
+    .doctorImages {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      // margin-bottom: 40px;
+  
+      .leftDoctor,
+      .rightDoctor {
+        width: 250px;
+        height: auto;
+      }
+    }
+  
+    .principlesContainer {
+      display: flex;
+      justify-content: center;
+      // background: rgba(255, 160, 122, 0.1490196078);
+  
+      .principles {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+        padding: 20px;
+  
+        .principleCard {
+            background-color: #4a8e72;
+          padding: 30px;
+          border-radius: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          flex: 1;
+          transition: transform 0.3s ease;
+  
+          &:hover {
+            transform: translateY(-10px);
+          }
+  
+          .icon {
+            font-size: 50px;
+            // color: #00bfa5;
+            color: white;
+     
+            margin-bottom: 20px;
+          }
+  
+          h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
+          }
+          p {
+            font-size: 16px;
+            color: white;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      .doctorImages {
+        flex-direction: column;
+  
+        .leftDoctor
+       {
+          width: 200px;
+          margin-bottom: 20px;
+        }
+        .rightDoctor{
+          display: none;
+        }
+      }
+  
+      .principlesContainer .principles {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 30px;
+      }
+  
+      .doctorImages {
+        .leftDoctor,
+        .rightDoctor {
+          width: 150px;
+        }
+      }
+  
+      .principlesContainer .principles {
+        gap: 20px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 26px;
+      }
+  
+      .doctorImages {
+        .leftDoctor,
+        .rightDoctor {
+          width: 120px;
+        }
+      }
+  
+      .principlesContainer .principles {
+        gap: 20px;
+      }
+    }
+  }
+  

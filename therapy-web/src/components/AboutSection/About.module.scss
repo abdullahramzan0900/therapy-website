@@ -1,0 +1,159 @@
+.aboutSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff7e8;
+    border-radius: 30px;
+    gap: 40px;
+  
+    .imageContainer {
+      position: relative;
+      width: 50%;
+      // background: #4a8e72e0; 
+      border-radius: 30px;
+      padding: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+  
+      .mainImage {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+  
+      .checkupTag {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        color: #4a8e72;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+  
+      .badge {
+        position: absolute;
+        bottom: -20px;
+        left: 20px;
+        background-color:#4a8e72;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        strong {
+          font-size: 18px;
+        }
+      }
+    }
+  
+    .textContainer {
+      width: 50%;
+  
+      h2 {
+        font-size: 20px;
+        color:rgba(179, 114, 4, 0.9);
+        margin-bottom: 10px;
+      }
+  
+      h3 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #6a6a6a;
+      }
+  
+      h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: rgba(179, 114, 4, 0.9);
+      }
+  
+      .learnMoreButton {
+        display: inline-block;
+        background: linear-gradient(90deg, rgb(36, 126, 192), rgb(72, 213, 196));
+        color: white;
+        padding: 15px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+       
+    &:hover {
+      background: linear-gradient(90deg,  rgb(72, 213, 196) 0%, rgb(36, 126, 192) 100%); 
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(0, 150, 229, 0.3); 
+    }
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      text-align: center;
+  
+      .imageContainer,
+      .textContainer {
+        width: 100%;
+      }
+  
+      .imageContainer {
+        margin-bottom: 30px;
+      }
+  
+      .badge {
+        bottom: -10px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 20px;
+      .textContainer {
+        h3 {
+          font-size: 28px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .checkupTag,
+      .badge {
+display: none;
+      }
+  
+//       .badge {
+//  display: none;
+//       }
+    }
+  
+    @media (max-width: 480px) {
+      padding: 15px;
+      .textContainer {
+        h3 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 12px;
+        }
+  
+        .learnMoreButton {
+          padding: 10px 20px;
+          font-size: 14px;
+        }
+      }
+    }
+  }

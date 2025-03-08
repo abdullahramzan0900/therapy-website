@@ -1,0 +1,242 @@
+{
+    "routes":[
+        {
+            "path": "/",
+            "component": "Home",
+            "location": "./routes/home/Home"
+          },
+          {
+            "path": "/services",
+            "component": "Services",
+            "location": "./routes/services/Services"
+          },
+          {
+            "path": "/about-us",
+            "component": "AboutUs",
+            "location": "./routes/about-us/AboutUs"
+          },
+          {
+            "path": "/contact-us",
+            "component": "ContactUs",
+            "location": "./routes/contact-us/ContactUs"
+          },
+          {
+            "path": "/privacy-policy",
+            "component": "PrivacySection",
+            "location": "./routes/PrivacySection/PrivacySection"
+          }
+ 
+    ],
+    "pages":{
+        "aboutUs":{},
+        "contactUs":{},
+        "home":{},
+        "services":{}
+    },
+    "components":{
+      "guidingPrinciples":{
+        "title": "Guiding Principles",
+        "images": {
+          "left": "assets/leftDoctorImage.png",
+          "right": "assets/rightDoctorImage.png"
+        },
+        "principles": [
+          {
+            "icon": "faHandsHelping",
+            "title": "Compassion",
+            "description": "We create a warm, supportive space where clients feel heard, valued, and respected."
+          },
+          {
+            "icon": "faUniversalAccess",
+            "title": "Inclusivity",
+            "description": "We welcome individuals from all backgrounds, cultures, genders, and identities, ensuring that therapy is a safe space for all."
+          },
+          {
+            "icon": "faUserShield",
+            "title": "Confidentiality",
+            "description": "We prioritize client privacy and trust, following strict ethical guidelines to ensure a safe and secure therapeutic environment."
+          },
+          {
+            "icon": "faChartLine",
+            "title": "Growth",
+            "description": "Our goal is to help individuals build resilience, confidence, and emotional well-being through personalized therapy."
+          }
+        ]
+      },
+      "HomeCareData":
+      {
+        "title": "",
+        "titleHighlight": "Affordable, Compassionate and Professional Online Therapy",
+        "description": "Struggling with life’s challenges? You don’t have to go through it alone. At Nova, we provide affordable, professional, and compassionate therapy to support you on your journey toward healing and personal growth.",
+        "emailPlaceholder": "Enter Your Email",
+        "buttonText": "Let's Talk",
+        "imageAlt": "Nurse helping elderly",
+        "imageSrc": "assets/mansitting.jpg"
+      },
+      "aboutUs": {
+        "title": "Who We Are",
+        "subtitle": "Healing, Growth, and Transformation",
+        "mainText": "At Nova, we believe in the power of healing, growth, and transformation. Our goal is to make therapy accessible and supportive for everyone, regardless of background or financial situation. We take an integrated approach, combining different therapeutic techniques to tailor support that meets your unique needs.",
+        "whoweare":"Nova Counselling & Psychotherapy At Nova Counselling & Psychotherapy, we are a team of three dedicated professionals committed to providing accessible, affordable, and high-quality mental health support. Our mission is to break barriers to therapy by offering low-cost, confidential online counselling to individuals from all walks of life.  We believe that mental well-being should not be a luxury—everyone deserves the opportunity to heal, grow, and thrive. With a client-centered approach, we create a safe and supportive space where you can explore your thoughts, emotions, and challenges without judgment.Let us help you take the first step toward a healthier, happier you.💚",
+        "missionTitle": "Our Core Values",
+        "missionText": "Compassion – We provide a warm, supportive space where you feel heard and valued.\nInclusivity – We welcome individuals from all ethnicities, cultures, genders, and backgrounds.\nAffordability – We believe mental health support should be accessible to everyone.\nConfidentiality – Your privacy and trust are at the heart of our work.\nGrowth & Empowerment – Therapy is about helping you build resilience, confidence, and emotional well-being.",
+        "buttonText": "Learn More →",
+        "stats": {
+          "tagline": "Committed to Mental Well-being",
+          "patientsCount": "Empowering Lives Every Day"
+        }
+      },
+      
+      
+      "services": {
+        "heading": "Our Services",
+        "subHeading": "Personalized Support for Your Well-being",
+        "buttonText": "Explore More",
+        "services":  [
+          {
+            "title": "15-Minute Free Consultation",
+            "description": "Receive a free 15-minute consultation to discuss your concerns.",
+            "icon": "faComments"
+          },
+          {
+            "title": "Individual Therapy",
+            "description": "One-to-one therapy sessions tailored to your needs.",
+            "icon": "faUser"
+          },
+          {
+            "title": "Trauma & PTSD",
+            "description": "Specialist therapy for trauma and PTSD-related challenges.",
+            "icon": "faBrain"
+          },
+          {
+            "title": "Anxiety & Depression",
+            "description": "Support and treatment for anxiety and depression.",
+            "icon": "faHeartbeat"
+          },
+          {
+            "title": "Bereavement",
+            "description": "Compassionate support for grief and loss.",
+            "icon": "faUsers"
+          },
+          {
+            "title": "Integrative Approach",
+            "description": "A holistic and personalised therapeutic approach.",
+            "icon": "faHandsHelping"
+          },
+          {
+            "title": "Confidential Online Therapy",
+            "description": "Secure and private therapy sessions online.",
+            "icon": "faLaptop"
+          },
+          {
+            "title": "Low-Cost Sessions",
+            "description": "Affordable therapy options to suit your budget.",
+            "icon": "faStethoscope"
+          }
+        ]
+  
+      },
+      
+      "testimonials":{
+        "heading": "What Our Clients Say",
+        "subHeading": "Testimonials",
+        "mainImage": "assets/pointingdown.png",
+        "testimonials": [
+          {
+            "name": "Sarah Johnson",
+            "image": "assets/profilePic1.png",
+            "review": "Nova Consultation has been a lifesaver for me. The therapists are compassionate, understanding, and truly helped me navigate through my anxiety. I highly recommend their services!",
+            "rating": 5
+          },
+          {
+            "name": "Michael Brown",
+            "image": "../../../src/assets/profilePic2.jpeg",
+            "review": "I was hesitant about therapy at first, but Nova Consultation made me feel comfortable from day one. Their approach is professional yet personal, and I've seen significant progress in my mental health.",
+            "rating": 5
+          },
+          {
+            "name": "David Wilson",
+            "image": "../../../src/assets/profilePic4.jpeg",
+            "review": "Nova Consultation has been instrumental in helping me manage my stress and improve my relationships. The therapists are knowledgeable and genuinely care about their clients.",
+            "rating": 5
+          }
+        ]
+      },
+      "header":{
+        "topbar": {
+          "locationText": "Lorem Ipsum Dolor",
+          "emailText": "info@ncptherapy.com",
+          "whatsappText": "Connect on Whatsapp",
+          "whatsappLink": "#"
+        },
+        "navbar": {
+          "logoText": "NovaTherapy ",
+          "phone": "07984628017",
+          "HeaderLogo":"assets/header-logo.svg"
+        },
+        "links": [
+          { "name": "Home", "path": "/" },
+          { "name": "About", "path": "/about-us" },
+          { "name": "Services", "path": "/services" },
+          { "name": "Contact", "path": "/contact-us" }
+      
+        ]
+      },
+      "footer":{
+        "companyName": "Call a Doctor",
+        "companyLinks": [
+          { "name": "Home", "path": "/" },
+          { "name": "Services", "path": "/services" },
+          { "name": "About Us", "path": "/about-us" },
+          { "name": "Contact Us", "path": "/contact-us" }
+        ],
+        "address": {
+          "heading": "Address",
+          "lines": [
+            "Lorem ipsum dolor sit amet,",
+            "consectetur adipiscing elit."
+          ],
+          "mapLinkText": "View on Maps",
+          "mapLink": "https://maps.google.com",
+          "inquiriesHeading": "Inquiries",
+          "inquiries": {
+            "phone": "07984628017",
+            "email": "info@ncptherapy.com"
+          }
+        },
+        "newsletter": {
+          "title": "Newsletter",
+          "description": "Stay Updated with our Latest News",
+          "placeholder": "Your Email"
+        },
+        "social": {
+          "heading": "Follow Us",
+          "socialLinks": [
+            { "icon": "faFacebookF", "link": "#" },
+            { "icon": "faLinkedinIn", "link": "https://www.linkedin.com/company/nova-counselling-psychotherapy/" },
+            { "icon": "faInstagram", "link": "https://www.instagram.com/ncptherapy?igsh=amNxN2d5Y2UxeTBs" }
+          ]
+        }
+      },
+      "appointmentData":  
+      { "Header":"Book an Appointment",
+        "para1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type specimen book",
+        "para2":"Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book.",
+        "stepLabels":[
+            "Start",
+            "Patient Info",
+            "Insurance Info",
+            "Appointment Booking"
+          ],
+          "colors":[
+           "#C47800",
+           "#4B8E71",
+           "#10312C",
+           "#CABEA1",
+           "#b3720473 for golden",
+           "#4A8E72 for green text and icons" ,
+           "#122D28 for dark green background"
+          ]
+      }
+    }
+}
