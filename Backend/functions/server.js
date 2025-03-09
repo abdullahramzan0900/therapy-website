@@ -1,5 +1,5 @@
 const express = require("express");
-const serverless = require("serverless-http"); // ✅ Correctly wrap Express for Netlify
+const serverless = require("serverless-http");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 
@@ -21,7 +21,9 @@ const transporter = nodemailer.createTransport({
   maxMessages: 50,
 });
 
-app.post("/send-email", async (req, res) => {
+const router = express.Router();
+
+router.post("/send-email", async (req, res) => {
   const { Email, YourName, Phone, MessageUs } = req.body.content;
 
   if (!Email || !YourName || !Phone || !MessageUs) {
@@ -61,7 +63,7 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-app.post("/contact", async (req, res) => {
+router.post("/contact", async (req, res) => {
   const { email } = req.body;
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -96,5 +98,6 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-// ✅ Wrap Express app with serverless-http for Netlify
+app.use("/.netlify/functions/server", router);
+
 module.exports.handler = serverless(app);

@@ -1,7 +1,7 @@
 [build]
-  functions = "functions"
+  base = "Backend"       # Set base directory
+  functions = "functions"  # Functions directory inside Backend
+  command = "npm install"
 
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
+[functions]
+  node_bundler = "esbuild"
