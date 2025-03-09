@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "*" })); 
 
 const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
