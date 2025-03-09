@@ -28,7 +28,7 @@ const ContactUs = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch("https://ncptherapyback.netlify.app/.netlify/functions/server/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
