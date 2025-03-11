@@ -21,7 +21,7 @@ const AboutSection = () => {
           <p>{aboutUs.whoweare}</p>
           <h4>{aboutUs.missionTitle}</h4>
           <ul>
-            {aboutUs.missionValues.map((value, index) => (
+            {aboutUs.missionValues.map((value) => (
               <>
                 <strong> {value.title}</strong> – {value.description}
               </>
