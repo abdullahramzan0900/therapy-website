@@ -16,16 +16,17 @@ const AboutSection = () => {
           <p><strong>{aboutUs.stats.patientsCount}</strong></p>
         </div>
       </div>
-
       <div className={styles.textContainer}>
-        {/* <h2>{aboutUs.title}</h2>
-        <h3>{aboutUs.subtitle}</h3>
-        <p>{aboutUs.mainText}</p> */}
-        <h2>{aboutUs.title}</h2>
-        <p>{aboutUs.whoweare}</p>
-        <h4>{aboutUs.missionTitle}</h4>
-        <p>{aboutUs.missionText}</p>
-          {/* <a href='/about-us' className={styles.learnMoreButton}>Learn More &rarr;</a> */}
+          <h2>{aboutUs.title}</h2>
+          <p>{aboutUs.whoweare}</p>
+          <h4>{aboutUs.missionTitle}</h4>
+          <ul>
+            {aboutUs.missionValues.map((value, index) => (
+              <>
+                <strong> {value.title}</strong> – {value.description}
+              </>
+            ))}
+          </ul>
         </div>
       </section>
 

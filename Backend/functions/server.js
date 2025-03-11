@@ -75,7 +75,11 @@ router.post("/contact", async (req, res) => {
       from: process.env.EMAIL_USER,
       to: email,
       subject: "Thank you for contacting Nova Counselling & Psychotherapy!",
-      html: `<p>Thank you for reaching out. We will get back to you as soon as possible.</p>`,
+      html: `
+        <p>Thank you for reaching out to Nova Counselling & Psychotherapy!</p>
+        <p>We appreciate you contacting us and are committed to supporting your mental health journey.</p>
+        <p>One of our team members will respond to your inquiry within 24 hours.</p>
+      `,
     };
 
     const adminNotification = {

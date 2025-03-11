@@ -4,7 +4,7 @@ const CookiesPolicy = () => {
   return (
     <div className={styles.cookiespolicy}>
       <h2>Cookies Policy</h2>
-      <p><strong>Last Updated:</strong> 05/04/225</p>
+      <p><strong>Last Updated:</strong> 07/03/25</p>
       <p>Nova Counselling & Psychotherapy ("we", "our", "us") uses cookies to improve your experience on our website and ensure compliance with the UK GDPR and the Privacy and Electronic Communications Regulations (PECR).</p>
       
       <h3>1. What Are Cookies?</h3>

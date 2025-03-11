@@ -52,7 +52,10 @@
   
     .textContainer {
       width: 50%;
-  
+      ul {
+        list-style: none; /* Removes default bullets */
+        padding: 0; /* Removes extra padding */
+      }
       h2 {
         font-size: 20px;
         color:rgba(179, 114, 4, 0.9);

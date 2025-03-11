@@ -55,7 +55,9 @@ const Header = () => {
         <div className={styles.topbar}>
           <div className={styles.topbarLeft}>
             <span>
-              <FontAwesomeIcon icon={faMapMarkerAlt} /> {header.topbar.locationText}
+            <a href={header.topbar.LocationLink} target="_blank" rel="noopener noreferrer">
+  <FontAwesomeIcon icon={faMapMarkerAlt} /> {header.topbar.locationText}
+</a>
             </span>
             <span>
               <a href="mailto:info@ncptherapy.com?subject=Inquiry&body=Hello," rel="noopener noreferrer">
