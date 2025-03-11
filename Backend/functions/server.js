@@ -44,11 +44,12 @@ router.post("/send-email", async (req, res) => {
     const userConfirmation = {
       from: process.env.EMAIL_USER,
       to: Email,
-      subject: "Thank you for reaching out!",
+      subject: "Thank you for contacting Nova Counselling & Psychotherapy!",
       html: `<p>Hi ${YourName},</p>
-             <p>We have received your message and will get back to you soon.</p>
-             <p>Best regards,</p>
-             <p><strong>Nova Counselling & Psychotherapy Team</strong></p>`,
+               <p>Thank you for reaching out to Nova Counselling & Psychotherapy!</p>
+               <p>We appreciate you contacting us and are committed to supporting your mental health journey.</p>
+               <p>One of our team members will respond to your inquiry within 24 hours.</p>
+             `,
     };
 
     await Promise.all([
