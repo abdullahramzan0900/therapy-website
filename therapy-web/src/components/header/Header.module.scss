@@ -31,7 +31,7 @@
         align-items: center;
         gap: 5px;
         &:hover {
-          color:  rgba(74, 142, 114, 0.8901960784);
+          color:   (74, 142, 114, 0.8901960784);
           }
       }
       a{
@@ -245,8 +245,8 @@
   
       }
       .logo {
-     display: flex;
-     gap: 10px;
+    //  display: flex;
+    //  gap: 10px;
 
       }
       .contact {
