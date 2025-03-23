@@ -5,6 +5,8 @@ import GuidingPrinciples from "../../components/GuidingPrinciples/GuidingPrincip
 import ServicesSection from "../../components/ServiceSection/ServiceSecxtion";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import JourneySection from "../../components/JourneySection/JourneySection";
+import WhyChooseUs from "../../components/whychooseus/whychooseus";
+import LowCostCounselling from "../../components/LowCostCounselling/LowCostCounselling";
 
 
 const Home = () => {
@@ -13,7 +15,9 @@ const Home = () => {
 <HomeCareSection/>
 <AboutSection/>
 <GuidingPrinciples/>
-<ServicesSection/>
+<ServicesSection showAll={false}/>
+<WhyChooseUs/>
+<LowCostCounselling/>
 <Testimonials/>
 <JourneySection/>
 

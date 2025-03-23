@@ -27,6 +27,12 @@ const AboutSection = () => {
               </>
             ))}
           </ul>
+          <div style={{
+            paddingTop:'14px'
+          }} >
+
+        <a href="/about-us" className={styles.learnMoreButton}>Learn More</a>
+          </div>
         </div>
       </section>
 

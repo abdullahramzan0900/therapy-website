@@ -108,7 +108,7 @@
     padding: 20px;
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 9999;  
   
     .logo img {
       // font-size: 24px;
@@ -118,8 +118,9 @@
       // -webkit-background-clip: text;
       // -webkit-text-fill-color: transparent;
       // background-clip: text;
-      width: 170px; // Adjust the width as needed
+      max-width: 100%; // Ensure it scales within the parent
       height: auto; // Maintain aspect ratio
+      object-fit: contain; // Prevent cropping
     }
 
     .hamburger {

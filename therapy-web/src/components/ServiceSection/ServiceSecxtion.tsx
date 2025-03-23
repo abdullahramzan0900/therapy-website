@@ -14,7 +14,7 @@ import {
   faBrain, 
   faComments
 } from '@fortawesome/free-solid-svg-icons';
-
+import { Link } from 'react-router-dom';
 import data from '../../data/data.json';
 
 const iconMapping: { [key: string]: any } = {
@@ -32,15 +32,16 @@ const iconMapping: { [key: string]: any } = {
   faComments
 };
 
+const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
+  const { services } = data.components;
+  const displayedServices = showAll ? services.services : services.services.slice(0, 2);
 
-const ServicesSection = () => {
-  const {services}=data.components;
   return (
     <section className={styles.servicesSection}>
-  <h2 className={styles.servicesHeading}>{services.heading}</h2>
-  <h3 className={styles.servicesSubHeading}>{services.subHeading}</h3>
+      <h2 className={styles.servicesHeading}>{services.heading}</h2>
+      <h3 className={styles.servicesSubHeading}>{services.subHeading}</h3>
       <div className={styles.servicesGrid}>
-      {services.services.map((service, index) => (
+        {displayedServices.map((service, index) => (
           <div key={index} className={styles.serviceCard}>
             <div className={styles.serviceIcon}>
               <FontAwesomeIcon icon={iconMapping[service.icon]} />
@@ -48,11 +49,17 @@ const ServicesSection = () => {
             <div className={styles.innerServiceCard}>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              {/* <a href={service.link} className={styles.readMore}>{services.buttonText}</a> */}
             </div>
           </div>
         ))}
       </div>
+      {!showAll && (
+  
+          <a href="/services" className={styles.ServicesMoreButton}>
+            View Our Services
+          </a>
+      
+      )}
     </section>
   );
 };

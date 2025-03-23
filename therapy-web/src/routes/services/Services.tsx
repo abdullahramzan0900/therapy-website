@@ -8,7 +8,7 @@ const Services = () => {
   return <>
 
    <HomeCareSection/>
-   <ServicesSection/>
+   <ServicesSection showAll={true}/>
    <GuidingPrinciples/>
    < JourneySection/>
 
