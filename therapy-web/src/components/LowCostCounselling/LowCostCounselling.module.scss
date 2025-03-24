@@ -1,134 +1,151 @@
+// Variables
+$primary-color: #6a11cb; // Gradient color 1
+$secondary-color: #2575fc; // Gradient color 2
+$glass-bg: rgba(255, 255, 255, 0.1); // Glass morphism background
+$shadow: 0 8px 32px rgba(0, 0, 0, 0.1); // Soft shadow
+$border-radius: 15px; // Rounded corners
+$highlight-color: #28a745; // Green color matching the logo
+$text-bg-color: white; // Background for normal text
+
+// Section Styling
 .lowCostCounselling {
-    background: linear-gradient(135deg, #e8f5e9, #f4f9f4);
-    border-radius: 12px;
-    // padding: 3rem;
-    margin: 4rem auto;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    // max-width: 800px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    }
-  
-    h2 {
-      font-size: 2rem;
-      color: #2f6b5f;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-      border-bottom: 3px solid #2f6b5f;
-    }
-  
-    .highlight {
-      font-size: 1.4rem;
-      color: #333;
-      font-weight: 600;
-      margin: 1.5rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      &::before {
-        content: "💙";
-        font-size: 1.7rem;
-        margin-right: 0.7rem;
-        color: #4b826b;
-      }
-    }
-  
-    .content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-    }
-  
+  padding: 6rem 0;
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .sectionIntro {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .contentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+
     .infoCard {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: white;
-      padding: 1.2rem 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      width: 100%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-      &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-      }
-  
-      .icon {
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, #4b826b, #3a6e58);
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        font-size: 1.5rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-  
-      .text {
-        text-align: left;
-  
-        h3 {
-          font-size: 1.3rem;
-          color: #2f6b5f;
-          font-weight: bold;
-          margin-bottom: 0.3rem;
-        }
-  
-        p {
-          font-size: 1.1rem;
-          color: #555;
-        }
-      }
-    }
-  
-    .cost {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #4b826b;
-      margin-top: 1rem;
-    }
-  
-    .button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background: linear-gradient(135deg, #4b826b, #3a6e58);
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: background 0.3s ease, transform 0.2s ease;
-  
-      &:hover {
-        background: #2f6b5f;
-        transform: scale(1.05);
-      }
-    }
-  
-    @media (max-width: 768px) {
+      background: $glass-bg;
+      backdrop-filter: blur(10px);
+      border-radius: $border-radius;
+      box-shadow: $shadow;
       padding: 2rem;
+      max-width: 300px;
       text-align: center;
-  
-      .infoCard {
-        flex-direction: column;
-        text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .cardIcon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .infoTitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      .infoList {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+          opacity: 0.9;
+          position: relative;
+          padding-left: 1.5rem;
+
+          &::before {
+            content: '•';
+            color: white;
+            position: absolute;
+            left: 0;
+          }
+        }
       }
     }
   }
-  
+
+  .learnMoreButton {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: white;
+    color: $primary-color;
+    text-decoration: none;
+    border-radius: $border-radius;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background: darken(white, 10%);
+      color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+// Styling for highlighted text
+.highlightedText {
+  background: $highlight-color;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 0; // Sharp edges
+}
+
+// Styling for normal text
+.normalText {
+  background: $text-bg-color;
+  color: black;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: $border-radius; // Rounded corners if needed
+}

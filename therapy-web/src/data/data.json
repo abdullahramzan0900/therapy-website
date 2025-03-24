@@ -24,6 +24,11 @@
             "path": "/privacy-policy",
             "component": "PrivacySection",
             "location": "./routes/PrivacySection/PrivacySection"
+          },
+          {
+            "path": "/low-cost-counselling",
+            "component": "LowCostCounselling",
+            "location": "./routes/LowCostCounselling/LowCostCounselling"
           }
  
     ],

@@ -3,6 +3,7 @@ import GoalsMissionVision from "../../components/GoalsMissionVision/GoalsMission
 import GuidingPrinciples from "../../components/GuidingPrinciples/GuidingPrinciples";
 import HomeCareSection from "../../components/HomeCareSection/HomeCareSection";
 import JourneySection from "../../components/JourneySection/JourneySection";
+import WhatWeOffer from "../../components/WhatWeOffer/WhatWeOffer";
 import "./AboutUs.scss";
 
 const AboutUs = () => {
@@ -10,6 +11,7 @@ const AboutUs = () => {
    <HomeCareSection/>
    <AboutSection/>
    <GoalsMissionVision/>
+   <WhatWeOffer/>
    <GuidingPrinciples/>
    <JourneySection/>
   </>
