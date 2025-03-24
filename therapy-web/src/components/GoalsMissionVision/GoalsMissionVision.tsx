@@ -37,7 +37,8 @@ const GoalsMissionVision: React.FC = () => {
 
   return (
     <div className={styles.missionContainer}>
-      <h2 className={styles.title}>Our mission is simple</h2>
+      <h2 className={styles.title}>Our mission is simple:</h2>
+      
 
       <div className={styles.missionGrid}>
         {missionData.map((item, index) => (
