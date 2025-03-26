@@ -1,33 +1,54 @@
+import React from "react";
 import styles from "./WhyChooseUs.module.scss";
-import { FaUserMd, FaDollarSign, FaLock, FaComments } from "react-icons/fa";
+import { FaUserTie, FaShieldAlt, FaHeart, FaUsers } from "react-icons/fa";
 
-const WhyChooseUs = () => {
-  const reasons = [
-    { icon: <FaUserMd />, title: "Professional & Compassionate", desc: "Offering personalized support." },
-    { icon: <FaDollarSign />, title: "Affordable & Flexible", desc: "Making therapy accessible to everyone." },
-    { icon: <FaLock />, title: "Online & Confidential", desc: "Speak with a therapist from home." },
-    { icon: <FaComments />, title: "Free Consultation", desc: "Get started with a free 15-minute consultation." }
-  ];
-
+const WhyChooseUs: React.FC = () => {
   return (
     <section className={styles.whyChooseUs}>
-      {/* Circular Main Heading */}
-      <div className={styles.circleContainer}>
-        <h2>WHY<br />CHOOSE<br />US?</h2>
-        <div className={styles.fadedCircle}></div>
-      </div>
-
-      {/* Right Side List */}
-      <div className={styles.reasonsList}>
-        {reasons.map((item, index) => (
-          <div key={index} className={styles.reason}>
-            <div className={styles.icon}>{item.icon}</div>
-            <div className={styles.text}>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+      <div className={styles.content}>
+        {/* Left Section - Large Image */}
+        <div className={styles.leftSection}>
+          <div className={styles.largeImage}>
+            <img src="https://placehold.co/500x500" alt="Consultation" />
+            <div className={styles.smallImage}>
+              <img src="https://placehold.co/150x150" alt="Small Consultation" />
             </div>
           </div>
-        ))}
+        </div>
+
+        {/* Right Section - Text and Benefits */}
+        <div className={styles.rightSection}>
+          <h5>WHY CHOOSE US</h5>
+          <h2>Trusted Care, Lasting Positive Change</h2>
+          <p>
+            With a commitment to compassionate, evidence-based care, we empower individuals to create
+            lasting positive change in their lives. Our team of experienced therapists provides:
+          </p>
+          <div className={styles.benefits}>
+            <div className={styles.benefit}>
+              <FaUserTie className={styles.icon} />
+              <span>Experienced Professionals</span>
+            </div>
+            <div className={styles.benefit}>
+              <FaShieldAlt className={styles.icon} />
+              <span>Safe & Confidential Environment</span>
+            </div>
+            <div className={styles.benefit}>
+              <FaHeart className={styles.icon} />
+              <span>Client-Centered Approach</span>
+            </div>
+            <div className={styles.benefit}>
+              <FaUsers className={styles.icon} />
+              <span>Commitment to Growth</span>
+            </div>
+          </div>
+          <div className={styles.bottomSection}>
+            <button className={styles.ctaButton}>Contact Us</button>
+          </div>
+     
+        </div>
+        
+        
       </div>
     </section>
   );

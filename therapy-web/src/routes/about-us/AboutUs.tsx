@@ -3,13 +3,13 @@ import GoalsMissionVision from "../../components/GoalsMissionVision/GoalsMission
 import GuidingPrinciples from "../../components/GuidingPrinciples/GuidingPrinciples";
 import HomeCareSection from "../../components/HomeCareSection/HomeCareSection";
 import JourneySection from "../../components/JourneySection/JourneySection";
+import WelcomeSection from "../../components/WelcomeSection/WelcomeAboutSection";
 import WhatWeOffer from "../../components/WhatWeOffer/WhatWeOffer";
 import "./AboutUs.scss";
 
 const AboutUs = () => {
   return <>
-   <HomeCareSection/>
-   <AboutSection/>
+   <WelcomeSection/>
    <GoalsMissionVision/>
    <WhatWeOffer/>
    <GuidingPrinciples/>

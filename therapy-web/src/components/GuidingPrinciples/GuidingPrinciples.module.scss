@@ -1,127 +1,124 @@
-.guidingPrinciples {
-    text-align: center;
-    padding: 50px 20px;
-    background:#fff7e8;
-  
+.therapyProcess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: #f9f9f9;
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Heading Section */
+  .heading {
+    margin-bottom: 40px;
+
+    span {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #6e6e6e;
+      letter-spacing: 1px;
+    }
+
     h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-      color: rgba(179, 114, 4, 0.9);
-    }
-  
-    .doctorImages {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      // margin-bottom: 40px;
-  
-      .leftDoctor,
-      .rightDoctor {
-        width: 250px;
-        height: auto;
-      }
-    }
-  
-    .principlesContainer {
-      display: flex;
-      justify-content: center;
-      // background: rgba(255, 160, 122, 0.1490196078);
-  
-      .principles {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        width: 100%;
-        padding: 20px;
-  
-        .principleCard {
-            background-color: #4a8e72;
-          padding: 30px;
-          border-radius: 20px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          text-align: center;
-          flex: 1;
-          transition: transform 0.3s ease;
-  
-          &:hover {
-            transform: translateY(-10px);
-          }
-  
-          .icon {
-            font-size: 50px;
-            // color: #00bfa5;
-            color: white;
-     
-            margin-bottom: 20px;
-          }
-  
-          h3 {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: white;
-          }
-          p {
-            font-size: 16px;
-            color: white;
-            line-height: 1.6;
-          }
-        }
-      }
-    }
-  
-    @media (max-width: 1024px) {
-      .doctorImages {
-        flex-direction: column;
-  
-        .leftDoctor
-       {
-          width: 200px;
-          margin-bottom: 20px;
-        }
-        .rightDoctor{
-          display: none;
-        }
-      }
-  
-      .principlesContainer .principles {
-        flex-direction: column;
-        gap: 30px;
-      }
-    }
-  
-    @media (max-width: 768px) {
-      h2 {
-        font-size: 30px;
-      }
-  
-      .doctorImages {
-        .leftDoctor,
-        .rightDoctor {
-          width: 150px;
-        }
-      }
-  
-      .principlesContainer .principles {
-        gap: 20px;
-      }
-    }
-  
-    @media (max-width: 480px) {
-      h2 {
-        font-size: 26px;
-      }
-  
-      .doctorImages {
-        .leftDoctor,
-        .rightDoctor {
-          width: 120px;
-        }
-      }
-  
-      .principlesContainer .principles {
-        gap: 20px;
-      }
+      font-size: 32px;
+      color: #222;
+      margin-top: 5px;
     }
   }
-  
+
+  /* Steps Section */
+  .steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 220px;
+    position: relative;
+  }
+
+  .stepNumber {
+    width: 70px;
+    height: 70px;
+    background: #9e9b85;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .stepContent {
+    h4 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #6e6e6e;
+    }
+  }
+
+  /* Dashed Line */
+  .dashedLine {
+    width: 80px;
+    height: 2px;
+    border-bottom: 2px dashed #9e9b85;
+  }
+
+  /* Contact Button */
+  .buttonWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+  }
+
+  .contactButton {
+    background: #9e9b85;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background: #7f7c66;
+    }
+  }
+  @media (max-width: 768px) {
+    .steps {
+      max-width: 100%;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dashedLine {
+      width: 60px;
+      height: 30px;
+    }
+    .heading{
+      text-align: center;
+    }
+    .buttonWrapper{
+      justify-content: center;
+    }
+  }
+
+}

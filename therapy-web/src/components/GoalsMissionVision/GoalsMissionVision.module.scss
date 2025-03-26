@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: stretch;
   gap: 30px;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 }
 
 .missionCard {
@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
 
   &:hover {
     transform: translateY(-5px);
@@ -96,19 +96,45 @@
 
 .arrow {
   position: absolute;
-  top: 50%;
-  right: -25px;
   width: 0;
   height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 12px solid #ccc; // Adjust color to match design
+  border-style: solid;
   transform: translateY(-50%);
 }
 
-@media (max-width: 768px) {
+// Default rightward arrow
+.arrowRight {
+  top: 50%;
+  right: -25px;
+  border-width: 8px 0 8px 12px;
+  border-color: transparent transparent transparent #ccc;
+}
+
+// Downward arrow for full-width cards
+.arrowDown {
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  border-width: 12px 8px 0 8px;
+  border-color: #ccc transparent transparent transparent;
+}
+// @media (max-width: 768px) {
+//   .missionGrid {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }
+
+@media (max-width: 1024px) {
+
   .missionGrid {
-    flex-direction: column;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: stretch;
+    // gap: 30px;
+    flex-wrap: wrap;
+  }
+  .missionCard{
+    width: 100%;
   }
 }

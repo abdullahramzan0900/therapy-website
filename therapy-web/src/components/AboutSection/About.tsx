@@ -1,43 +1,50 @@
-import styles from './About.module.scss';
-import image1 from '/assets/familytherapy.jpg';
-import data from '../../data/data.json'
+import React from "react";
+import styles from "./About.module.scss";
 
-const AboutSection = () => {
-  const {aboutUs}=data.components;
+const AboutSection: React.FC = () => {
   return (
-    <>
-      <section className={styles.aboutSection}>
-        <div className={styles.imageContainer}>
-          <img src={image1} alt="" className={styles.mainImage} />
-          <div className={styles.checkupTag}>
-          <p>{aboutUs.stats.tagline}</p>
-        </div>
-        <div className={styles.badge}>
-          <p><strong>{aboutUs.stats.patientsCount}</strong></p>
-        </div>
-      </div>
-      <div className={styles.textContainer}>
-          <h2>{aboutUs.title}</h2>
-          <p>{aboutUs.whoweare}</p>
-          <h4>{aboutUs.missionTitle}</h4>
-          <ul>
-            {aboutUs.missionValues.map((value) => (
-              <>
-                <strong> {value.title}</strong> – {value.description}
-              </>
-            ))}
-          </ul>
-          <div style={{
-            paddingTop:'14px'
-          }} >
+    <section className={styles.aboutContainer}>
+      <div className={styles.contentWrapper}>
+        {/* Left Side - Images and Reviews */}
+        <div className={styles.left}>
+          <div className={styles.reviewCard}>
+            <p>⭐⭐⭐⭐⭐</p>
+            <h4>Customer Review <strong>30,000</strong></h4>
+            <div className={styles.avatars}>
+              <img src="/avatars/avatar1.jpg" alt="User 1" />
+              <img src="/avatars/avatar2.jpg" alt="User 2" />
+              <img src="/avatars/avatar3.jpg" alt="User 3" />
+              <img src="/avatars/avatar4.jpg" alt="User 4" />
+              <div className={styles.more}>30K</div>
+            </div>
+          </div>
 
-        <a href="/about-us" className={styles.learnMoreButton}>Learn More</a>
+          <div className={styles.imageGrid}>
+            <img src="/images/therapy1.jpg" alt="Therapy Session 1" className={styles.largeImage} />
+            <img src="/images/therapy2.jpg" alt="Therapy Session 2" className={styles.smallImage} />
           </div>
         </div>
-      </section>
 
+        {/* Right Side - Content */}
+        <div className={styles.right}>
+          <h5>ABOUT US</h5>
+          <h2>About Nura Counselling</h2>
+          <p>
+            At Nura Counselling and Psychotherapy, we provide compassionate and professional 
+            online therapy, ensuring that mental health support is accessible to everyone. 
+            Our focus is on individual therapy, offering a safe, confidential space to help 
+            clients navigate anxiety, depression, bereavement, stress, and self-esteem challenges. 
+            With affordable pricing and low-cost counselling options, we are committed to making 
+            quality therapy available to those who need it most.
+          </p>
 
-    </>
+          <div className={styles.buttons}>
+            <button className={styles.primary}>Read More</button>
+            <button className={styles.secondary}>Get In Touch</button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

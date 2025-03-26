@@ -1,43 +1,60 @@
+import React from "react";
+import styles from "./GuidingPrinciples.module.scss";
 
-import styles from './GuidingPrinciples.module.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHandsHelping, faShieldAlt, faStar,faUniversalAccess,faUserShield,faChartLine } from '@fortawesome/free-solid-svg-icons';
-import data from '../../data/data.json'
-
-type Principle = {
-  icon: any;
-  title: string;
-  description: string;
-};
-
-const iconMapping: { [key in Principle['icon']]: any } = {
-  faHandsHelping,
-  faShieldAlt,
-  faStar,
-  faUniversalAccess,
-  faUserShield,
-  faChartLine
-};
-
-const GuidingPrinciples = () => {
-  const {guidingPrinciples}=data.components;
+const GuidingPrinciples: React.FC = () => {
   return (
-    <section className={styles.guidingPrinciples}>
-      <div className={styles.doctorImages}>
-      {/* <img src={guidingPrinciples.images.left} alt="Medical Team" className={styles.leftDoctor} /> */}
-        <h2>{guidingPrinciples.title}</h2>
-        {/* <img src={guidingPrinciples.images.right} alt="Medical Professional" className={styles.rightDoctor} /> */}
-      </div>
-      <div className={styles.principlesContainer}>
-        <div className={styles.principles}>
-     
-        {guidingPrinciples.principles.map((principle, index) => (
-            <div key={index} className={styles.principleCard}>
-              <FontAwesomeIcon icon={iconMapping[principle.icon]}className={styles.icon} />
-              <h3>{principle.title}</h3>
-              <p>{principle.description}</p>
+    <section className={styles.therapyProcess}>
+      <div className={styles.container}>
+        {/* Heading Section */}
+        <div className={styles.heading}>
+          <span>● HOW IT WORK</span>
+          <h2>Guiding You Our Therapy Process</h2>
+        </div>
+
+        {/* Steps Section */}
+        <div className={styles.steps}>
+          <div className={`${styles.step} ${styles.step1}`}>
+            <div className={styles.stepNumber}>01</div>
+            <div className={styles.stepContent}>
+              <h4>O1. Book Appointment</h4>
+              <p>Scheduling appointment with us is simple and</p>
             </div>
-          ))}
+          </div>
+
+          {/* <div className={styles.dashedLine}></div> */}
+
+          <div className={`${styles.step} ${styles.step2}`}>
+            <div className={styles.stepNumber}>02</div>
+            <div className={styles.stepContent}>
+              <h4>O2. Initial Consultation</h4>
+              <p>Scheduling appointment with us is simple and</p>
+            </div>
+          </div>
+
+          {/* <div className={styles.dashedLine}></div> */}
+
+          <div className={`${styles.step} ${styles.step3}`}>
+            <div className={styles.stepNumber}>03</div>
+            <div className={styles.stepContent}>
+              <h4>O3. Progress Check-Ins</h4>
+              <p>Scheduling appointment with us is simple and</p>
+            </div>
+          </div>
+{/* 
+          <div className={styles.dashedLine}></div> */}
+
+          <div className={`${styles.step} ${styles.step4}`}>
+            <div className={styles.stepNumber}>04</div>
+            <div className={styles.stepContent}>
+              <h4>O4. Ongoing Support</h4>
+              <p>Scheduling appointment with us is simple and</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Button */}
+        <div className={styles.buttonWrapper}>
+          <button className={styles.contactButton}>Contact Us</button>
         </div>
       </div>
     </section>

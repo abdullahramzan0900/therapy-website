@@ -1,67 +1,78 @@
-import styles from './ServiceSection.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faStethoscope, 
-  faUserNurse, 
-  faHeartbeat, 
-  faUserMd, 
-  faHandsHelping, 
-  faWheelchair, 
-  faUser, 
-  faLaptop, 
-  faUsers, 
-  faChild, 
-  faBrain, 
-  faComments
-} from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import data from '../../data/data.json';
+import React from "react";
+import Slider from "react-slick";
+import styles from "./ServiceSection.module.scss";
+import individualTherapy from "../../assets/individualtherapy.jpg";
+import lowcosttherapy from "../../assets/lowcosttherapyy.jpg";
+import freeconsulation from "../../assets/freeconsulation.png";
 
-const iconMapping: { [key: string]: any } = {
-  faStethoscope,
-  faUserNurse,
-  faHeartbeat,
-  faUserMd,
-  faHandsHelping,
-  faWheelchair,
-  faUser,
-  faLaptop,
-  faUsers,
-  faChild,
-  faBrain,
-  faComments
-};
+const services = [
+  { title: "personalized individual therapy", image: individualTherapy },
+  { title: "supportive couples counseling", image: lowcosttherapy },
+  { title: "youth and adolescent counseling", image: freeconsulation },
+  { title: "family counseling", image: lowcosttherapy },
+  { title: "grief support therapy", image: individualTherapy },
+  { title: "stress management", image: freeconsulation },
+];
 
-const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
-  const { services } = data.components;
-  const displayedServices = showAll ? services.services : services.services.slice(0, 2);
+const Services = ({ isCarousel = false }) => {
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
+    ],
+  };
 
   return (
     <section className={styles.servicesSection}>
-      <h2 className={styles.servicesHeading}>{services.heading}</h2>
-      <h3 className={styles.servicesSubHeading}>{services.subHeading}</h3>
-      <div className={styles.servicesGrid}>
-        {displayedServices.map((service, index) => (
-          <div key={index} className={styles.serviceCard}>
-            <div className={styles.serviceIcon}>
-              <FontAwesomeIcon icon={iconMapping[service.icon]} />
-            </div>
-            <div className={styles.innerServiceCard}>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </div>
+      <div className={styles.container}>
+        <p className={styles.subtitle}>● SERVICES</p>
+        <h2 className={styles.heading}>
+          Comprehensive services care <br /> for mind and wellness
+        </h2>
+
+        {isCarousel ? (
+          <Slider {...sliderSettings} className={styles.carousel}>
+            {services.map((service, index) => (
+              <div key={index} className={styles.serviceCard}>
+                <img src={service.image} alt={service.title} className={styles.image} />
+                <div className={styles.overlay}>
+                  <p>{service.title}</p>
+                  <a href="#" className={styles.readMore}>
+                    Read More →
+                  </a>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        ) : (
+          <div className={styles.servicesGrid}>
+            {services.map((service, index) => (
+              <div key={index} className={styles.serviceCard}>
+                <img src={service.image} alt={service.title} className={styles.image} />
+                <div className={styles.overlay}>
+                  <p>{service.title}</p>
+                  <a href="#" className={styles.readMore}>
+                    Read More →
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        )}
+
+        <div className={styles.buttonWrapper}>
+          <button className={styles.viewAllButton}>View All Services</button>
+        </div>
       </div>
-      {!showAll && (
-  
-          <a href="/services" className={styles.ServicesMoreButton}>
-            View Our Services
-          </a>
-      
-      )}
     </section>
   );
 };
 
-export default ServicesSection;
+export default Services;
