@@ -1,0 +1,130 @@
+.faqSection {
+    background: black;
+    color: white;
+    padding: 3rem 5%;
+    font-family: "Arial", sans-serif;
+  
+    .faqTitle {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+  
+    .faqContainer {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+  
+      @media (min-width: 1024px) {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+  
+    .faqList {
+      .faqItem {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 1rem 0;
+  
+        .faqQuestion {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1.2rem;
+          font-weight: 500;
+          background: transparent;
+          border: none;
+          color: white;
+          width: 100%;
+          text-align: left;
+          cursor: pointer;
+          padding: 0.5rem 0;
+  
+          .faqIcon {
+            transition: transform 0.3s ease;
+          }
+  
+          .faqIcon.open {
+            transform: rotate(45deg);
+          }
+        }
+  
+        .faqAnswer {
+          overflow: hidden;
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 1rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  
+    .contactBox {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+  
+      .avatars {
+        display: flex;
+        gap: -10px;
+  
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 2px solid white;
+        }
+      }
+  
+      .contactInfo {
+        .contactText {
+          font-size: 0.9rem;
+          color: rgba(255, 255, 255, 0.8);
+        }
+  
+        .phoneNumber {
+          display: flex;
+          align-items: center;
+          font-size: 1.2rem;
+          font-weight: bold;
+  
+          svg {
+            margin-right: 0.5rem;
+            color: #34d399;
+          }
+        }
+      }
+      .contactInfo {
+        .contactText {
+          font-size: 1rem;
+          font-weight: bold;
+        }
+  
+        .phoneNumber {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          font-size: 1rem;
+          margin: 5px 0;
+          color: #ffd700;
+        }
+  
+        .contactButton {
+          background: #ff9800;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 1rem;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background 0.3s ease-in-out;
+  
+          &:hover {
+            background: #e68900;
+          }
+        }
+      }
+    }
+  }

@@ -7,6 +7,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .subtitle {
@@ -31,10 +32,23 @@
 }
 
 .carousel {
-  .slick-slide {
-    display: flex;
-    justify-content: center;
+.slideWrapper {
+  padding: 0 30px; // Default spacing
+}
+
+// Responsive adjustments
+@media (max-width: 1024px) {
+  .slideWrapper {
+    padding: 0 10px;
   }
+}
+
+@media (max-width: 768px) {
+  .slideWrapper {
+    padding: 0 5px;
+  }
+}
+
 }
 
 .serviceCard {
@@ -84,7 +98,7 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   color: white;
   font-size: 18px;
   font-weight: bold;

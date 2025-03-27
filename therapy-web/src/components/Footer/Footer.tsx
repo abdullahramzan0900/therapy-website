@@ -1,96 +1,115 @@
-import styles from "./Footer.module.scss";
+import React from 'react';
+import styles from './Footer.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
   faTwitter,
-  faYoutube,
-  faLinkedinIn,
   faInstagram,
-  faPinterest,
-  faTiktok,
+  faLinkedinIn,
+  faYoutube
 } from "@fortawesome/free-brands-svg-icons";
-import data from '../../data/data.json';
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import footerlogo from '/assets/footer-logo.svg';
-
-const iconMap: Record<string, IconProp> = {
-  faFacebookF,
-  faTwitter,
-  faYoutube,
-  faLinkedinIn,
-  faInstagram,
-  faPinterest,
-  faTiktok
-};
-
+import { faPhone, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
-  const { footer } = data.components;
+  // Mock data structure similar to your JSON
+  const footerData = {
+    companyName: "Hipno",
+    tagline: "We're Here When You're Ready.",
+    contacts: [
+      { icon: faPhone, title: "Phone Number", value: "0761-8523-398" },
+      { icon: faEnvelope, title: "Email Address", value: "info@domainname.com" },
+      { icon: faMapMarkerAlt, title: "Location", value: "123 High Street LNI IAB United Kingdom" }
+    ],
+    community: {
+      heading: "Join Our Community",
+      text: "Join Us Today for Resources, Insight & Connection"
+    },
+    links: [
+      { name: "Home", path: "/" },
+      { name: "About Us", path: "/about" },
+      { name: "Services", path: "/services" },
+      { name: "Blog", path: "/blog" },
+      { name: "Contact Us", path: "/contact" }
+    ],
+    socialLinks: [
+      { icon: faFacebookF, url: "#" },
+      { icon: faTwitter, url: "#" },
+      { icon: faInstagram, url: "#" },
+      { icon: faLinkedinIn, url: "#" },
+      { icon: faYoutube, url: "#" }
+    ]
+  };
 
   return (
     <>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <div className={styles.company}>
-            <div className={styles.footerlogo}>
-              <img alt="logo" src={footerlogo} />
+          {/* Brand Section */}
+          <div className={styles.brandSection}>
+            <div className={styles.logo}>
+              <img src="" alt="Hipno Logo" />
             </div>
-            <ul>
-              {footer.companyLinks.map((link, index) => (
-                <li key={index}>
-                  <a href={link.path}>{link.name}</a>
+            <h2 className={styles.companyName}>{footerData.companyName}</h2>
+            <p className={styles.tagline}>{footerData.tagline}</p>
+            
+            <div className={styles.socialIcons}>
+              {footerData.socialLinks.map((social, index) => (
+                <a 
+                  key={index} 
+                  href={social.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label={social.icon.iconName}
+                >
+                  <FontAwesomeIcon icon={social.icon} />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className={styles.contactSection}>
+            <h3 className={styles.sectionTitle}>Contact Us</h3>
+            <ul className={styles.contactList}>
+              {footerData.contacts.map((contact, index) => (
+                <li key={index} className={styles.contactItem}>
+                  <FontAwesomeIcon icon={contact.icon} className={styles.contactIcon} />
+                  <div>
+                    <h4>{contact.title}</h4>
+                    <p>{contact.value}</p>
+                  </div>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className={styles.address}>
-            <h3>{footer.address.heading}</h3>
-            {footer.address.lines.map((line, index) => (
-              <p key={index}>{line}<br /></p>
-            ))}
-            <a
-              href={footer.address.mapLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {footer.address.mapLinkText}
-            </a>
-            <h4>{footer.address.inquiriesHeading}</h4>
-            <p>
-            <a className="phone" href={`tel:${footer.address.inquiries.phone}`}>{footer.address.inquiries.phone}</a>
-              <br /> <a href="mailto:info@ncptherapy.com?subject=Inquiry&body=Hello," rel="noopener noreferrer">
-  {footer.address.inquiries.email}
-</a>
-            </p>
-          </div>
+          {/* Community Section */}
+          {/* <div className={styles.communitySection}>
+            <h3 className={styles.sectionTitle}>{footerData.community.heading}</h3>
+            <p className={styles.communityText}>{footerData.community.text}</p>
+            <button className={styles.joinButton}>Join Now</button>
+          </div> */}
 
-          <div>
-            <div className={styles.social}>
-              <h3>{footer.social.heading}</h3>
-              <div className={styles.socialIcons}>
-                {footer.social.socialLinks.map((social, index) => (
-                  <a target="_blank" rel="noopener noreferrer" key={index} href={social.link}>
-                    <FontAwesomeIcon icon={iconMap[social.icon]} />
+          {/* Navigation Links */}
+          <div className={styles.linksSection}>
+            <h3 className={styles.sectionTitle}>Quick Links</h3>
+            <ul className={styles.navList}>
+              {footerData.links.map((link, index) => (
+                <li key={index}>
+                  <a href={link.path} className={styles.navLink}>
+                    {link.name}
                   </a>
-                ))}
-              </div>
-            </div>
+                </li>
+              ))}
+            </ul>
           </div>
+        </div>
+
+        {/* Copyright Section */}
+        <div className={styles.copyrightSection}>
+          <p>Copyright © {new Date().getFullYear()} Hipno. All Rights Reserved.</p>
+          <a href="/privacy-policy" className={styles.privacyLink}>Privacy Policy</a>
         </div>
       </footer>
-
-      {/* Bottom Footer with Privacy Policy Link and Copyright Notice */}
-      <div className={styles.bottomFotter}>
-   
-        <div className={styles.bottomFooterContent}>
-          <h3 className={styles.privacyLink}>
-            <a href="/privacy-policy">Privacy Policy</a>
-          </h3>
-          <p className={styles.copyright}>
-            © {new Date().getFullYear()} Nova Counselling & Psychotherapy. All Rights Reserved.
-          </p>
-        </div>
-      </div>
     </>
   );
 };

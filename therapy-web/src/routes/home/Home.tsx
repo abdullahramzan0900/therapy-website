@@ -7,6 +7,8 @@ import Testimonials from "../../components/Testimonials/Testimonials";
 import JourneySection from "../../components/JourneySection/JourneySection";
 import WhyChooseUs from "../../components/whychooseus/whychooseus";
 import LowCostCounselling from "../../components/LowCostCounselling/LowCostCounselling";
+import FAQSection from "../../components/FAQSection/FAQSection";
+import AppointmentForm from "../../components/AppointmentForm/AppointmentForm";
 
 
 const Home = () => {
@@ -15,10 +17,12 @@ const Home = () => {
 <HomeCareSection/>
 <AboutSection/>
 <GuidingPrinciples/>
-<ServicesSection showAll={false}/>
+<ServicesSection isCarousel ={true}/>
 <WhyChooseUs/>
 <LowCostCounselling/>
 <Testimonials/>
+<FAQSection/>
+<AppointmentForm/>
 <JourneySection/>
 
   </>;

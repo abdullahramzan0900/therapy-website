@@ -14,7 +14,7 @@ const services = [
   { title: "stress management", image: freeconsulation },
 ];
 
-const Services = ({ isCarousel = false }) => {
+const Services = ({ isCarousel  }) => {
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -28,6 +28,7 @@ const Services = ({ isCarousel = false }) => {
       { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   };
+  
 
   return (
     <section className={styles.servicesSection}>
@@ -39,18 +40,21 @@ const Services = ({ isCarousel = false }) => {
 
         {isCarousel ? (
           <Slider {...sliderSettings} className={styles.carousel}>
-            {services.map((service, index) => (
-              <div key={index} className={styles.serviceCard}>
-                <img src={service.image} alt={service.title} className={styles.image} />
-                <div className={styles.overlay}>
-                  <p>{service.title}</p>
-                  <a href="#" className={styles.readMore}>
-                    Read More →
-                  </a>
-                </div>
-              </div>
-            ))}
-          </Slider>
+  {services.map((service, index) => (
+    <div key={index} className={styles.slideWrapper}>
+      <div className={styles.serviceCard}>
+        <img src={service.image} alt={service.title} className={styles.image} />
+        <div className={styles.overlay}>
+          <p>{service.title}</p>
+          <a href="#" className={styles.readMore}>
+            Read More →
+          </a>
+        </div>
+      </div>
+    </div>
+  ))}
+</Slider>
+
         ) : (
           <div className={styles.servicesGrid}>
             {services.map((service, index) => (

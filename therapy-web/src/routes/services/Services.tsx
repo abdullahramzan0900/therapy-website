@@ -1,3 +1,4 @@
+import AppointmentForm from "../../components/AppointmentForm/AppointmentForm";
 import GuidingPrinciples from "../../components/GuidingPrinciples/GuidingPrinciples";
 import HomeCareSection from "../../components/HomeCareSection/HomeCareSection";
 import JourneySection from "../../components/JourneySection/JourneySection";
@@ -8,8 +9,9 @@ const Services = () => {
   return <>
 
    <HomeCareSection/>
-   <ServicesSection showAll={true}/>
+   <ServicesSection isCarousel ={false}/>
    <GuidingPrinciples/>
+   <AppointmentForm/> 
    < JourneySection/>
 
   </>

@@ -1,4 +1,5 @@
 import AboutSection from "../../components/AboutSection/About";
+import AppointmentForm from "../../components/AppointmentForm/AppointmentForm";
 import GoalsMissionVision from "../../components/GoalsMissionVision/GoalsMissionVision";
 import GuidingPrinciples from "../../components/GuidingPrinciples/GuidingPrinciples";
 import HomeCareSection from "../../components/HomeCareSection/HomeCareSection";
@@ -13,6 +14,7 @@ const AboutUs = () => {
    <GoalsMissionVision/>
    <WhatWeOffer/>
    <GuidingPrinciples/>
+   <AppointmentForm/>
    <JourneySection/>
   </>
 };

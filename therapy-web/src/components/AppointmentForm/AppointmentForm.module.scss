@@ -1,0 +1,195 @@
+$primary-color: #606040;
+$background-light: #f8f8f8;
+$text-dark: #333;
+$text-light: #666;
+$border-color: #ddd;
+$button-hover: #4d4d33;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: $background-light;
+  padding: 40px 20px; // Adjust padding for smaller screens
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 50px;
+  max-width: 1200px;
+  width: 100%;
+  
+  @media (max-width: 1024px) {
+    flex-direction: column; // Stack sections on smaller screens
+    padding: 40px;
+  }
+}
+
+.formSection {
+  flex: 2;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: $text-dark;
+}
+
+.subtitle {
+  color: $text-light;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.inputGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Single column on mobile
+  }
+}
+
+.inputField {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  font-size: 16px;
+  color: $text-dark;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+
+.dateWrapper {
+  position: relative;
+}
+
+.calendarIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $text-light;
+}
+
+.bookButton {
+  margin-top: 25px;
+  width: 100%;
+  padding: 16px;
+  background: $primary-color;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: $button-hover;
+  }
+}
+
+.contactSection {
+  flex: 1;
+  background: $background-light;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    flex: unset;
+    width: 100%;
+  }
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.icon {
+  color: $text-dark;
+}
+
+.label {
+  font-size: 16px;
+  color: $text-light;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: bold;
+  color: $text-dark;
+}
+
+.note {
+  font-size: 14px;
+  color: $text-light;
+}
+
+.hoursIcon {
+  width: 45px;
+  height: 45px;
+  background: $primary-color;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .formWrapper {
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .bookButton {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .inputField {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .bookButton {
+    font-size: 14px;
+    padding: 12px;
+  }
+}

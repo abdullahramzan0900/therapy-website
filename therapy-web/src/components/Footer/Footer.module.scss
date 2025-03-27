@@ -1,198 +1,340 @@
+// Variables
+$primary-color: #6c5ce7;
+$secondary-color: #a29bfe;
+$text-color: #2d3436;
+$light-text: #636e72;
+$background: #f5f6fa;
+$white: #ffffff;
+$hover-color: #00cec9;
+
 .footer {
-  padding: 40px 20px;
-    background: #fff7e857;
-  display: flex;
-  justify-content: center;
+  background-color: darken($background, 5%);
+  color: $text-color;
+  padding: 3rem 0 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
 
-  .footerContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, $primary-color, $hover-color);
   }
+}
 
-  .footerlogo {
-    width: 110px;
-    height: auto;
-  }
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
 
-  h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #333;
-  }
-
-  p {
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #666;
-  }
-
-  a {
-    text-decoration: none;
-    color: #0073e6;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: #005bb5;
+// Brand Section
+.brandSection {
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
-  .company {
-    flex: 1;
+  .companyName {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: $primary-color;
+    position: relative;
+    display: inline-block;
 
-    ul {
-      list-style: none;
-      padding: 0;
-
-      li {
-        margin-bottom: 10px;
-
-        a {
-          font-size: 14px;
-          color: rgba(179, 114, 4, 0.9);
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: $hover-color;
+      border-radius: 3px;
     }
   }
 
-  .address {
-    flex: 1;
-
-    p {
-      margin-bottom: 5px;
-      color: rgba(179, 114, 4, 0.9)
-      
-    }
-    a{
-      color: rgba(179, 114, 4, 0.9)
-    }
-
-    h4 {
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
+  .tagline {
+    font-size: 1rem;
+    color: $light-text;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
   }
 
-  .newsletter {
-    flex: 1;
+  .socialIcons {
+    display: flex;
+    gap: 1rem;
 
-    .newsletterInput {
+    a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: $white;
+      color: $primary-color;
       display: flex;
       align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-      input {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 30px;
-        width: 70%;
-        margin-right: 10px;
+      &:hover {
+        background: $primary-color;
+        color: $white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba($primary-color, 0.3);
       }
 
-      button {
-        background-color: #0073e6;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        i {
-          font-size: 16px;
-        }
-
-        &:hover {
-          background-color: #005bb5;
-        }
-      }
-    }
-  }
-
-  .social {
-    flex: 1;
-
-    .socialIcons {
-      display: flex;
-      gap: 10px;
-
-      a {
-        font-size: 18px;
-        color: #4A8E72;
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: rgb(74, 142, 114);
-        }
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .footerContent {
-      flex-direction: column;
-      align-items: flex-start;
-
-      .company,
-      .address,
-      .newsletter,
-      .social {
-        margin-bottom: 20px;
-        width: 100%;
+      svg {
+        width: 16px;
+        height: 16px;
       }
     }
   }
 }
 
-.bottomFotter {
-  height: auto; // Changed from fixed height to auto for flexibility
-  width: 100%;
-  background: rgb(179 114 4 / 52%);
-  color: white;
-  text-align: center;
-  padding: 15px 20px; // Added padding for better spacing
+// Common Section Styles
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  color: $primary-color;
 
-  .divider {
-    border: 0;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.3); // Subtle horizontal line
-    margin: 10px auto;
-    max-width: 800px;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: $hover-color;
   }
+}
 
-  .bottomFooterContent {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
+// Contact Section
+.contactSection {
+  .contactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-  .privacyLink {
-    font-size: 16px;
-    color: white;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      font-weight: bolder;
+    .contactItem {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
 
       &:hover {
-        text-decoration: underline;
+        transform: translateX(5px);
+        
+        .contactIcon {
+          color: $hover-color;
+        }
+      }
+
+      .contactIcon {
+        color: $primary-color;
+        font-size: 1.2rem;
+        margin-top: 0.2rem;
+        transition: color 0.3s ease;
+      }
+
+      h4 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        color: $light-text;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: $text-color;
+        line-height: 1.5;
+        margin: 0;
       }
     }
   }
+}
 
-  .copyright {
-    font-size:16px;
-    color: rgba(255, 255, 255, 0.8); // Slightly lighter shade
+// Community Section
+.communitySection {
+  .communityText {
+    font-size: 0.95rem;
+    color: $text-color;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .joinButton {
+    background: $primary-color;
+    color: $white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba($primary-color, 0.2);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba($white, 0.2), transparent);
+      transition: 0.5s;
+    }
+
+    &:hover {
+      background: darken($primary-color, 5%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba($primary-color, 0.3);
+
+      &::before {
+        left: 100%;
+      }
+    }
+  }
+}
+
+// Links Section
+.linksSection {
+  .navList {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    font-weight: bolder;
+    display:flex;
+    gap:20px;
+
+    li {
+      margin-bottom: 0.8rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .navLink {
+      color: $text-color;
+      text-decoration: none;
+      font-size: 0.95rem;
+      position: relative;
+      padding-bottom: 3px;
+      transition: color 0.3s ease;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $hover-color;
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        color: $primary-color;
+
+        &::before {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+// Copyright Section
+.copyrightSection {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  background: darken($background, 10%);
+  text-align: center;
+  font-size: 0.85rem;
+  color: $light-text;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+
+  .privacyLink {
+    color: $light-text;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .brandSection, 
+  .contactSection,
+  .communitySection,
+  .linksSection {
+    text-align: center;
+  }
+
+  .brandSection {
+    .companyName::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .socialIcons {
+      justify-content: center;
+    }
+  }
+
+  .sectionTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .contactSection {
+    .contactItem {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .navList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 }
