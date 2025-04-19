@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./About.module.scss";
+import buttonstyles from '../../components/styles/button.module.scss'
 
 const AboutSection: React.FC = () => {
   return (
@@ -39,8 +40,8 @@ const AboutSection: React.FC = () => {
           </p>
 
           <div className={styles.buttons}>
-            <button className={styles.primary}>Read More</button>
-            <button className={styles.secondary}>Get In Touch</button>
+            <button className={buttonstyles.primary}>Read More</button>
+            <button className={buttonstyles.secondary}>Get In Touch</button>
           </div>
         </div>
       </div>

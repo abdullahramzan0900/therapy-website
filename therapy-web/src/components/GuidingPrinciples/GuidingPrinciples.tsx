@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./GuidingPrinciples.module.scss";
+import buttonstyles from '../../components/styles/button.module.scss'
 
 const GuidingPrinciples: React.FC = () => {
   return (
@@ -54,7 +55,7 @@ const GuidingPrinciples: React.FC = () => {
 
         {/* Contact Button */}
         <div className={styles.buttonWrapper}>
-          <button className={styles.contactButton}>Contact Us</button>
+          <button className={buttonstyles.primary }>Contact Us</button>
         </div>
       </div>
     </section>

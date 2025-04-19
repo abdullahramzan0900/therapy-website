@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./WhyChooseUs.module.scss";
 import { FaUserTie, FaShieldAlt, FaHeart, FaUsers } from "react-icons/fa";
+import buttonstyles from '../../components/styles/button.module.scss'
 
 const WhyChooseUs: React.FC = () => {
   return (
@@ -43,7 +44,7 @@ const WhyChooseUs: React.FC = () => {
             </div>
           </div>
           <div className={styles.bottomSection}>
-            <button className={styles.ctaButton}>Contact Us</button>
+            <button className={buttonstyles.primary}>Contact Us</button>
           </div>
      
         </div>

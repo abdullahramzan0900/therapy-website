@@ -4,6 +4,7 @@ import styles from "./ServiceSection.module.scss";
 import individualTherapy from "../../assets/individualtherapy.jpg";
 import lowcosttherapy from "../../assets/lowcosttherapyy.jpg";
 import freeconsulation from "../../assets/freeconsulation.png";
+import buttonstyles from '../../components/styles/button.module.scss'
 
 const services = [
   { title: "personalized individual therapy", image: individualTherapy },
@@ -72,7 +73,7 @@ const Services = ({ isCarousel  }) => {
         )}
 
         <div className={styles.buttonWrapper}>
-          <button className={styles.viewAllButton}>View All Services</button>
+          <button className={buttonstyles.primary}>View All Services</button>
         </div>
       </div>
     </section>
