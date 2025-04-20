@@ -1,7 +1,7 @@
 import styles from "./Contact.module.scss";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Import styles
+import "react-toastify/dist/ReactToastify.css";
 import ThankYou from "../../components/ThankYouMessage/ThankYou";
 
 const ContactUs = () => {
@@ -11,11 +11,11 @@ const ContactUs = () => {
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [messageResponse, setMessageResponse] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // Loader state
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true); // Start loading
+    setIsLoading(true);
 
     const reqBody = {
       content: {
@@ -30,9 +30,7 @@ const ContactUs = () => {
     try {
       const response = await fetch("https://ncptherapyback.netlify.app/.netlify/functions/server/send-email", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(reqBody),
       });
 
@@ -41,47 +39,43 @@ const ContactUs = () => {
         setMessageResponse(data.success);
         setIsSubmitted(true);
       } else {
-        toast.error("Failed to send message. Please try again later.", {
-          position: "top-left",
-          icon: false, // Remove default cross icon
-          className: "custom-toast",
-        });
+        toast.error("Failed to send message. Please try again later.");
       }
     } catch (err) {
-      console.error("Error sending email:", err);
-      toast.error("An error occurred. Please try again later.", {
-        position: "top-left",
-        icon: false,
-        className: "custom-toast",
-      });
+      console.error("Error:", err);
+      toast.error("Something went wrong. Please try again.");
     } finally {
-      setIsLoading(false); // Stop loading
+      setIsLoading(false);
     }
   };
 
   return (
     <>
-      <ToastContainer /> 
+      <ToastContainer />
       <section className={styles.contactMain}>
-        <div className={styles.contatctSection}>
-          <div className={styles.content}>
+        <div className={styles.contactContainer}>
+          <div className={styles.leftSection}>
+            <h3>Contact Information</h3>
+            <p><strong>Phone:</strong> +44 123 456 789</p>
+            <p><strong>Email:</strong> therapycenter@example.com</p>
+            <p>Reach out to us to schedule your session or ask any questions.</p>
+          </div>
+          <div className={styles.rightSection}>
             {isSubmitted ? (
               <ThankYou message={messageResponse} />
             ) : (
-              <div>
-                <h3>Contact Us</h3>
-                <form onSubmit={handleSubmit}>
+              <>
+                <h2 className={styles.heading}>Book Your Appointment</h2>
+                <form onSubmit={handleSubmit} className={styles.form}>
                   <div>
                     <label htmlFor="name">Name</label>
                     <input
                       type="text"
                       id="name"
-                      placeholder="Name"
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      maxLength={100}
-                      className={styles.inputField}
+                      placeholder="Your Name"
                     />
                   </div>
 
@@ -89,46 +83,44 @@ const ContactUs = () => {
                     <label htmlFor="email">Email</label>
                     <input
                       type="email"
-                      required
-                      placeholder="Email"
                       id="email"
+                      required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone">Phone</label>
-                    <input
-                      type="number"
-                      id="phone"
-                      placeholder="Phone"
-                      value={phone}
-                      required
-                      onChange={(e) => setPhone(e.target.value)}
-                      className={styles.inputField}
+                      placeholder="you@example.com"
                     />
                   </div>
 
                   <div>
-                    <label>⁠Reason for Therapy</label>
-                    <textarea
-                      id="textarea"
+                    <label htmlFor="phone">Phone</label>
+                    <input
+                      type="text"
+                      id="phone"
                       required
-                      placeholder="Message"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      placeholder="+44 123 456 789"
+                    />
+                  </div>
+
+                  <div className={styles.fullWidth}>
+                    <label htmlFor="message">Reason for Therapy</label>
+                    <textarea
+                      id="message"
+                      required
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      className={styles.inputField}
+                      placeholder="Tell us about your reason for booking..."
                     />
                   </div>
 
                   <div className={styles.formActions}>
-                    <button type="submit" className={styles.submitButton} disabled={isLoading}>
-                      {isLoading ? "Submitting..." : "Submit"} {/* Show loader text */}
+                    <button type="submit" disabled={isLoading}>
+                      {isLoading ? "Submitting..." : "Submit"}
                     </button>
                   </div>
                 </form>
-              </div>
+              </>
             )}
           </div>
         </div>

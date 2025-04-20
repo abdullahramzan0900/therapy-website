@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './LowCostCounselling.module.scss'; // Import SCSS module
+import buttonstyles from '../../components/styles/button.module.scss'; // Import button styles
 
 const LowCostCounselling: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const LowCostCounselling: React.FC = () => {
         <div className={styles.contentWrapper}>
           {/* What is Low-Cost Counselling? */}
           <div className={styles.infoCard}>
-            <div className={styles.cardIcon}>💙</div>
+            <div className={styles.cardIcon}>💚</div>
             <h3 className={styles.infoTitle}>What is Low-Cost Counselling?</h3>
             <ul className={styles.infoList}>
               <li>Sessions provided by trainee counsellors under professional supervision.</li>
@@ -23,7 +24,7 @@ const LowCostCounselling: React.FC = () => {
 
           {/* Who Can Access It? */}
           <div className={styles.infoCard}>
-            <div className={styles.cardIcon}>💙</div>
+            <div className={styles.cardIcon}>💚</div>
             <h3 className={styles.infoTitle}>Who Can Access It?</h3>
             <ul className={styles.infoList}>
               <li>Individuals on a low income or receiving benefits.</li>
@@ -34,7 +35,7 @@ const LowCostCounselling: React.FC = () => {
 
           {/* How Much Does It Cost? */}
           <div className={styles.infoCard}>
-            <div className={styles.cardIcon}>💙</div>
+            <div className={styles.cardIcon}>💚</div>
             <h3 className={styles.infoTitle}>How Much Does It Cost?</h3>
             <ul className={styles.infoList}>
               <li>First Consultation: Free / Discounted</li>
@@ -44,8 +45,10 @@ const LowCostCounselling: React.FC = () => {
         </div>
 
         {/* Button */}
-        <a href="/low-cost-counselling" className={styles.learnMoreButton}>
-          Learn More About Low-Cost Counselling
+        <a style={{
+          textDecoration:'none'
+        }} href="/low-cost-counselling" className={buttonstyles.primary}>
+          Learn More
         </a>
       </div>
     </section>

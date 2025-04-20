@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CalendarIcon, PhoneCall } from "lucide-react";
 import styles from "./AppointmentForm.module.scss";
+import buttonstyles from '.././styles/button.module.scss'
 
 export default function AppointmentForm() {
   const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ export default function AppointmentForm() {
     date: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -28,22 +29,20 @@ export default function AppointmentForm() {
 
           <div className={styles.inputGrid}>
             <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} className={styles.inputField} />
-            <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} className={styles.inputField} />
             <input type="email" name="email" placeholder="Email Address" value={formData.email} onChange={handleChange} className={styles.inputField} />
-            <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className={styles.inputField} />
-            <select name="service" value={formData.service} onChange={handleChange} className={styles.inputField}>
-              <option value="">— Please choose an option</option>
-              <option value="plumbing">Plumbing</option>
-              <option value="electrical">Electrical</option>
-              <option value="carpentry">Carpentry</option>
-            </select>
             <div className={styles.dateWrapper}>
               <input type="date" name="date" value={formData.date} onChange={handleChange} className={styles.inputField} />
               <CalendarIcon className={styles.calendarIcon} size={18} />
             </div>
+            <div>
+
+              <input type=" " name="service" placeholder="Service Required" value={formData.service} onChange={handleChange} className={styles.inputField} />
+            </div>
           </div>
 
-          <button className={styles.bookButton}>Book An Appointment</button>
+          <button style={{
+            marginTop:'15px'
+          }} className={buttonstyles.primary}>Book An Appointment</button>
         </div>
 
         {/* Contact Info Section */}
@@ -52,7 +51,7 @@ export default function AppointmentForm() {
             <PhoneCall size={24} className={styles.icon} />
             <div>
               <p className={styles.label}>Customer Services</p>
-              <p className={styles.value}>+91 - 123 456 7890</p>
+              <p className={styles.value}>07984628017</p>
             </div>
           </div>
 

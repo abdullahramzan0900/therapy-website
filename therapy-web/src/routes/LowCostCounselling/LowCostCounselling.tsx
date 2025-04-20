@@ -1,74 +1,94 @@
-
-import styles from "./LowCostCounselling.module.scss";
-import { FaArrowRight } from "react-icons/fa";
-import { FaLaptop, FaClock, FaPoundSign, FaComments } from "react-icons/fa";
+import React from 'react';
+import styles from './LowCostCounselling.module.scss';
+import { FaCheckCircle, FaMoneyBillWave, FaUserCheck, FaComments } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const LowCostCounselling: React.FC = () => {
   return (
-    <div className={styles.lowCostContainer}>
-      <div className={styles.heroSection}>
-        <h1>Low-Cost Counselling</h1>
-        <p>
-          We understand that therapy can be a financial commitment, and we want
-          to ensure that everyone has access to mental health support,
-          regardless of their circumstances.
+    <section className={styles.lowCostWrapper}>
+      <div className={styles.container}>
+        <h1>Low-Cost Counselling at <span>Nura Counselling and Psychotherapy</span></h1>
+        <p className={styles.intro}>
+          At Nura, we believe that everyone deserves access to mental health support, regardless of financial circumstances.
+          Our low-cost counselling ensures professional therapy is accessible to those who need it most.
         </p>
-      </div>
-      <div className={styles.infoSection}>
-        <p>
-          Our low-cost counselling service is available for individuals who may
-          find private therapy unaffordable. These sessions are provided by
-          trainee counsellors under professional supervision and are ideal for
-          those looking for support at a reduced cost.
-        </p>
-        <a href="/low-cost-counselling" className={styles.learnMoreBtn}>
-          Learn More About Low-Cost Counselling <FaArrowRight />
-        </a>
-      </div>
-      <div className={styles.sessionSection}>
-        <h2>How Our Sessions Work</h2>
-        <div className={styles.sessionItem}>
-          <FaLaptop className={styles.icon} />
-          <h3>Online Therapy Sessions</h3>
+
+        <section className={styles.block}>
+          <h2>🧠 What is Low-Cost Counselling?</h2>
           <p>
-            All our sessions are conducted online, allowing you to access
-            support from the comfort and privacy of your own home. This means
-            no travel time, flexible scheduling, and a more comfortable
-            environment for you to open up.
+            Sessions are delivered by trainee counsellors in the final stages of their training, under strict clinical supervision.
+            You’ll receive safe, confidential, and supportive therapy at an affordable price.
           </p>
-        </div>
-        <div className={styles.sessionItem}>
-          <FaClock className={styles.icon} />
-          <h3>Session Length & Frequency</h3>
+          <Link to="/contact" className={styles.button}>🡲 Apply for Low-Cost Counselling</Link>
+        </section>
+
+        <section className={styles.block}>
+          <h2>👥 Who is it for?</h2>
+          <ul className={styles.checkList}>
+            <li><FaCheckCircle /> Low-income individuals or those receiving benefits</li>
+            <li><FaCheckCircle /> Students or young adults</li>
+            <li><FaCheckCircle /> Those facing financial hardship</li>
+            <li><FaCheckCircle /> Anyone who can’t afford private counselling rates</li>
+          </ul>
+          <Link to="/contact-us" className={styles.button}>🡲 Contact Us</Link>
+        </section>
+
+        <section className={styles.block}>
+          <h2>📌 What to Expect</h2>
+          <div className={styles.featuresGrid}>
+            <div>
+              <FaUserCheck className={styles.icon} />
+              <h4>Professional Support</h4>
+              <p>Delivered by trainee counsellors under professional supervision.</p>
+            </div>
+            <div>
+              <FaComments className={styles.icon} />
+              <h4>Safe & Confidential</h4>
+              <p>Non-judgemental sessions in a secure and private setting.</p>
+            </div>
+            <div>
+              <FaComments className={styles.icon} />
+              <h4>Online Convenience</h4>
+              <p>No travel needed — access therapy from your own space.</p>
+            </div>
+            <div>
+              <FaComments className={styles.icon} />
+              <h4>Tailored to You</h4>
+              <p>Anxiety, depression, grief, transitions, and more — we support it all.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.block}>
+          <h2><FaMoneyBillWave /> How Much Does It Cost?</h2>
           <p>
-            • Sessions typically last 50 minutes.<br />• Weekly or fortnightly
-            sessions are available, depending on your needs.
+            Our low-cost sessions start from <strong>[£X per session]</strong>. We offer a sliding scale based on financial need — please contact us for details.
+            We believe no one should be turned away due to cost.
           </p>
-        </div>
-        <div className={styles.sessionItem}>
-          <FaPoundSign className={styles.icon} />
-          <h3>Costs & Pricing</h3>
-          <p>
-            We offer affordable standard pricing as well as low-cost therapy
-            options for those who need financial support.
-          </p>
-        </div>
+        </section>
+
+        <section className={styles.block}>
+          <h2>📝 How to Apply</h2>
+          <ol className={styles.stepList}>
+            <li>Fill out our enquiry form</li>
+            <li>We’ll contact you to discuss your needs</li>
+            <li>Book your first session with a matched counsellor</li>
+          </ol>
+          <Link to="/contact" className={styles.button}>🡲 Apply Now</Link>
+        </section>
+
+        <section className={styles.block}>
+          <h2>🌿 Why Choose Nura?</h2>
+          <ul className={styles.checkList}>
+            <li><FaCheckCircle /> Affordable and accessible therapy</li>
+            <li><FaCheckCircle /> Caring trainee counsellors under supervision</li>
+            <li><FaCheckCircle /> Flexible online sessions</li>
+            <li><FaCheckCircle /> Confidential and safe space</li>
+            <li><FaCheckCircle /> Committed to inclusive care for all</li>
+          </ul>
+        </section>
       </div>
-      <div className={styles.ctaSection}>
-        <h2>Take the First Step Towards Your Well-Being</h2>
-        <p>
-          If you’re feeling overwhelmed, anxious, or stuck, you don’t have to
-          go through it alone. Therapy can help you gain clarity, develop
-          coping strategies, and build emotional resilience.
-        </p>
-        <a href="/book-consultation" className={styles.ctaBtn}>
-          Book a Free Consultation <FaArrowRight />
-        </a>
-        <a href="/contact" className={styles.ctaBtn}>
-          Contact Us for More Information <FaComments />
-        </a>
-      </div>
-    </div>
+    </section>
   );
 };
 

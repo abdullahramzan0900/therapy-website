@@ -1,23 +1,18 @@
-import React from 'react';
 import styles from './Footer.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebookF,
-  faTwitter,
   faInstagram,
   faLinkedinIn,
-  faYoutube
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
-  // Mock data structure similar to your JSON
   const footerData = {
-    companyName: "Hipno",
+    companyName: "Nora counselling and Psychotherapy",
     tagline: "We're Here When You're Ready.",
     contacts: [
-      { icon: faPhone, title: "Phone Number", value: "0761-8523-398" },
-      { icon: faEnvelope, title: "Email Address", value: "info@domainname.com" },
-      { icon: faMapMarkerAlt, title: "Location", value: "123 High Street LNI IAB United Kingdom" }
+      { icon: faPhone, title: "Phone Number", value: "0798-4628-017" },
+      { icon: faEnvelope, title: "Email Address", value: "info@ncptherapy.com" },
+      { icon: faMapMarkerAlt, title: "Location", value: "London, United Kingdom" }
     ],
     community: {
       heading: "Join Our Community",
@@ -27,15 +22,11 @@ const Footer = () => {
       { name: "Home", path: "/" },
       { name: "About Us", path: "/about" },
       { name: "Services", path: "/services" },
-      { name: "Blog", path: "/blog" },
       { name: "Contact Us", path: "/contact" }
     ],
     socialLinks: [
-      { icon: faFacebookF, url: "#" },
-      { icon: faTwitter, url: "#" },
       { icon: faInstagram, url: "#" },
-      { icon: faLinkedinIn, url: "#" },
-      { icon: faYoutube, url: "#" }
+      { icon: faLinkedinIn, url: "#" }
     ]
   };
 
@@ -46,7 +37,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className={styles.brandSection}>
             <div className={styles.logo}>
-              <img src="" alt="Hipno Logo" />
+              <img src="" alt="image" />
             </div>
             <h2 className={styles.companyName}>{footerData.companyName}</h2>
             <p className={styles.tagline}>{footerData.tagline}</p>
@@ -106,7 +97,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className={styles.copyrightSection}>
-          <p>Copyright © {new Date().getFullYear()} Hipno. All Rights Reserved.</p>
+          <p>Copyright © {new Date().getFullYear()} Nora counselling and Psychotherapy. All Rights Reserved.</p>
           <a href="/privacy-policy" className={styles.privacyLink}>Privacy Policy</a>
         </div>
       </footer>

@@ -23,7 +23,7 @@ const WelcomeSection: React.FC = () => {
         <p className={styles.highlight}>
           Our focus is on <strong>affordable therapy</strong>, offering both standard counselling
           and a low-cost counselling service to make professional support available
-          to those who need it most.
+          to those who need it most. 
         </p>
 
         <div className={styles.features}>

@@ -1,6 +1,6 @@
-import React from "react";
 import styles from "./WhatWeOffer.module.scss";
 import { FaUser, FaHandHoldingHeart, FaBrain, FaHeart, FaLeaf, FaLifeRing } from "react-icons/fa";
+import buttonStyles from '.././styles/button.module.scss'
 
 const WhatWeOffer = () => {
   return (
@@ -25,7 +25,9 @@ const WhatWeOffer = () => {
               <li><FaLifeRing /> Bereavement & Loss – Process grief and adjust to life after a loss.</li>
               <li><FaUser /> Life Transitions & Challenges – Navigate changes in career, relationships, or personal growth.</li>
             </ul>
-            <a href="/services" className={styles.link}>Learn More About Our Services →</a>
+            <a style={{
+              marginTop:'10px',
+            }} href="/services" className={buttonStyles.primary}>Learn More About Our Services</a>
           </div>
 
           {/* Low-Cost Counselling */}

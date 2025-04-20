@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap');
 
+$primary-green: #4CAF50; // calm green
+$dark-green: #2e7d32;
+$soft-grey: #555;
+$background: #ffffff;
+
 .welcomeContainer {
   position: relative;
-  background: url('/therapy-bg.jpg') no-repeat center center/cover;
-  color: #fff;
+  background-color: $background;
+  color: $soft-grey;
   text-align: center;
   padding: 80px 5%;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 
   .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    display: none; 
   }
 
   .content {
@@ -31,9 +30,10 @@
       font-weight: 600;
       font-family: 'Playfair Display', serif;
       margin-bottom: 20px;
-
+      color: $dark-green;
+      
       span {
-        color: #f4a261;
+        color: $primary-green;
       }
     }
 
@@ -42,12 +42,13 @@
       font-family: 'Poppins', sans-serif;
       margin-bottom: 15px;
       line-height: 1.6;
+      color: $soft-grey;
     }
 
     .highlight {
       font-size: 20px;
       font-weight: bold;
-      color: #f4a261;
+      color: $primary-green;
     }
   }
 
@@ -61,26 +62,27 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: rgba(255, 255, 255, 0.2);
+      background: #f1f8f4;
       padding: 20px;
       border-radius: 10px;
       width: 200px;
-      backdrop-filter: blur(10px);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       &:hover {
         transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
 
       .icon {
         font-size: 40px;
-        color: #f4a261;
+        color: $primary-green;
         margin-bottom: 10px;
       }
 
       h3 {
         font-size: 18px;
         font-weight: 500;
+        color: $dark-green;
       }
     }
   }
