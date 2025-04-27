@@ -5,7 +5,7 @@ import GuidingPrinciples from "../../components/GuidingPrinciples/GuidingPrincip
 import ServicesSection from "../../components/ServiceSection/ServiceSecxtion";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import JourneySection from "../../components/JourneySection/JourneySection";
-import WhyChooseUs from "../../components/whychooseus/whychooseus";
+import WhyChooseUs from "../../components/whychooseus/WhyChooseUs";
 import LowCostCounselling from "../../components/LowCostCounselling/LowCostCounselling";
 import FAQSection from "../../components/FAQSection/FAQSection";
 import AppointmentForm from "../../components/AppointmentForm/AppointmentForm";

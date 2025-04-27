@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./About.module.scss";
 import buttonstyles from '../../components/styles/button.module.scss'
 

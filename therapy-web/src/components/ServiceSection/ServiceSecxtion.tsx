@@ -1,4 +1,4 @@
-import React from "react";
+
 import Slider from "react-slick";
 import styles from "./ServiceSection.module.scss";
 import individualTherapy from "../../assets/individualtherapy.jpg";
@@ -15,7 +15,11 @@ const services = [
   { title: "stress management", image: freeconsulation },
 ];
 
-const Services = ({ isCarousel  }) => {
+interface ServicesProps {
+  isCarousel: boolean;
+}
+
+const Services = ({ isCarousel }: ServicesProps) => {
   const sliderSettings = {
     dots: true,
     infinite: true,
