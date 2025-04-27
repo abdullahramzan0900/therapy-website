@@ -53,21 +53,23 @@ const ContactUs = () => {
     <>
       <ToastContainer />
       <section className={styles.contactMain}>
+        <div className={styles.signLeft}></div>
+        <div className={styles.signRight}></div>
+
         <div className={styles.contactContainer}>
-          <div className={styles.leftSection}>
-            <h3>Contact Information</h3>
-            <p><strong>Phone:</strong> +44 123 456 789</p>
-            <p><strong>Email:</strong> therapycenter@example.com</p>
-            <p>Reach out to us to schedule your session or ask any questions.</p>
+          <div className={styles.contactHeader}>
+            <h2>Book Your Appointment</h2>
+            <p>We’re here to help you find support and healing</p>
+            <div className={styles.underline}></div>
           </div>
-          <div className={styles.rightSection}>
+
+          <div className={styles.formBox}>
             {isSubmitted ? (
               <ThankYou message={messageResponse} />
             ) : (
-              <>
-                <h2 className={styles.heading}>Book Your Appointment</h2>
-                <form onSubmit={handleSubmit} className={styles.form}>
-                  <div>
+              <form onSubmit={handleSubmit} className={styles.form}>
+                <div className={styles.row}>
+                  <div className={styles.inputGroup}>
                     <label htmlFor="name">Name</label>
                     <input
                       type="text"
@@ -78,8 +80,7 @@ const ContactUs = () => {
                       placeholder="Your Name"
                     />
                   </div>
-
-                  <div>
+                  <div className={styles.inputGroup}>
                     <label htmlFor="email">Email</label>
                     <input
                       type="email"
@@ -90,8 +91,10 @@ const ContactUs = () => {
                       placeholder="you@example.com"
                     />
                   </div>
+                </div>
 
-                  <div>
+                <div className={styles.row}>
+                  <div className={styles.inputGroupFull}>
                     <label htmlFor="phone">Phone</label>
                     <input
                       type="text"
@@ -102,8 +105,10 @@ const ContactUs = () => {
                       placeholder="+44 123 456 789"
                     />
                   </div>
+                </div>
 
-                  <div className={styles.fullWidth}>
+                <div className={styles.row}>
+                  <div className={styles.inputGroupFull}>
                     <label htmlFor="message">Reason for Therapy</label>
                     <textarea
                       id="message"
@@ -113,14 +118,14 @@ const ContactUs = () => {
                       placeholder="Tell us about your reason for booking..."
                     />
                   </div>
+                </div>
 
-                  <div className={styles.formActions}>
-                    <button type="submit" disabled={isLoading}>
-                      {isLoading ? "Submitting..." : "Submit"}
-                    </button>
-                  </div>
-                </form>
-              </>
+                <div className={styles.submitRow}>
+                  <button type="submit" disabled={isLoading}>
+                    {isLoading ? "Submitting..." : "Submit"}
+                  </button>
+                </div>
+              </form>
             )}
           </div>
         </div>

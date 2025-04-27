@@ -23,9 +23,9 @@ export default function AppointmentForm() {
         {/* Form Section */}
         <div className={styles.formSection}>
           <h2 className={styles.title}>Make an appointment</h2>
-          <p className={styles.subtitle}>
+          {/* <p className={styles.subtitle}>
             Schedule your handyman service with ease. Choose a date and time that works best for you.
-          </p>
+          </p> */}
 
           <div className={styles.inputGrid}>
             <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} className={styles.inputField} />

@@ -15,12 +15,11 @@ const PrivacySection = () => {
     <div className={styles.mainSection}>
 
     <section className={styles.PrivacySection}>
-       <PrivacyPolicy />
+      <PrivacyPolicy />
       <TermsAndConditions />
       <Disclaimer />
       <CookiesPolicy />
       <GDPRCompliance />
-
     </section>
     </div>
   );

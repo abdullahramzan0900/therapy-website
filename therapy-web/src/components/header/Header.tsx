@@ -6,7 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
 import headerlogo from "/assets/header-logo.svg";
 import data from "../../data/data.json";
-import buttonstyles from '../../components/styles/button.module.scss'
+import FloatingAppointmentButton from "../FloatingAppointmentButton/FloatingAppointmentButton";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -96,16 +96,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faPhone} /> <span>{header.navbar.phone}</span>
           </a>
        
-            <button
-              className={buttonstyles.secondary}
-              onClick={() => {
-                navigate("/contact-us");
-                setMenuOpen(false);
-              }}
-            >
-              Book an appointment
-            </button>
-         
+         <FloatingAppointmentButton/>
         </div>
         <button className={styles.hamburger} onClick={toggleMenu}>
           <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
