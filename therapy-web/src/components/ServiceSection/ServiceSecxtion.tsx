@@ -2,17 +2,21 @@
 import Slider from "react-slick";
 import styles from "./ServiceSection.module.scss";
 import individualTherapy from "../../assets/individualtherapy.jpg";
-import lowcosttherapy from "../../assets/lowcosttherapyy.jpg";
-import freeconsulation from "../../assets/freeconsulation.png";
+import lowcosttherapy from "../../assets/image2.jpeg";
+import freeconsulation from "../../assets/image7.jpeg";
 import buttonstyles from '../../components/styles/button.module.scss'
+import image8 from '../../assets/image8.jpg'
+import image9 from '../../assets/image9.jpg'
+import couplesimage from '../../assets/couplesimage.jpg'
+import { useNavigate } from "react-router-dom";
 
 const services = [
   { title: "personalized individual therapy", image: individualTherapy },
-  { title: "supportive couples counseling", image: lowcosttherapy },
+  { title: "supportive couples counseling", image: couplesimage },
   { title: "youth and adolescent counseling", image: freeconsulation },
-  { title: "family counseling", image: lowcosttherapy },
-  { title: "grief support therapy", image: individualTherapy },
-  { title: "stress management", image: freeconsulation },
+  { title: "family counseling", image: image9 },
+  { title: "grief support therapy", image: image8 },
+  { title: "stress management", image: lowcosttherapy },
 ];
 
 interface ServicesProps {
@@ -33,6 +37,7 @@ const Services = ({ isCarousel }: ServicesProps) => {
       { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   };
+  const navigate = useNavigate(); // Initialize the useNavigate hook
   
 
   return (
@@ -50,7 +55,9 @@ const Services = ({ isCarousel }: ServicesProps) => {
       <div className={styles.serviceCard}>
         <img src={service.image} alt={service.title} className={styles.image} />
         <div className={styles.overlay}>
-          <p>{service.title}</p>
+          <p style={{
+            color: "white"
+          }}>{service.title}</p>
           <a href="#" className={styles.readMore}>
             Read More →
           </a>
@@ -76,9 +83,14 @@ const Services = ({ isCarousel }: ServicesProps) => {
           </div>
         )}
 
+          {isCarousel && (
         <div className={styles.buttonWrapper}>
-          <button className={buttonstyles.primary}>View All Services</button>
+          <button onClick={()=>{
+            navigate("/services")
+          }}  className={buttonstyles.primary}>View All Services</button>
         </div>
+)}
+
       </div>
     </section>
   );

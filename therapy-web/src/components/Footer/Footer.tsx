@@ -5,6 +5,7 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import logo from '../../assets/transparentLogo.svg'
 const Footer = () => {
   const footerData = {
     companyName: "Nora counselling and Psychotherapy",
@@ -37,9 +38,9 @@ const Footer = () => {
           {/* Brand Section */}
           <div className={styles.brandSection}>
             <div className={styles.logo}>
-              <img src="" alt="image" />
+              <img src={logo} alt="image" />
             </div>
-            <h2 className={styles.companyName}>{footerData.companyName}</h2>
+            {/* <h2 className={styles.companyName}>{footerData.companyName}</h2>
             <p className={styles.tagline}>{footerData.tagline}</p>
             
             <div className={styles.socialIcons}>
@@ -54,7 +55,7 @@ const Footer = () => {
                   <FontAwesomeIcon icon={social.icon} />
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Information */}

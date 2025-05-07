@@ -106,7 +106,7 @@
     align-items: center;
     // background-color: #fff7e8;
     background-color: white;
-    padding: 20px;
+    // padding: 20px;
     position: sticky;
     top: 0;
     z-index: 9999;  
@@ -119,7 +119,7 @@
       // -webkit-background-clip: text;
       // -webkit-text-fill-color: transparent;
       // background-clip: text;
-      max-width: 100%; // Ensure it scales within the parent
+      max-width: 150px; // Ensure it scales within the parent
       height: auto; // Maintain aspect ratio
       object-fit: contain; // Prevent cropping
     }
@@ -268,8 +268,8 @@
       }
       .hamburger {
         display: block;
-        background: linear-gradient(to right, #5ce1e6, #8a9ce6, #3399cc);
-        -webkit-text-fill-color: transparent;
+        background: white;
+        color: black;
         background-clip: text;
       }
  

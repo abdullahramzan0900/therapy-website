@@ -1,8 +1,13 @@
 import React from "react";
 import styles from "./GuidingPrinciples.module.scss";
 import buttonstyles from '../../components/styles/button.module.scss'
+import { useNavigate,useLocation } from "react-router-dom";
 
 const GuidingPrinciples: React.FC = () => {
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const location = useLocation();
+  console.log(location,'location')
+  if (location.pathname === "/contact-us") return null;
   return (
     <section className={styles.therapyProcess}>
       <div className={styles.container}>
@@ -55,7 +60,9 @@ const GuidingPrinciples: React.FC = () => {
 
         {/* Contact Button */}
         <div className={styles.buttonWrapper}>
-          <button className={buttonstyles.primary }>Contact Us</button>
+          <button  onClick={()=>{
+                navigate('/contact-us')
+            }} className={buttonstyles.primary }>Contact Us</button>
         </div>
       </div>
     </section>

@@ -1,14 +1,17 @@
 
 import styles from "./About.module.scss";
-import buttonstyles from '../../components/styles/button.module.scss'
+import buttonstyles from '../../components/styles/button.module.scss';
+import image2 from '../../assets/lowcosttherapyy.jpg'
+import {  useNavigate } from "react-router-dom";
 
 const AboutSection: React.FC = () => {
+  const navigate=useNavigate()
   return (
     <section className={styles.aboutContainer}>
       <div className={styles.contentWrapper}>
         {/* Left Side - Images and Reviews */}
         <div className={styles.left}>
-          <div className={styles.reviewCard}>
+          {/* <div className={styles.reviewCard}>
             <p>⭐⭐⭐⭐⭐</p>
             <h4>Customer Review <strong>30,000</strong></h4>
             <div className={styles.avatars}>
@@ -18,11 +21,11 @@ const AboutSection: React.FC = () => {
               <img src="/avatars/avatar4.jpg" alt="User 4" />
               <div className={styles.more}>30K</div>
             </div>
-          </div>
+          </div> */}
 
-          <div className={styles.imageGrid}>
-            <img src="/images/therapy1.jpg" alt="Therapy Session 1" className={styles.largeImage} />
-            <img src="/images/therapy2.jpg" alt="Therapy Session 2" className={styles.smallImage} />
+          <div className={styles.imageFrame}>
+            <img src={image2} alt="Therapy Session 1" className={styles.largeImage} />
+            {/* <img src={image2} alt="Therapy Session 2" className={styles.smallImage} /> */}
           </div>
         </div>
 
@@ -40,8 +43,12 @@ const AboutSection: React.FC = () => {
           </p>
 
           <div className={styles.buttons}>
-            <button className={buttonstyles.primary}>Read More</button>
-            <button className={buttonstyles.secondary}>Get In Touch</button>
+            <button onClick={()=>{
+                navigate('/about-us')
+            }} className={buttonstyles.primary}>Read More</button>
+            <button  onClick={()=>{
+              navigate('/contact-us')
+            }} className={buttonstyles.secondary}>Get In Touch</button>
           </div>
         </div>
       </div>

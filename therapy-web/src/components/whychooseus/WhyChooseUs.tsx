@@ -2,17 +2,21 @@ import React from "react";
 import styles from "./WhyChooseUs.module.scss";
 import { FaUserTie, FaShieldAlt, FaHeart, FaUsers } from "react-icons/fa";
 import buttonstyles from '../../components/styles/button.module.scss'
+import image3 from '../../assets/image3.jpeg'
+import smallImage from '../../assets/aboutus.jpg'
+import { useNavigate } from "react-router-dom";
 
 const WhyChooseUs: React.FC = () => {
+  const navigate = useNavigate(); // Initialize the useNavigate hook
   return (
     <section className={styles.whyChooseUs}>
       <div className={styles.content}>
         {/* Left Section - Large Image */}
         <div className={styles.leftSection}>
           <div className={styles.largeImage}>
-            <img src="https://placehold.co/500x500" alt="Consultation" />
+            <img src={image3} alt="Consultation" />
             <div className={styles.smallImage}>
-              <img src="https://placehold.co/150x150" alt="Small Consultation" />
+              <img src={smallImage} alt="Small Consultation" />
             </div>
           </div>
         </div>
@@ -44,7 +48,9 @@ const WhyChooseUs: React.FC = () => {
             </div>
           </div>
           <div className={styles.bottomSection}>
-            <button className={buttonstyles.primary}>Contact Us</button>
+            <button onClick={()=>{
+            navigate('/contact-us')
+            }} className={buttonstyles.primary}>Contact Us</button>
           </div>
      
         </div>

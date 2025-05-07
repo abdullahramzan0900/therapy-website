@@ -38,8 +38,8 @@ $hover-color: #00cec9;
 // Brand Section
 .brandSection {
   .logo {
-    width: 60px;
-    height: 60px;
+    // width: 60px;
+    // height: 60px;
     margin-bottom: 1rem;
     
     img {
@@ -300,6 +300,18 @@ $hover-color: #00cec9;
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+  .brandSection {
+    .logo {
+      // width: 60px;
+      // height: 60px;
+      margin-bottom: 0rem !important;
+    }
+      img {
+        width: 48% !important;
+        height: auto;
+        object-fit: contain;  
+      }
+    }
 
   .brandSection, 
   .contactSection,

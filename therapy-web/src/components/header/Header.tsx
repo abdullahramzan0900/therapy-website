@@ -4,7 +4,7 @@ import { faBars, faTimes, faMapMarkerAlt, faEnvelope, faPhone } from "@fortaweso
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
-import headerlogo from "/assets/header-logo.svg";
+import headerlogo from "../../assets/logo1.svg";
 import data from "../../data/data.json";
 import FloatingAppointmentButton from "../FloatingAppointmentButton/FloatingAppointmentButton";
 

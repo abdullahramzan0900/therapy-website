@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { PhoneCall } from "lucide-react";
 import styles from "./FAQSection.module.scss";
 import buttonstyles from '.././styles/button.module.scss'
+import { useNavigate } from "react-router-dom";
 
 const faqs = [
   { question: "What is mental therapy, and how can it help me?", answer: "Mental therapy helps individuals understand their emotions, develop coping strategies, and improve their overall mental well-being." },
@@ -14,6 +15,7 @@ const faqs = [
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
+  const navigate = useNavigate(); // Initialize the useNavigate hook                
 
   const toggleFAQ = (index:any) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -60,7 +62,9 @@ export default function FAQSection() {
               <PhoneCall size={20} />
               +01 789 859 664
             </p>
-            <button className={buttonstyles.primary}>Contact Us</button>
+            <button onClick={()=>{
+            navigate('/contact-us')
+            }} className={buttonstyles.primary}>Contact Us</button>
           </div>
         </div>
       </div>
