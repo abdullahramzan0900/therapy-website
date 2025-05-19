@@ -67,7 +67,7 @@ const LowCostCounselling: React.FC = () => {
           <div className={styles.card}>
             <h2><FaMoneyBillWave /> How Much Does It Cost?</h2>
             <p>
-              Sessions start from <strong>£X per session</strong>. Sliding scale available based on financial need.
+              Sessions start from <strong>£15-£25 per session</strong>. Sliding scale available based on financial need.
               No one is turned away due to cost.
             </p>
           </div>

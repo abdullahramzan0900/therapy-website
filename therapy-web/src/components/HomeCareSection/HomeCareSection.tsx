@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Import styles
 import styles from "./HomeCareSection.module.scss";
 import data from "../../data/data.json";
@@ -7,63 +7,63 @@ import { useNavigate } from "react-router-dom";
 
 const HomeCareSection = () => {
   const homeCareData = data.components.HomeCareData;
-  const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // Loader state
+  // const [email, setEmail] = useState("");
+  // const [isLoading, setIsLoading] = useState(false); // Loader state
   const navigate=useNavigate();
 
-  const validateEmail = (email: string) => {
-    return /\S+@\S+\.\S+/.test(email); // Checks if email contains '@' and '.'
-  };
+  // const validateEmail = (email: string) => {
+  //   return /\S+@\S+\.\S+/.test(email); // Checks if email contains '@' and '.'
+  // };
 
-  const handleSubmit = async () => {
-    if (!email.trim()) {
-      toast.error("Email is required!", { position: "top-left", icon: false, className: "custom-toast" });
-      return;
-    }
+  // const handleSubmit = async () => {
+  //   if (!email.trim()) {
+  //     toast.error("Email is required!", { position: "top-left", icon: false, className: "custom-toast" });
+  //     return;
+  //   }
 
-    if (!validateEmail(email)) {
-      toast.error("Invalid email format!", { position: "top-left", icon: false, className: "custom-toast" });
-      return;
-    }
+  //   if (!validateEmail(email)) {
+  //     toast.error("Invalid email format!", { position: "top-left", icon: false, className: "custom-toast" });
+  //     return;
+  //   }
 
-    setIsLoading(true); // Start loading
+  //   // setIsLoading(true); // Start loading
 
-    try {
-      const response = await fetch("https://ncptherapyback.netlify.app/.netlify/functions/server/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
+  //   try {
+  //     const response = await fetch("https://ncptherapyback.netlify.app/.netlify/functions/server/contact", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ email }),
+  //     });
 
-      const result = await response.json();
+  //     const result = await response.json();
 
-      if (response.ok) {
-        toast.success("Thank you for contacting us! We will reach out soon.", {
-          position: "top-left",
-          icon: false,
-          className: "custom-toast",
-        });
-        setEmail(""); // Clear input
-      } else {
-        toast.error(result.message || "Something went wrong.", {
-          position: "top-left",
-          icon: false,
-          className: "custom-toast",
-        });
-      }
-    } catch (error) {
-      console.error("Error submitting email:", error);
-      toast.error("Failed to send. Please try again.", {
-        position: "top-left",
-        icon: false,
-        className: "custom-toast",
-      });
-    } finally {
-      setIsLoading(false); // Stop loading
-    }
-  };
+  //     if (response.ok) {
+  //       toast.success("Thank you for contacting us! We will reach out soon.", {
+  //         position: "top-left",
+  //         icon: false,
+  //         className: "custom-toast",
+  //       });
+  //       setEmail(""); // Clear input
+  //     } else {
+  //       toast.error(result.message || "Something went wrong.", {
+  //         position: "top-left",
+  //         icon: false,
+  //         className: "custom-toast",
+  //       });
+  //     }
+  //   } catch (error) {
+  //     console.error("Error submitting email:", error);
+  //     toast.error("Failed to send. Please try again.", {
+  //       position: "top-left",
+  //       icon: false,
+  //       className: "custom-toast",
+  //     });
+  //   } finally {
+  //     // setIsLoading(false); // Stop loading
+  //   }
+  // };
 
   return (
     <>

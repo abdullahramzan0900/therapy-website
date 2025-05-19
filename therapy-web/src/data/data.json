@@ -71,10 +71,12 @@
       "HomeCareData":
       {
         "title": "",
-        "titleHighlight": "Affordable Online Therapy – Supporting Your Mental Well-Being",
-        "description": "Compassionate and confidential counselling for individuals. Flexible, accessible, and tailored to your needs",
+        "titleHighlight": "Affordable Online Therapy ",
+        "titleHighlight2": "Supporting Your Mental Well-Being",
+        "description": "Compassionate and confidential counselling for individuals. Flexible, accessible, and tailored to your needs. ",
         "emailPlaceholder": "Enter Your Email",
         "buttonText": "Let's Talk",
+        "buttonText2": "Book your free 15 minutes consultation",
         "imageAlt": "Nurse helping elderly",
         "imageSrc": "assets/mansitting.jpg"
       },
@@ -174,15 +176,15 @@
         ]
       },
       "header":{
-        "topbar": {
-          "locationText": "London, United Kingdom",
-          "LocationLink": "https://www.google.com/maps/place/London,+UK",
-          "emailText": "info@ncptherapy.com",
-          "whatsappText": "Connect on Whatsapp",
-          "whatsappLink": "#"
-        },
+     "topbar": {
+  "locationText": "71–75 Shelton Street, WC2H 9JQ, London, United Kingdom",
+  "LocationLink": "https://www.google.com/maps?q=71-75+Shelton+Street,+WC2H+9JQ,+London,+United+Kingdom",
+  "emailText": "info@ncptherapy.com",
+  "whatsappText": "Connect on Whatsapp",
+  "whatsappLink": "#"
+},
         "navbar": {
-          "logoText": "NoraTherapy ",
+          "logoText": "NuraTherapy ",
           "phone": "07984628017",
           "HeaderLogo":"assets/header-logo.svg"
         },
