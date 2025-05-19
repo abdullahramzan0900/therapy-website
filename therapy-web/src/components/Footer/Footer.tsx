@@ -5,7 +5,7 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-import logo from '../../assets/transparentLogo.svg'
+import logo from '../../assets/footerlogoNew.svg'
 const Footer = () => {
   const footerData = {
     companyName: "Nura counselling and Psychotherapy",

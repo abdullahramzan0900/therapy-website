@@ -4,7 +4,7 @@ import { faBars, faTimes, faMapMarkerAlt, faEnvelope, faPhone } from "@fortaweso
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
-import headerlogo from "../../assets/logo1.svg";
+import headerlogo from "../../assets/headerlogoNew.svg";
 import data from "../../data/data.json";
 import FloatingAppointmentButton from "../FloatingAppointmentButton/FloatingAppointmentButton";
 
@@ -12,7 +12,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const menuRef = useRef<HTMLDivElement | null>(null); // ✅ Added correct typing
+  const menuRef = useRef<HTMLDivElement | null>(null); 
   const { header } = data.components;
 
   useEffect(() => {

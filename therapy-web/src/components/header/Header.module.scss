@@ -117,8 +117,7 @@
       // -webkit-background-clip: text;
       // -webkit-text-fill-color: transparent;
       // background-clip: text;
-      max-width: 150px; // Ensure it scales within the parent
-      height: auto; // Maintain aspect ratio
+      width: 91%;
       object-fit: contain; // Prevent cropping
     }
 
