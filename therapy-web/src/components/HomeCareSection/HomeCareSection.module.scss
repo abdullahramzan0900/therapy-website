@@ -20,10 +20,9 @@
   align-items: center;
   padding: 50px;
   width: 93%;
-  background: #4a8e72e3;  
-  border-radius: 60px;
+  background: #6B8D7A;  
+  border-radius: 8px;
   flex-wrap: wrap;
-
 
   .content {
     max-width: 50%;
@@ -40,6 +39,12 @@
         color:white;
       }
     }
+    h3{
+      color: white;
+      font-weight: 700;
+      opacity: 0; 
+      animation: slideUp 0.8s ease-out forwards 0.1s;
+    }
 
     p {
       font-size: 18px;
@@ -49,6 +54,13 @@
       opacity: 0; 
       animation: slideUp 0.8s ease-out forwards 0.3s;
 
+    }
+    .titleText{
+      color: white;
+      font-size: 25px;
+      font-weight: 700;
+      opacity: 0; 
+      animation: slideUp 0.8s ease-out forwards 0.1s;
     }
 
     .emailInput {
@@ -87,6 +99,38 @@
     }
       }
     }
+
+
+    .consultationButtonWrapper {
+      margin-bottom: 20px;
+    
+      .consultationButton {
+        padding: 15px 30px;
+        background: linear-gradient(90deg, rgb(74, 142, 114), rgb(72, 213, 196));
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        animation: slideUp 0.8s ease-out forwards 0.4s;
+        opacity: 0;
+        transition: all 0.3s ease;
+    
+        &:hover {
+          background: linear-gradient(90deg, rgb(72, 213, 196), rgb(74, 142, 114));
+          box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+          transform: translateY(-2px);
+        }
+    
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 4px rgba(0, 150, 229, 0.3);
+        }
+      }
+    }
+    
   }
 
   .visuals {

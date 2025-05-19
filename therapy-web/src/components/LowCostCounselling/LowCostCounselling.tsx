@@ -14,7 +14,7 @@ const LowCostCounselling: React.FC = () => {
         <div className={styles.contentWrapper}>
           {/* What is Low-Cost Counselling? */}
           <div className={styles.infoCard}>
-            <div className={styles.cardIcon}>💚</div>
+            {/* <div className={styles.cardIcon}>💚</div> */}
             <h3 className={styles.infoTitle}>What is Low-Cost Counselling?</h3>
             <ul className={styles.infoList}>
               <li>Sessions provided by trainee counsellors under professional supervision.</li>
@@ -24,7 +24,7 @@ const LowCostCounselling: React.FC = () => {
 
           {/* Who Can Access It? */}
           <div className={styles.infoCard}>
-            <div className={styles.cardIcon}>💚</div>
+            {/* <div className={styles.cardIcon}>💚</div> */}
             <h3 className={styles.infoTitle}>Who Can Access It?</h3>
             <ul className={styles.infoList}>
               <li>Individuals on a low income or receiving benefits.</li>
@@ -35,11 +35,11 @@ const LowCostCounselling: React.FC = () => {
 
           {/* How Much Does It Cost? */}
           <div className={styles.infoCard}>
-            <div className={styles.cardIcon}>💚</div>
+            {/* <div className={styles.cardIcon}>💚</div> */}
             <h3 className={styles.infoTitle}>How Much Does It Cost?</h3>
             <ul className={styles.infoList}>
               <li>First Consultation: Free / Discounted</li>
-              <li>Ongoing Sessions: £X per session (Sliding scale available based on circumstances)</li>
+              <li>Ongoing Sessions: £15-£25 per  session (Sliding scale available based on circumstances)</li>
             </ul>
           </div>
         </div>

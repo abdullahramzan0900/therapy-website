@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
     <div className={styles.PrivacyPolicy}>
       <h2>Privacy Policy</h2>
       <p><strong>Last Updated:</strong>07/03/25</p>
-      <p>Nova Counselling & Psychotherapy ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and protect your personal data in compliance with the UK GDPR and Data Protection Act 2018.</p>
+      <p>Nura Counselling & Psychotherapy ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and protect your personal data in compliance with the UK GDPR and Data Protection Act 2018.</p>
       
       <h3>1. Information We Collect</h3>
       <p><strong>Personal Information:</strong> Name, email address, phone number, and other details provided through booking or contact forms.</p>

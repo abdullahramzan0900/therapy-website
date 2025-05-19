@@ -5,7 +5,7 @@ const CookiesPolicy = () => {
     <div className={styles.cookiespolicy}>
       <h2>Cookies Policy</h2>
       <p><strong>Last Updated:</strong> 07/03/25</p>
-      <p>Nova Counselling & Psychotherapy ("we", "our", "us") uses cookies to improve your experience on our website and ensure compliance with the UK GDPR and the Privacy and Electronic Communications Regulations (PECR).</p>
+      <p>Nura Counselling & Psychotherapy ("we", "our", "us") uses cookies to improve your experience on our website and ensure compliance with the UK GDPR and the Privacy and Electronic Communications Regulations (PECR).</p>
       
       <h3>1. What Are Cookies?</h3>
       <p>Cookies are small text files stored on your device when you visit our website. They help us enhance site functionality, track performance, and improve user experience.</p>

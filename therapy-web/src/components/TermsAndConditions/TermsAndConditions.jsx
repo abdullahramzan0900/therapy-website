@@ -6,7 +6,7 @@ const TermsAndConditions = () => {
     <div className={styles.TermsAndConditions}>
       <h2>Terms & Conditions</h2>
       <p><strong>Last Updated:</strong>  07/03/25</p>
-      <p>By accessing Nova Counselling & Psychotherapy’s website, you agree to the following terms:</p>
+      <p>By accessing Nura Counselling & Psychotherapy’s website, you agree to the following terms:</p>
       
       <h3>1. Use of Website</h3>
       <p>The content provided is for informational purposes only and does not constitute medical advice.</p>

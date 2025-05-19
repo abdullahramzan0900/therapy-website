@@ -8,13 +8,18 @@ import { faPhone, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg
 import logo from '../../assets/transparentLogo.svg'
 const Footer = () => {
   const footerData = {
-    companyName: "Nora counselling and Psychotherapy",
+    companyName: "Nura counselling and Psychotherapy",
     tagline: "We're Here When You're Ready.",
     contacts: [
       { icon: faPhone, title: "Phone Number", value: "0798-4628-017" },
       { icon: faEnvelope, title: "Email Address", value: "info@ncptherapy.com" },
-      { icon: faMapMarkerAlt, title: "Location", value: "London, United Kingdom" }
+      { 
+        icon: faMapMarkerAlt, 
+        title: "Location", 
+        value: "71–75 Shelton Street, WC2H 9JQ, London, United Kingdom" 
+      }
     ],
+    
     community: {
       heading: "Join Our Community",
       text: "Join Us Today for Resources, Insight & Connection"
@@ -98,7 +103,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className={styles.copyrightSection}>
-          <p>Copyright © {new Date().getFullYear()} Nora counselling and Psychotherapy. All Rights Reserved.</p>
+          <p>Copyright © {new Date().getFullYear()} Nura Counselling and Psychotherapy. All Rights Reserved.</p>
           <a href="/privacy-policy" className={styles.privacyLink}>Privacy Policy</a>
         </div>
       </footer>

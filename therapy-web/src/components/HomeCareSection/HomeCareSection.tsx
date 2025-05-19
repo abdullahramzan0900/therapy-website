@@ -3,11 +3,13 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Import styles
 import styles from "./HomeCareSection.module.scss";
 import data from "../../data/data.json";
+import { useNavigate } from "react-router-dom";
 
 const HomeCareSection = () => {
   const homeCareData = data.components.HomeCareData;
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false); // Loader state
+  const navigate=useNavigate();
 
   const validateEmail = (email: string) => {
     return /\S+@\S+\.\S+/.test(email); // Checks if email contains '@' and '.'
@@ -72,8 +74,16 @@ const HomeCareSection = () => {
             <h1>
               {homeCareData.title.split(" ")[0]} <span>{homeCareData.titleHighlight}</span>
             </h1>
+            <span className={styles.titleText}>{homeCareData.titleHighlight2}</span>
+            {/* <h2>{homeCareData.titleHighlight2}</h2> */}
             <p>{homeCareData.description}</p>
 
+            <div className={styles.consultationButtonWrapper}>
+  <button onClick={()=>{
+    navigate('contact-us')
+  }} className={styles.consultationButton}>Book your free 15 minutes consultation</button>
+</div>
+{/* 
             <div className={styles.emailInput}>
               <input
                 type="email"
@@ -84,7 +94,7 @@ const HomeCareSection = () => {
               <button onClick={handleSubmit} disabled={isLoading}>
                 {isLoading ? "Submitting..." : homeCareData.buttonText}
               </button>
-            </div>
+            </div> */}
           </div>
 
           <div className={styles.visuals}>

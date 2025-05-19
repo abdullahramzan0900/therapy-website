@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const faqs = [
   { question: "What is mental therapy, and how can it help me?", answer: "Mental therapy helps individuals understand their emotions, develop coping strategies, and improve their overall mental well-being." },
-  { question: "What if I don't feel a connection with my therapist?", answer: "It’s important to find the right therapist. If you don’t feel connected, consider discussing your concerns or finding another therapist who suits your needs." },
+  { question: "What if I don't feel a connection with my therapist?", answer: "A strong therapeutic relationship is important. If you feel that the connection isn’t quite right, please don’t hesitate to contact our admin team. We’ll be happy to discuss your experience and arrange a referral to another therapist within our team where possible." },
   { question: "What should I expect in my first session?", answer: "Your first session typically involves discussing your concerns, goals, and background to help your therapist understand your situation better." },
   { question: "Will therapy be covered by my insurance?", answer: "Insurance coverage varies. It's best to check with your provider to see if therapy sessions are included." },
   { question: "How long does therapy usually take?", answer: "The duration varies based on individual needs, but therapy can range from a few sessions to several months or longer." },
