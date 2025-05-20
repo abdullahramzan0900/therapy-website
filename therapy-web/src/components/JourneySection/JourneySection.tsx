@@ -9,9 +9,7 @@ const JourneySection = () => {
       <div className={styles.peopleContainer}>
         <img src={group} alt="Healthcare professionals" /> 
       </div> */}
-
-
-      <div className={styles.contentContainer}>
+       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
           <h2>Start Your Journey With Us Now</h2>
           <a href='/contact-us' className={styles.ctaButton}>Start Now</a>

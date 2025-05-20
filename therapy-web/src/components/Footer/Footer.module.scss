@@ -1,11 +1,11 @@
 // Variables
-$primary-color: #6c5ce7;
+$primary-color: rgba(179, 114, 4, 0.9);
 $secondary-color: #a29bfe;
 $text-color: #2d3436;
 $light-text: #636e72;
 $background: #f5f6fa;
 $white: #ffffff;
-$hover-color: #00cec9;
+$hover-color: #6B8D7A;
 
 .footer {
   background-color: darken($background, 5%);
@@ -113,7 +113,7 @@ $hover-color: #00cec9;
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.5rem;
-  color: $primary-color;
+  color: rgba(179, 114, 4, 0.9);
 
   &::after {
     content: '';
@@ -268,7 +268,7 @@ $hover-color: #00cec9;
 .copyrightSection {
   margin-top: 3rem;
   padding: 1.5rem 0;
-  background: darken($background, 10%);
+  background: #d2a685;
   text-align: center;
   font-size: 0.85rem;
   color: $light-text;
@@ -279,15 +279,17 @@ $hover-color: #00cec9;
 
   p {
     margin: 0;
+    color: white;
   }
 
   .privacyLink {
     color: $light-text;
     text-decoration: none;
     transition: color 0.3s ease;
+    color: $white;
 
     &:hover {
-      color: $primary-color;
+      color: #6B8D7A;
       text-decoration: underline;
     }
   }
