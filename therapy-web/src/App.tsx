@@ -18,6 +18,7 @@ const routeComponents: any = {
   "/appointment": lazy(() => import("./components/Appointment/Appoinment")),
   "/privacy-policy": lazy(() => import("./routes/PrivacySection/PrivacySection")),
   "/low-cost-counselling": lazy(() => import("./routes/LowCostCounselling/LowCostCounselling")),
+  "/Workshops": lazy(() => import("./components/Workshops/Workshops")),
 };
  
 const loadComponent = (path: string) => routeComponents[path] || null;

@@ -1,318 +1,284 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .header {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .topbar {
+.header {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background: #d2a685;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+
+  .topbarLeft {
     display: flex;
-    justify-content: space-between;
-    // background: #fdab9f;
-    background:#d2a685;
-    padding: 10px;
-    color: white;
-    font-size: 14px;
-    .topbarLeft {
+    gap: 20px;
+    color: #f0fff0;
+    font-weight: bold;
+
+    span {
       display: flex;
-      gap: 20px;
-  color: #f0fff0;
-  font-weight: bold;
-      span {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        &:hover {
-          color:   (74, 142, 114, 0.8901960784);
-          }
+      align-items: center;
+      gap: 5px;
+
+      &:hover {
+        color: rgba(74, 142, 114, 0.89);
       }
-      a{
-        color:#f0fff0;
-        text-decoration: none;
+    }
+
+    a {
+      color: #f0fff0;
+      text-decoration: none;
+
+      &:hover {
+        color: rgba(74, 142, 114, 0.89);
+      }
+    }
+  }
+
+  .topbarRight {
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 5px 10px;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+      background-color: #075e54;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+/* Appointment Button */
+.appointmentBtnDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.appointmentBtn {
+  background: linear-gradient(90deg, rgb(74, 142, 114), rgb(72, 213, 196));
+  color: white;
+  padding: 16px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(90deg, rgb(72, 213, 196) 0%, rgb(74, 142, 114) 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 150, 229, 0.3);
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  .logo img {
+    width: 91%;
+    object-fit: contain;
+  }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .links {
+    display: flex;
+
+    p {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        color: #4a8e72;
+      }
+    }
+  }
+
+  .activeLink {
+    color: #00b3ff;
+    font-weight: bold;
+    border-bottom: 2px solid #4a8e72;
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      i {
+        margin-right: 5px;
+      }
+
+      &:hover {
+        color: #00bfa5;
+      }
+
+      &.appointmentBtn {
+        background: linear-gradient(90deg, rgba(36, 126, 192, 1), rgba(72, 213, 196, 1));
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: background-color 0.3s;
 
         &:hover {
-        color:  rgba(74, 142, 114, 0.8901960784);
+          background: linear-gradient(90deg, rgb(72, 213, 196) 0%, rgb(36, 126, 192) 100%);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 4px rgba(0, 150, 229, 0.3);
         }
       }
     }
-  
-    .topbarRight {
-      a {
+  }
+}
+
+/* Responsive */
+@media (max-width: 884px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: relative;
+
+    .logo img {
+      width: 80%;
+    }
+
+    .links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #d2a685;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 80px 20px 20px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 999;
+
+      &.showMenu {
+        transform: translateX(0);
+      }
+
+      p {
         color: white;
-        text-decoration: none;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        padding: 5px 10px;
-        border-radius: 20px;
-        transition: background-color 0.3s;
-        background-color: #075e54;
-  
+        font-size: 18px;
+        padding: 10px 15px;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
         &:hover {
           background-color: rgba(255, 255, 255, 0.1);
         }
-  
-        i {
-          margin-right: 5px;
-        }
+      }
+
+      .activeLink {
+        border-bottom: 2px solid white;
+        color: white;
       }
     }
-  }
-  
-  .appointmentBtnDiv{
-    display: flex;
-    // padding: 10px;
-    justify-content: center;
-  }
-  .appointmentBtn {
-    // background: linear-gradient(90deg, rgba(36, 126, 192, 1),rgba(72, 213, 196, 1));
-    background: linear-gradient(90deg, rgb(74, 142, 114), rgb(72, 213, 196));
-    color: white;
-    padding: 16px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    display: flex;
-    // margin: 20px;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-  
-    
-  &:hover {
-  // background: linear-gradient(90deg,  rgb(72, 213, 196) 0%, rgb(36, 126, 192) 100%); 
-  background: linear-gradient(90deg,  rgb(72, 213, 196) 0%, rgb(74, 142, 114) 100%); 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  &:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(0, 150, 229, 0.3); 
-  }
-  }
-  .navbar {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    // background-color: #fff7e8;
-    background-color: white;
-    // padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 9999;  
-  
-    .logo img {
-      // font-size: 24px;
-      // font-weight: bolder;
-      // color: #00b3ff;
-      // background: linear-gradient(to right, #5ce1e6, #8a9ce6, #3399cc);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
-      // background-clip: text;
-      width: 91%;
-      object-fit: contain; // Prevent cropping
+
+    .contact {
+      display: none;
     }
 
     .hamburger {
-      display: none;
+      display: block;
       background: none;
       border: none;
       font-size: 24px;
+      color: #4a8e72;
       cursor: pointer;
-    
-    }
-  
-    .links {
-      display: flex;
-      p {
-        margin: 0 15px;
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        font-size: 16px;
-        cursor: pointer;
-  
-        &:hover {
-          color: #4A8E72;
-        }
-      }
-    }
-    .activeLink {
-        color: #00b3ff;
-        font-weight: bold;
-        border-bottom: 2px solid #4A8E72; 
-        // width: fit-content;
-      }
-  
-    .contact {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-  
-      a {
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        i {
-          margin-right: 5px;
-        }
-  
-        &:hover {
-          color: #00bfa5;
-        }
-  
-        &.appointmentBtn {
-            background: linear-gradient(90deg, rgba(36, 126, 192, 1),rgba(72, 213, 196, 1));
-          color: white;
-          padding: 10px 20px;
-          border-radius: 20px;
-          font-weight: bold;
-          transition: background-color 0.3s;
-  
-          
-    &:hover {
-      background: linear-gradient(90deg,  rgb(72, 213, 196) 0%, rgb(36, 126, 192) 100%); 
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 4px rgba(0, 150, 229, 0.3); 
-    }
-        }
-      }
+      z-index: 1000;
     }
   }
-  
 
-  @media (max-width: 884px) {
-    .navbar {
-      flex-direction: row;
-      text-align: center;
-      gap: 15px;
-  
-    
-      .links {
-        display: none; 
+  /* Overlay when menu is open */
+  .menuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
 
-  
-        &.showMenu {
-        z-index: 999;
-        position: absolute;
-        right: 16%;
-        top: 61%;
-        color: white;
-        background: linear-gradient(90deg, rgb(74 142 114), rgb(72, 213, 196));
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-          padding: 20px; 
-          border-radius: 10px; 
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          transition: all 0.3s ease-in-out;
-        }
-        p {
-          margin: 0 15px;
-          text-decoration: none;
-          color: white;
-          font-weight: bold;
-          font-size: 16px;
-          cursor: pointer;
-    
-          &:hover { 
-            // color: #4A8E72;
-          }
-        }
-        .activeLink {
-    
-          font-weight: bold;
-          border-bottom: 2px solid white; 
-          // width: fit-content;
-        }
-    
-  
-      }
-      .logo {
-    //  display: flex;
-    //  gap: 10px;
-
-      }
-      .contact {
-       .phone{
-        display: none;
-       }
-      }
-      
-  
-  
-      .contact {
-    a{
-    span{
-        display: none;
-      }
-    }
-      }
-      .hamburger {
-        display: block;
-        background: white;
-        color: black;
-        background-clip: text;
-      }
- 
-
-     
-      
-    }
-    .appointmentBtn{
-      display: none;
-    }
-
-    .topbar {
-      flex-direction: column;
-      align-items: center;
-  
-      .topbarLeft {
-        justify-content: center;
-        margin-bottom: 10px;
-      }
-  
-      .topbarRight {
-        margin-bottom: 10px;
-      }
+    &.showOverlay {
+      display: block;
     }
   }
-  
-  @media (max-width: 480px) {
-    .navbar {
-      padding: 10px;
-  
-      .logo a {
-        font-size: 20px;
-      }
-  
-      .links a {
-        font-size: 14px;
-      }
-  
-      .contact a {
-        font-size: 14px;
-      }
+
+  .topbar {
+    flex-direction: column;
+    align-items: center;
+
+    .topbarLeft {
+      justify-content: center;
+      margin-bottom: 10px;
     }
-  
-    .topbar {
-      font-size: 12px;
-      padding: 5px;
+
+    .topbarRight {
+      margin-bottom: 10px;
     }
   }
-  
+}
