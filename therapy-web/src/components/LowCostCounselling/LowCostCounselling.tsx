@@ -38,7 +38,7 @@ const LowCostCounselling: React.FC = () => {
             {/* <div className={styles.cardIcon}>💚</div> */}
             <h3 className={styles.infoTitle}>How Much Does It Cost?</h3>
             <ul className={styles.infoList}>
-              <li>First Consultation: Free / Discounted</li>
+              <li>First Consultation: Free </li>
               <li>Ongoing Sessions: £15-£25 per  session (Sliding scale available based on circumstances)</li>
             </ul>
           </div>

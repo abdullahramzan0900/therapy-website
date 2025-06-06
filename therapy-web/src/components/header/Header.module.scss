@@ -1,16 +1,15 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.header {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+// .header {
+//   font-family: Arial, sans-serif;
+// }
 
-/* Topbar */
+/* ===== Topbar Styles ===== */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -33,14 +32,14 @@
       &:hover {
         color: rgba(74, 142, 114, 0.89);
       }
-    }
 
-    a {
-      color: #f0fff0;
-      text-decoration: none;
+      a {
+        color: #f0fff0;
+        text-decoration: none;
 
-      &:hover {
-        color: rgba(74, 142, 114, 0.89);
+        &:hover {
+          color: rgba(74, 142, 114, 0.89);
+        }
       }
     }
   }
@@ -56,21 +55,17 @@
       border: 1px solid rgba(255, 255, 255, 0.4);
       padding: 5px 10px;
       border-radius: 20px;
-      transition: background-color 0.3s;
       background-color: #075e54;
+      transition: background-color 0.3s;
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.1);
-      }
-
-      i {
-        margin-right: 5px;
       }
     }
   }
 }
 
-/* Appointment Button */
+/* ===== Appointment Button (Floating or Navbar) ===== */
 .appointmentBtnDiv {
   display: flex;
   justify-content: center;
@@ -82,14 +77,12 @@
   padding: 16px 20px;
   border-radius: 20px;
   font-weight: bold;
-  transition: background-color 0.3s;
-  display: flex;
-  justify-content: center;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s;
 
   &:hover {
-    background: linear-gradient(90deg, rgb(72, 213, 196) 0%, rgb(74, 142, 114) 100%);
+    background: linear-gradient(90deg, rgb(72, 213, 196), rgb(74, 142, 114));
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
 
@@ -99,7 +92,7 @@
   }
 }
 
-/* Navbar */
+/* ===== Navbar Styles ===== */
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -112,13 +105,6 @@
   .logo img {
     width: 91%;
     object-fit: contain;
-  }
-
-  .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
     cursor: pointer;
   }
 
@@ -127,7 +113,6 @@
 
     p {
       margin: 0 15px;
-      text-decoration: none;
       color: black;
       font-weight: bold;
       font-size: 16px;
@@ -141,7 +126,6 @@
 
   .activeLink {
     color: #00b3ff;
-    font-weight: bold;
     border-bottom: 2px solid #4a8e72;
   }
 
@@ -158,10 +142,6 @@
       align-items: center;
       gap: 10px;
 
-      i {
-        margin-right: 5px;
-      }
-
       &:hover {
         color: #00bfa5;
       }
@@ -172,10 +152,9 @@
         padding: 10px 20px;
         border-radius: 20px;
         font-weight: bold;
-        transition: background-color 0.3s;
 
         &:hover {
-          background: linear-gradient(90deg, rgb(72, 213, 196) 0%, rgb(36, 126, 192) 100%);
+          background: linear-gradient(90deg, rgb(72, 213, 196), rgb(36, 126, 192));
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
@@ -186,15 +165,28 @@
       }
     }
   }
+
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #4a8e72;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .closeIcon {
+    display: none;
+  }
 }
 
-/* Responsive */
+/* ===== Responsive Design ===== */
 @media (max-width: 884px) {
   .navbar {
     flex-direction: row;
     justify-content: space-between;
     padding: 15px 20px;
-    position: relative;
 
     .logo img {
       width: 80%;
@@ -206,11 +198,11 @@
       left: 0;
       width: 100%;
       height: 100vh;
-      background: #d2a685;
+      background: white;
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding: 80px 20px 20px;
+      padding: 26px 21px 21px;
       transform: translateX(-100%);
       transition: transform 0.3s ease-in-out;
       z-index: 999;
@@ -219,11 +211,18 @@
         transform: translateX(0);
       }
 
+      .closeIcon {
+        display: block;
+        margin-top: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        color:black;
+      }
+
       p {
-        color: white;
+        color: black;
         font-size: 18px;
         padding: 10px 15px;
-        margin: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
         &:hover {
@@ -232,8 +231,8 @@
       }
 
       .activeLink {
-        border-bottom: 2px solid white;
-        color: white;
+        border-bottom: 2px solid #6B8D7A;
+        color: #6B8D7A;
       }
     }
 
@@ -243,16 +242,10 @@
 
     .hamburger {
       display: block;
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: #4a8e72;
-      cursor: pointer;
-      z-index: 1000;
     }
   }
 
-  /* Overlay when menu is open */
+  /* Menu Overlay */
   .menuOverlay {
     position: fixed;
     top: 0;
@@ -271,10 +264,13 @@
   .topbar {
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     .topbarLeft {
       justify-content: center;
       margin-bottom: 10px;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .topbarRight {

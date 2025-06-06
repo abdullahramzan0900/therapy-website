@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ThankYou from "../../components/ThankYouMessage/ThankYou";
+import buttonstyles from '../../components/styles/button.module.scss'
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -121,7 +122,7 @@ const ContactUs = () => {
                 </div>
 
                 <div className={styles.submitRow}>
-                  <button type="submit" disabled={isLoading}>
+                  <button className={buttonstyles.primary} type="submit" disabled={isLoading}>
                     {isLoading ? "Submitting..." : "Submit"}
                   </button>
                 </div>

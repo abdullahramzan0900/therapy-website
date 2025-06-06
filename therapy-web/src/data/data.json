@@ -182,7 +182,7 @@
       },
       "header":{
      "topbar": {
-  "locationText": "71–75 Shelton Street, WC2H 9JQ, London, United Kingdom",
+  "locationText": "71–75 Shelton Street, London, WC2H 9JQ ,United Kingdom",
   "LocationLink": "https://www.google.com/maps?q=71-75+Shelton+Street,+WC2H+9JQ,+London,+United+Kingdom",
   "emailText": "info@ncptherapy.com",
   "whatsappText": "Connect on Whatsapp",
@@ -197,8 +197,10 @@
           { "name": "Home", "path": "/" },
           { "name": "About", "path": "/about-us" },
           { "name": "Services", "path": "/services" },
-          { "name": "Contact", "path": "/contact-us" },
-          { "name": "Workshops", "path": "/Workshops"}
+          { "name": "Workshops", "path": "/Workshops"},
+          { "name": "Low-Cost Counselling", "path": "/low-cost-counselling" },
+          { "name": "Contact", "path": "/contact-us" }
+
       
         ]
       },

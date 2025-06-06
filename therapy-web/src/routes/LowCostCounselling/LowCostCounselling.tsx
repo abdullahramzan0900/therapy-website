@@ -1,95 +1,92 @@
 import React from 'react';
 import styles from './LowCostCounselling.module.scss';
-import { FaCheckCircle, FaMoneyBillWave, FaUserCheck, FaComments } from 'react-icons/fa';
+import { FaCheckCircle, FaUserCheck, FaComments, FaLaptopHouse, FaHandshake } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import CounsellingImage from '../../assets/appointment.png'; 
+import CounsellingImage from '../../assets/appointment.png';
 
 const LowCostCounselling: React.FC = () => {
   return (
     <section
       className={styles.lowCostWrapper}
-      style={{ backgroundImage: `url(${CounsellingImage})` }}
     >
       <div className={styles.overlay}>
         <div className={styles.container}>
           <h1>
-            Low-Cost Counselling at <span>Nura Counselling and Psychotherapy</span>
+            Affordable Therapy at <span>Nura Counselling</span>
           </h1>
           <p className={styles.intro}>
-            At Nura, we believe everyone deserves access to mental health support, regardless of financial circumstances. Our low-cost counselling ensures professional therapy is accessible to all.
+            At Nura, we make mental wellness accessible. Our low-cost counselling provides confidential and compassionate care tailored to your needs—without financial barriers.
           </p>
 
           <div className={styles.card}>
-            <h2>🧠 What is Low-Cost Counselling?</h2>
+            <h2>What is Low-Cost Counselling?</h2>
             <p>
-              Delivered by trainee counsellors in their final stages of training, under strict clinical supervision. Safe, confidential, and supportive therapy at an affordable price.
+              Sessions are conducted by advanced trainee therapists under expert clinical supervision. This ensures quality care that is safe, supportive, and confidential.
             </p>
-            <Link to="/contact" className={styles.button}>🡲 Apply for Low-Cost Counselling</Link>
+            <Link to="/contact-us " className={styles.button}>Apply for Support</Link>
           </div>
 
           <div className={styles.card}>
-            <h2>👥 Who is it for?</h2>
+            <h2>Who Can Benefit?</h2>
             <ul className={styles.checkList}>
-              <li><FaCheckCircle /> Low-income individuals or those receiving benefits</li>
-              <li><FaCheckCircle /> Students or young adults</li>
-              <li><FaCheckCircle /> Those facing financial hardship</li>
-              <li><FaCheckCircle /> Anyone who can’t afford private counselling rates</li>
+              <li><FaCheckCircle /> Individuals with limited income</li>
+              <li><FaCheckCircle /> Students and young adults</li>
+              <li><FaCheckCircle /> Those in financial difficulty</li>
+              <li><FaCheckCircle /> Anyone seeking affordable mental health care</li>
             </ul>
-            <Link to="/contact-us" className={styles.button}>🡲 Contact Us</Link>
           </div>
 
           <div className={styles.gridBlock}>
-            <h2>📌 What to Expect</h2>
+            <h2>What to Expect</h2>
             <div className={styles.featuresGrid}>
               <div>
                 <FaUserCheck className={styles.icon} />
-                <h4>Professional Support</h4>
-                <p>Delivered by trainee counsellors under professional supervision.</p>
+                <h4>Qualified Trainees</h4>
+                <p>Sessions led by skilled trainees under supervision.</p>
               </div>
               <div>
                 <FaComments className={styles.icon} />
-                <h4>Safe & Confidential</h4>
-                <p>Non-judgemental sessions in a secure and private setting.</p>
+                <h4>Confidential Space</h4>
+                <p>Your sessions are private, judgment-free, and secure.</p>
               </div>
               <div>
-                <FaComments className={styles.icon} />
-                <h4>Online Convenience</h4>
-                <p>Access therapy from your home. No travel needed.</p>
+                <FaLaptopHouse className={styles.icon} />
+                <h4>Virtual Convenience</h4>
+                <p>Therapy from the comfort of your own space.</p>
               </div>
               <div>
-                <FaComments className={styles.icon} />
-                <h4>Tailored to You</h4>
-                <p>Anxiety, depression, grief, transitions — we support it all.</p>
+                <FaHandshake className={styles.icon} />
+                <h4>Personalised Support</h4>
+                <p>Care that fits your emotional needs and life journey.</p>
               </div>
             </div>
           </div>
 
           <div className={styles.card}>
-            <h2><FaMoneyBillWave /> How Much Does It Cost?</h2>
+            <h2>Pricing</h2>
             <p>
-              Sessions start from <strong>£15-£25 per session</strong>. Sliding scale available based on financial need.
-              No one is turned away due to cost.
+              Sessions range between <strong>£15 to £25</strong>. Fees are income-based—ensuring no one is turned away due to cost.
             </p>
           </div>
 
           <div className={styles.card}>
-            <h2>📝 How to Apply</h2>
+            <h2>How to Begin</h2>
             <ol className={styles.stepList}>
-              <li>Fill out our enquiry form</li>
-              <li>We’ll contact you to discuss your needs</li>
-              <li>Book your first session with a matched counsellor</li>
+              <li>Complete our simple enquiry form</li>
+              <li>We’ll reach out to understand your needs</li>
+              <li>Start your sessions with a matched therapist</li>
             </ol>
-            <Link to="/contact" className={styles.button}>🡲 Apply Now</Link>
+            <Link to="/contact-us" className={styles.button}>Start Now</Link>
           </div>
 
           <div className={styles.card}>
-            <h2>🌿 Why Choose Nura?</h2>
+            <h2>Why Nura?</h2>
             <ul className={styles.checkList}>
-              <li><FaCheckCircle /> Affordable and accessible therapy</li>
-              <li><FaCheckCircle /> Caring trainee counsellors under supervision</li>
-              <li><FaCheckCircle /> Flexible online sessions</li>
-              <li><FaCheckCircle /> Confidential and safe space</li>
-              <li><FaCheckCircle /> Inclusive care for all backgrounds</li>
+              <li><FaCheckCircle /> Respectful, inclusive care</li>
+              <li><FaCheckCircle /> Affordable mental health support</li>
+              <li><FaCheckCircle /> Safe and nurturing sessions</li>
+              <li><FaCheckCircle /> Culturally sensitive practitioners</li>
+              <li><FaCheckCircle /> Flexible online appointments</li>
             </ul>
           </div>
         </div>

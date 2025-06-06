@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
         {/* Right Side - Content */}
         <div className={styles.right}>
           <h5>ABOUT US</h5>
-          <h2>About Nura Counselling</h2>
+          <h2>Nura Counselling</h2>
           <p>
             At Nura Counselling and Psychotherapy, we provide compassionate and professional 
             online therapy, ensuring that mental health support is accessible to everyone. 

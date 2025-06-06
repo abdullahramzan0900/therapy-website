@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap');
+
 
 $primary-green: #6B8D7A; // calm green
 $dark-green: #6B8D7A;
@@ -8,6 +8,8 @@ $background: #ffffff;
 .welcomeContainer {
   position: relative;
   background-color: $background;
+  font-family: 'Roboto', sans-serif;
+
   color: $soft-grey;
   text-align: center;
   padding: 80px 5%;
@@ -28,7 +30,7 @@ $background: #ffffff;
     h1 {
       font-size: 42px;
       font-weight: 600;
-      font-family: 'Playfair Display', serif;
+
       margin-bottom: 20px;
       color: $dark-green;
       
@@ -39,7 +41,8 @@ $background: #ffffff;
 
     p {
       font-size: 18px;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
+
       margin-bottom: 15px;
       line-height: 1.6;
       color: $soft-grey;

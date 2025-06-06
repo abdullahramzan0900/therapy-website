@@ -16,7 +16,7 @@ const Footer = () => {
       { 
         icon: faMapMarkerAlt, 
         title: "Location", 
-        value: "71–75 Shelton Street, WC2H 9JQ, London, United Kingdom" 
+        value: "71–75 Shelton Street,London, WC2H 9JQ,United Kingdom" 
       }
     ],
     
@@ -26,9 +26,11 @@ const Footer = () => {
     },
     links: [
       { name: "Home", path: "/" },
-      { name: "About Us", path: "/about" },
+      { name: "About Us", path: "/about-us" },
       { name: "Services", path: "/services" },
-      { name: "Contact Us", path: "/contact" }
+      { name: "Contact Us", path: "/contact-us" },
+      { name: "Workshops", path: "/Workshops" },
+      { name: "Low-Cost Counseling", path: "/low-cost-counselling" }
     ],
     socialLinks: [
       { icon: faInstagram, url: "#" },
