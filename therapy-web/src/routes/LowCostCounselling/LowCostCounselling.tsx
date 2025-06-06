@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './LowCostCounselling.module.scss';
 import { FaCheckCircle, FaUserCheck, FaComments, FaLaptopHouse, FaHandshake } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import CounsellingImage from '../../assets/appointment.png';
 
 const LowCostCounselling: React.FC = () => {
   return (
