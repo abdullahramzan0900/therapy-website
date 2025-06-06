@@ -44,9 +44,9 @@ router.post("/send-email", async (req, res) => {
     const userConfirmation = {
       from: process.env.EMAIL_USER,
       to: Email,
-      subject: "Thank you for contacting Nora Counselling & Psychotherapy!",
+      subject: "Thank you for contacting Nura Counselling & Psychotherapy!",
       html: `<p>Hi ${YourName},</p>
-               <p>Thank you for reaching out to Nora Counselling & Psychotherapy!</p>
+               <p>Thank you for reaching out to Nura Counselling & Psychotherapy!</p>
                <p>We appreciate you contacting us and are committed to supporting your mental health journey.</p>
                <p>One of our team members will respond to your inquiry within 24 hours.</p>
              `,

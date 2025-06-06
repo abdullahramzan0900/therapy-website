@@ -49,11 +49,11 @@ app.post("/send-email", (req, res) => {
         to: Email,
         subject: "Thank you for reaching out!",
         html: `<div style="font-family: Arial, sans-serif; color: #333;">
-                 <h2 style="color: #2c3e50;">Thank you for contacting Nora Counselling & Psychotherapy!</h2>
+                 <h2 style="color: #2c3e50;">Thank you for contacting Nura Counselling & Psychotherapy!</h2>
                  <p style="font-size: 16px;">Hi ${YourName},</p>
                  <p style="font-size: 16px;">We have received your message and will get back to you soon.</p>
                  <p style="font-size: 16px;">Best regards,</p>
-                 <p style="font-size: 16px; font-weight: bold;">Nora Counselling & Psychotherapy Team</p>
+                 <p style="font-size: 16px; font-weight: bold;">Nura Counselling & Psychotherapy Team</p>
                </div>`,
       };
 
