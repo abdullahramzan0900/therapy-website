@@ -2,8 +2,10 @@
 
 import styles from './IndividualTherapy.module.scss';
 import buttonstyles from '../../components/styles/button.module.scss'
+import { useNavigate } from 'react-router-dom';
 
 const IndividualTherapy = () => {
+  const navigate=useNavigate()
   return (
     <section className={styles.individualTherapySection}>
       <div className={styles.sectionContent}>
@@ -25,7 +27,9 @@ const IndividualTherapy = () => {
           alignItems: 'center'
         }}>
 
-        <button className={buttonstyles.primary}>🡲 Book a Consultation</button>
+        <button onClick={()=>{
+          navigate('/contact-us')
+        }} className={buttonstyles.primary}>🡲 Book a Consultation</button>
         </div>
 
         <h3>Areas We Cover</h3>

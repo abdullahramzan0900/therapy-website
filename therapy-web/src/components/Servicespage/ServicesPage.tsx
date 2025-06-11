@@ -14,7 +14,7 @@ const IndividualTherapy = () => {
         challenging period, our sessions are tailored to help you find clarity, confidence, and
         relief.
       </p>
-      <a href="/booking" className={styles.bookBtn}>🡲 Book a Consultation</a>
+      <a href="/contact-us" className={styles.bookBtn}>🡲 Book a Consultation</a>
 
       <h3>Areas We Cover</h3>
 

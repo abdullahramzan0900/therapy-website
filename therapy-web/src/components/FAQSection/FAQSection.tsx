@@ -50,17 +50,11 @@ export default function FAQSection() {
 
         {/* Contact Box */}
         <div className={styles.contactBox}>
-          <div className={styles.avatars}>
-            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User 1" />
-            <img src="https://randomuser.me/api/portraits/women/46.jpg" alt="User 2" />
-            <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="User 3" />
-            <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="User 4" />
-          </div>
           <div className={styles.contactInfo}>
             <p className={styles.contactText}>Still have questions?</p>
             <p className={styles.phoneNumber}>
               <PhoneCall size={20} />
-              +01 789 859 664
+              07984628017
             </p>
             <button onClick={()=>{
             navigate('/contact-us')
