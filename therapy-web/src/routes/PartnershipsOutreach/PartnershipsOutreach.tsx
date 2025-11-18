@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './PartnershipsOutreach.module.scss';
-import { FaCheckCircle, FaUsers, FaChalkboardTeacher, FaHandsHelping, FaEnvelope } from 'react-icons/fa';
+import { FaCheckCircle, FaUsers, FaChalkboardTeacher, FaHandsHelping } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const PartnershipsOutreach: React.FC = () => {
