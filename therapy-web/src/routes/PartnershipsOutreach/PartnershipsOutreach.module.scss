@@ -1,0 +1,127 @@
+$primary-green: #6B8D7A;
+$accent-beige: #d2a685;
+$overlay-color: rgba(255, 255, 255, 0.95);
+$light-bg: #fcf9f6;
+$text-color: #333;
+
+.partnershipWrapper {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+
+  .overlay {
+    background-color: $overlay-color;
+    padding: 60px 30px;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1300px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    color: $text-color;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    span {
+      color: $accent-beige;
+    }
+  }
+
+  .intro {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 auto 50px;
+    max-width: 900px;
+  }
+
+  .card {
+    background-color: $light-bg;
+    padding: 40px 30px;
+    border-radius: 16px;
+    margin-bottom: 50px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: $accent-beige;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    strong {
+      color: $primary-green;
+    }
+  }
+
+  .checkList {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      margin: 10px 0;
+
+      svg {
+        color: $primary-green;
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: $primary-green;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-green, 8%);
+    }
+  }
+
+  .note {
+    font-size: 14px;
+    margin-top: 12px;
+    color: $text-color;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 30px;
+    }
+
+    .intro {
+      font-size: 16px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+    }
+  }
+}

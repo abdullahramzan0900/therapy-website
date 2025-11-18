@@ -34,6 +34,11 @@
             "path": "/Workshops",
             "component": "Workshops",
             "location": "./routes/Workshops/Workshops"
+          },
+          {
+            "path": "/PartnershipsOutreach",
+            "component": "PartnershipsOutreach",
+            "location": "./routes/PartnershipsOutreach/PartnershipsOutreach"
           }
  
     ],
@@ -199,7 +204,8 @@
           { "name": "Services", "path": "/services" },
           { "name": "Workshops", "path": "/Workshops"},
           { "name": "Low-Cost Counselling", "path": "/low-cost-counselling" },
-          { "name": "Contact", "path": "/contact-us" }
+          { "name": "Contact", "path": "/contact-us" },
+          { "name": "Partnerships", "path": "/PartnershipsOutreach" }
 
       
         ]
@@ -211,7 +217,9 @@
           { "name": "Services", "path": "/services" },
           { "name": "About Us", "path": "/about-us" },
           { "name": "Contact Us", "path": "/contact-us"},
-          { "name": "Workshops", "path": "/Workshops"}
+          { "name": "Workshops", "path": "/Workshops"},
+          { "name": "Partnerships", "path": "/PartnershipsOutreach" }
+
         ],
         "address": {
           "heading": "Address",

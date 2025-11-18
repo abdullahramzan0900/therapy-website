@@ -30,7 +30,8 @@ const Footer = () => {
       { name: "Services", path: "/services" },
       { name: "Contact Us", path: "/contact-us" },
       { name: "Workshops", path: "/Workshops" },
-      { name: "Low-Cost Counseling", path: "/low-cost-counselling" }
+      { name: "Low-Cost Counseling", path: "/low-cost-counselling" },
+      { "name": "Partnerships", "path": "/PartnershipsOutreach" }
     ],
     socialLinks: [
       { icon: faInstagram, url: "#" },
