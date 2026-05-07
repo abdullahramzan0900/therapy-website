@@ -1,0 +1,98 @@
+$primary-green: #6b8d7a;
+
+.imagesSection {
+  width: 100%;
+  padding: 35px 5%;
+  background: #ffffff;
+
+  .imagesGrid {
+    max-width: 950px; // reduced overall width
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .imageCard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 190px; // reduced image height
+    border-radius: 18px;
+    // overflow: hidden;
+    position: relative;
+
+    // box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+
+      img {
+        transform: scale(1.04);
+      }
+    }
+
+    img {
+    //   width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+      display: block;
+    }
+  }
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 992px) {
+  .imagesSection {
+    .imagesGrid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 700px;
+    }
+
+    .imageCard {
+      height: 180px;
+    }
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .imagesSection {
+    padding: 30px 20px;
+
+    .imagesGrid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      gap: 16px;
+    }
+
+    .imageCard {
+      height: 200px;
+      border-radius: 16px;
+    }
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 480px) {
+  .imagesSection {
+    padding: 25px 16px;
+
+    .imageCard {
+      height: 180px;
+      border-radius: 14px;
+    }
+  }
+}

@@ -83,7 +83,7 @@
         "title": "",
         "titleHighlight": "Affordable Online Therapy ",
         "titleHighlight2": "Supporting Your Mental Well-Being",
-        "description": "Compassionate and confidential counselling for individuals. Flexible, accessible, and tailored to your needs. ",
+        "description": "At NURA, we don’t just treat symptoms, we understand the impact of life experiences.Our trauma-informed approach ensures you feel safe, heard, and supported at every step. And add the badge next to it again. Can you send me a mock up first so I can see if the placement is right. ",
         "emailPlaceholder": "Enter Your Email",
         "buttonText": "Let's Talk",
         "buttonText2": "Book your free 15 minutes consultation",
@@ -93,7 +93,7 @@
       "aboutUs": {
         "title": "Who We Are",
         "subtitle": "Healing, Growth, and Transformation",
-        "mainText": "At Nova, we believe in the power of healing, growth, and transformation. Our goal is to make therapy accessible and supportive for everyone, regardless of background or financial situation. We take an integrated approach, combining different therapeutic techniques to tailor support that meets your unique needs.",
+        "mainText": "At Nura, we believe in the power of healing, growth, and transformation. Our goal is to make therapy accessible and supportive for everyone, regardless of background or financial situation. We take an integrated approach, combining different therapeutic techniques to tailor support that meets your unique needs.",
         "whoweare":"At Nura Counselling and Psychotherapy, we provide compassionate and professional online therapy, ensuring that mental health support is accessible to everyone. Our focus is on individual therapy, offering a safe, confidential space to help clients navigate anxiety, depression, bereavement, stress, and self-esteem challenges. With affordable pricing and low-cost counselling options, we are committed to making quality therapy available to those who need it most",
         "missionTitle": "Our Core Values",
         "missionValues": [
@@ -168,19 +168,19 @@
           {
             "name": "Sarah Johnson",
             "image": "assets/profilePic1.png",
-            "review": "Nova Consultation has been a lifesaver for me. The therapists are compassionate, understanding, and truly helped me navigate through my anxiety. I highly recommend their services!",
+            "review": "Nura Consultation has been a lifesaver for me. The therapists are compassionate, understanding, and truly helped me navigate through my anxiety. I highly recommend their services!",
             "rating": 5
           },
           {
             "name": "Michael Brown",
             "image": "../../../src/assets/profilePic2.jpeg",
-            "review": "I was hesitant about therapy at first, but Nova Consultation made me feel comfortable from day one. Their approach is professional yet personal, and I've seen significant progress in my mental health.",
+            "review": "I was hesitant about therapy at first, but Nura Consultation made me feel comfortable from day one. Their approach is professional yet personal, and I've seen significant progress in my mental health.",
             "rating": 5
           },
           {
             "name": "David Wilson",
             "image": "../../../src/assets/profilePic4.jpeg",
-            "review": "Nova Consultation has been instrumental in helping me manage my stress and improve my relationships. The therapists are knowledgeable and genuinely care about their clients.",
+            "review": "Nura Consultation has been instrumental in helping me manage my stress and improve my relationships. The therapists are knowledgeable and genuinely care about their clients.",
             "rating": 5
           }
         ]

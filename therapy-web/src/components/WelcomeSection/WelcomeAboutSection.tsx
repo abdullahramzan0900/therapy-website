@@ -1,44 +1,49 @@
 import React from "react";
 import styles from "./WelcomeAboutSection.module.scss";
-import { FaHeart, FaComments, FaUsers } from "react-icons/fa";
+import trauma from '../../assets/trauma.jpeg'
 
 const WelcomeSection: React.FC = () => {
   return (
     <section className={styles.welcomeContainer}>
       <div className={styles.overlay}></div>
 
-      <div className={styles.content}> 
-        <h1>Welcome to <span>Nura Counselling and Psychotherapy</span></h1>
-        <p>
-          At Nura Counselling and Psychotherapy, we believe that mental health
-          support should be accessible to everyone. Life can be challenging, and
-          whether you are struggling with anxiety, depression, bereavement, or
-          self-confidence issues, you don’t have to face it alone.
-        </p>
-        <p>
-          We provide compassionate, professional online therapy for individuals,
-          ensuring a <strong>safe, confidential</strong> space where you can explore your thoughts,
-          emotions, and experiences.
-        </p>
-        <p className={styles.highlight}>
-          Our focus is on <strong>affordable therapy</strong>, offering both standard counselling
-          and a low-cost counselling service to make professional support available
-          to those who need it most. 
-        </p>
+      <div className={styles.content}>
+        <h1>
+          Welcome to <span>Nura Counselling and Psychotherapy</span>
+        </h1>
 
-        <div className={styles.features}>
-          <div className={styles.feature}>
-            <FaHeart className={styles.icon} />
-            <h3>Compassionate Care</h3>
-          </div>
-          <div className={styles.feature}>
-            <FaComments className={styles.icon} />
-            <h3>Confidential Support</h3>
-          </div>
-          <div className={styles.feature}>
-            <FaUsers className={styles.icon} />
-            <h3>Affordable Therapy</h3>
-          </div>
+        {/* Trauma Informed Badge */}
+        <div className={styles.badge}>
+          <img src={trauma} alt="Trauma-informed Practice" />
+          <span>Trauma-informed Practice</span>
+        </div>
+
+        {/* About Content */}
+        <div className={styles.aboutText}>
+          <p>
+            At Nura Counselling and Psychotherapy, we provide compassionate,
+            professional therapy that is accessible, culturally sensitive, and
+            grounded in understanding.
+          </p>
+
+          <p>
+            As a trauma-informed practice, we recognise that many emotional
+            challenges are shaped by past experiences. Our approach prioritises
+            safety, trust, and collaboration, allowing each client to move at
+            their own pace without judgement or pressure.
+          </p>
+
+          <p>
+            We offer a confidential and supportive space to explore anxiety,
+            depression, bereavement, stress, and self-esteem, with a focus on
+            helping you feel heard, understood, and empowered.
+          </p>
+
+          <p className={styles.highlight}>
+            With affordable pricing and low-cost counselling options, we are
+            committed to making meaningful mental health support available to
+            those who need it most.
+          </p>
         </div>
       </div>
     </section>

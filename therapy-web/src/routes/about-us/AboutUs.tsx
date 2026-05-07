@@ -1,5 +1,6 @@
 
 import AppointmentForm from "../../components/AppointmentForm/AppointmentForm";
+import ContactImagesRow from "../../components/ContactImagesRow/ContactImagesRow";
 import GoalsMissionVision from "../../components/GoalsMissionVision/GoalsMissionVision";
 import GuidingPrinciples from "../../components/GuidingPrinciples/GuidingPrinciples";
 import JourneySection from "../../components/JourneySection/JourneySection";
@@ -13,6 +14,7 @@ const AboutUs = () => {
    <GoalsMissionVision/>
    <WhatWeOffer/>
    <GuidingPrinciples/>
+   <ContactImagesRow/>
    <AppointmentForm/>
    <JourneySection/>
   </>
