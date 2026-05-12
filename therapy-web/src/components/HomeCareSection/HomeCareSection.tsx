@@ -3,6 +3,7 @@ import "react-toastify/dist/ReactToastify.css"; // Import styles
 import styles from "./HomeCareSection.module.scss";
 import data from "../../data/data.json";
 import { useNavigate } from "react-router-dom";
+import trauma from '../../assets/trauma.jpeg'
 
 const HomeCareSection = () => {
   const homeCareData = data.components.HomeCareData;
@@ -76,6 +77,12 @@ const HomeCareSection = () => {
             <span className={styles.titleText}>{homeCareData.titleHighlight2}</span>
             {/* <h2>{homeCareData.titleHighlight2}</h2> */}
             <p>{homeCareData.description}</p>
+            <img
+                src={trauma}
+                alt=""
+  
+              
+              />
 
             <div className={styles.consultationButtonWrapper}>
   <button onClick={()=>{
