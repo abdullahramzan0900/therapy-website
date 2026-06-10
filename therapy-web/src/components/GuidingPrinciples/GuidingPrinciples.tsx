@@ -1,68 +1,70 @@
 import React from "react";
 import styles from "./GuidingPrinciples.module.scss";
-import buttonstyles from '../../components/styles/button.module.scss'
-import { useNavigate,useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
+const steps = [
+  {
+    num: "01",
+    icon: "ti-calendar",
+    title: "Book a Free Consultation",
+    desc: "A relaxed 15-minute call to explore your needs and answer any questions.",
+  },
+  {
+    num: "02",
+    icon: "ti-message-circle",
+    title: "Initial Assessment",
+    desc: "We'll discuss what's bringing you to therapy and how support can be tailored to you.",
+  },
+  {
+    num: "03",
+    icon: "ti-heart",
+    title: "Ongoing Sessions",
+    desc: "A safe, confidential space to explore emotions, experiences, and healing at your own pace.",
+  },
+  {
+    num: "04",
+    icon: "ti-leaf",
+    title: "Continued Support",
+    desc: "Therapy that supports long-term emotional wellbeing and personal growth.",
+  },
+];
 
 const GuidingPrinciples: React.FC = () => {
-  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const navigate = useNavigate();
   const location = useLocation();
-  console.log(location,'location')
+
   if (location.pathname === "/contact-us") return null;
+
   return (
     <section className={styles.therapyProcess}>
       <div className={styles.container}>
-        {/* Heading Section */}
         <div className={styles.heading}>
-          <span>● HOW IT WORK</span>
-          <h2>Guiding You Our Therapy Process</h2>
+          <h2>Our Therapy Process</h2>
+          <div className={styles.divider}></div>
         </div>
 
-        {/* Steps Section */}
         <div className={styles.steps}>
-          <div className={`${styles.step} ${styles.step1}`}>
-            <div className={styles.stepNumber}>01</div>
-            <div className={styles.stepContent}>
-              <h4>O1. Book Appointment</h4>
-              <p>Scheduling appointment with us is simple and</p>
+          {steps.map((step) => (
+            <div className={styles.step} key={step.num}>
+              <div className={styles.stepNumber}>{step.num}</div>
+              <div className={styles.stepIcon}>
+                <i className={`ti ${step.icon}`} aria-hidden="true" />
+              </div>
+              <div className={styles.stepContent}>
+                <h4>{step.title}</h4>
+                <p>{step.desc}</p>
+              </div>
             </div>
-          </div>
-
-          {/* <div className={styles.dashedLine}></div> */}
-
-          <div className={`${styles.step} ${styles.step2}`}>
-            <div className={styles.stepNumber}>02</div>
-            <div className={styles.stepContent}>
-              <h4>O2. Initial Consultation</h4>
-              <p>Scheduling appointment with us is simple and</p>
-            </div>
-          </div>
-
-          {/* <div className={styles.dashedLine}></div> */}
-
-          <div className={`${styles.step} ${styles.step3}`}>
-            <div className={styles.stepNumber}>03</div>
-            <div className={styles.stepContent}>
-              <h4>O3. Progress Check-Ins</h4>
-              <p>Scheduling appointment with us is simple and</p>
-            </div>
-          </div>
-{/* 
-          <div className={styles.dashedLine}></div> */}
-
-          <div className={`${styles.step} ${styles.step4}`}>
-            <div className={styles.stepNumber}>04</div>
-            <div className={styles.stepContent}>
-              <h4>O4. Ongoing Support</h4>
-              <p>Scheduling appointment with us is simple and</p>
-            </div>
-          </div>
+          ))}
         </div>
 
-        {/* Contact Button */}
         <div className={styles.buttonWrapper}>
-          <button  onClick={()=>{
-                navigate('/contact-us')
-            }} className={buttonstyles.primary }>Contact Us</button>
+          <button
+            className={styles.startButton}
+            onClick={() => navigate("/contact-us")}
+          >
+            Start Your Journey
+          </button>
         </div>
       </div>
     </section>

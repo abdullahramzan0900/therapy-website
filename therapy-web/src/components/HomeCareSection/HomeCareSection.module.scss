@@ -1,7 +1,8 @@
 .homeCareMain {
   width: 100%;
-  background: #7b9685;
-  padding: 60px 40px;
+  background: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+  padding: 60px 48px;
 
   @media (max-width: 768px) {
     padding: 40px 20px;
@@ -9,122 +10,184 @@
 }
 
 .homeCareSection {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 70px;
+  gap: 60px;
 
   @media (max-width: 992px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     text-align: center;
     gap: 40px;
   }
 }
 
 .content {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.05;
-    color: #fff;
-    margin-bottom: 20px;
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e8f4ed;
+  color: #1a5c36;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 50px;
+  width: fit-content;
+  margin-bottom: 16px;
 
-    span {
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 2.8rem;
-    }
-  }
-
-  .titleText {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 18px;
-
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-    }
-  }
-
-  p {
-    max-width: 650px;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: #f3f3f3;
-    margin-bottom: 24px;
-
-    @media (max-width: 992px) {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 1rem;
-    }
-  }
-
-  img {
-    width: 170px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 14px;
-    background: white;
-    padding: 8px;
-    margin-top: 20px;
-    display: block;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-
-    @media (max-width: 992px) {
-      margin: 20px auto;
-    }
-
-    @media (max-width: 768px) {
-      width: 140px;
-    }
+  @media (max-width: 992px) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-.consultationButtonWrapper {
-  margin-top: 30px;
+.content h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #1a3d2b;
+  margin: 0 0 6px;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+}
+
+.titleText {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d6a4f;
+  margin-bottom: 14px;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+}
+
+.content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 10px;
+  max-width: 480px;
 
   @media (max-width: 992px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.trustRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+
+  span {
     display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2d6a4f;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+
+  @media (max-width: 992px) {
     justify-content: center;
   }
 }
 
 .consultationButton {
-  background: #fff;
-  color: #5f7b69;
+  background: #2d6a4f;
+  color: #fff;
   border: none;
-  padding: 16px 28px;
+  padding: 12px 22px;
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.2s ease;
 
   &:hover {
-    background: #f3f3f3;
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    max-width: 320px;
+    background: #1a5c36;
   }
 }
 
+.exploreButton {
+  background: transparent;
+  color: #2d6a4f;
+  border: 1.5px solid #2d6a4f;
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #e8f4ed;
+  }
+}
+
+.features {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.featureIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e8f4ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2d6a4f;
+  font-size: 1.1rem;
+}
+
+.featureItem span {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
 .visuals {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,28 +197,22 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 
   .mainImage {
     width: 100%;
-    max-width: 540px;
-    height: 430px;
+    max-width: 500px;
+    height: 380px;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 24px;
     display: block;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-
-    @media (max-width: 992px) {
-      max-width: 100%;
-    }
 
     @media (max-width: 768px) {
-      height: 320px;
+      height: 280px;
     }
 
     @media (max-width: 480px) {
-      height: 250px;
-      border-radius: 22px;
+      height: 220px;
+      border-radius: 16px;
     }
   }
 }

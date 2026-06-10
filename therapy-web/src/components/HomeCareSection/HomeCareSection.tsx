@@ -1,121 +1,79 @@
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Import styles
-import styles from "./HomeCareSection.module.scss";
-import data from "../../data/data.json";
-import { useNavigate } from "react-router-dom";
-import trauma from '../../assets/trauma.jpeg'
+  import { ToastContainer } from "react-toastify";
+  import "react-toastify/dist/ReactToastify.css";
+  import styles from "./HomeCareSection.module.scss";
+  import data from "../../data/data.json";
+  import { useNavigate } from "react-router-dom";
 
-const HomeCareSection = () => {
-  const homeCareData = data.components.HomeCareData;
-  // const [email, setEmail] = useState("");
-  // const [isLoading, setIsLoading] = useState(false); // Loader state
-  const navigate=useNavigate();
+  const HomeCareSection = () => {
+    const homeCareData = data.components.HomeCareData;
+    const navigate = useNavigate();
 
-  // const validateEmail = (email: string) => {
-  //   return /\S+@\S+\.\S+/.test(email); // Checks if email contains '@' and '.'
-  // };
+    return (
+      <>
+        <ToastContainer />
+        <section className={styles.homeCareMain}>
+          <div className={styles.homeCareSection}>
+            <div className={styles.content}>
+              <div className={styles.badge}>
+                Safe · Confidential · Accessible
+              </div>
 
-  // const handleSubmit = async () => {
-  //   if (!email.trim()) {
-  //     toast.error("Email is required!", { position: "top-left", icon: false, className: "custom-toast" });
-  //     return;
-  //   }
+              <h1>
+                {homeCareData.title.split(" ")[0]}{" "}
+                <span>{homeCareData.titleHighlight}</span>
+              </h1>
+              <span className={styles.titleText}>{homeCareData.titleHighlight2}</span>
+              <p>{homeCareData.description}</p>
 
-  //   if (!validateEmail(email)) {
-  //     toast.error("Invalid email format!", { position: "top-left", icon: false, className: "custom-toast" });
-  //     return;
-  //   }
+              <div className={styles.trustRow}>
+                <span>✓ Safe</span>
+                <span>✓ Confidential</span>
+                <span>✓ Accessible</span>
+              </div>
 
-  //   // setIsLoading(true); // Start loading
+              <div className={styles.buttonGroup}>
+                <button
+                  onClick={() => navigate("contact-us")}
+                  className={styles.consultationButton}
+                >
+                  Book Your Free 15-Minute Consultation
+                </button>
+                <button
+                onClick={() => navigate("/services")}
+                className={styles.exploreButton}>
+                  Explore Our Services
+                </button>
+              </div>
 
-  //   try {
-  //     const response = await fetch("https://ncptherapyback.netlify.app/.netlify/functions/server/contact", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({ email }),
-  //     });
+              <div className={styles.features}>
+                {[
+                  { icon: "🧠", label: "Trauma-Informed" },
+                  { icon: "🌍", label: "Culturally Sensitive" },
+                  { icon: "💰", label: "Low-Cost Options" },
+                  { icon: "💻", label: "Online Therapy" },
+                  { icon: "🗣️", label: "English, Urdu & Punjabi" },
+                ].map((f) => (
+                  <div className={styles.featureItem} key={f.label}>
+                    <div className={styles.featureIcon}>{f.icon}</div>
+                    <span>{f.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-  //     const result = await response.json();
-
-  //     if (response.ok) {
-  //       toast.success("Thank you for contacting us! We will reach out soon.", {
-  //         position: "top-left",
-  //         icon: false,
-  //         className: "custom-toast",
-  //       });
-  //       setEmail(""); // Clear input
-  //     } else {
-  //       toast.error(result.message || "Something went wrong.", {
-  //         position: "top-left",
-  //         icon: false,
-  //         className: "custom-toast",
-  //       });
-  //     }
-  //   } catch (error) {
-  //     console.error("Error submitting email:", error);
-  //     toast.error("Failed to send. Please try again.", {
-  //       position: "top-left",
-  //       icon: false,
-  //       className: "custom-toast",
-  //     });
-  //   } finally {
-  //     // setIsLoading(false); // Stop loading
-  //   }
-  // };
-
-  return (
-    <>
-      <ToastContainer />
-      <section className={styles.homeCareMain}>
-        <div className={styles.homeCareSection}>
-          <div className={styles.content}>
-            <h1>
-              {homeCareData.title.split(" ")[0]} <span>{homeCareData.titleHighlight}</span>
-            </h1>
-            <span className={styles.titleText}>{homeCareData.titleHighlight2}</span>
-            {/* <h2>{homeCareData.titleHighlight2}</h2> */}
-            <p>{homeCareData.description}</p>
-            <img
-                src={trauma}
-                alt=""
-  
-              
-              />
-
-            <div className={styles.consultationButtonWrapper}>
-  <button onClick={()=>{
-    navigate('contact-us')
-  }} className={styles.consultationButton}>Book your free 15 minutes consultation</button>
-</div>
-{/* 
-            <div className={styles.emailInput}>
-              <input
-                type="email"
-                placeholder={homeCareData.emailPlaceholder}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <button onClick={handleSubmit} disabled={isLoading}>
-                {isLoading ? "Submitting..." : homeCareData.buttonText}
-              </button>
-            </div> */}
-          </div>
-
-          <div className={styles.visuals}>
-            <div className={styles.imageWrapper}>
-              <img
-                src={homeCareData.imageSrc}
-                alt={homeCareData.imageAlt}
-                className={styles.mainImage}
-              />
+            <div className={styles.visuals}>
+              <div className={styles.imageWrapper}>
+                <img
+                  src={homeCareData.imageSrc}
+                  alt={homeCareData.imageAlt}
+                  className={styles.mainImage}
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </>
-  );
-};
+        </section>
+      </>
+    );
+  };
 
-export default HomeCareSection;
+  export default HomeCareSection;
