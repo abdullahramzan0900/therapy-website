@@ -4,7 +4,7 @@ import IndividualTherapy from "../../components/OurServices/OurServices";
 import "./Services.scss";
 import TherapySupport from "../../components/therapySupport/TherapySupport";
 import TherapyProcess from "../../components/GuidingPrinciples/GuidingPrinciples";
-import WhoWesupport from "../../components/WhoWesupport/WhoWesupport";
+import WhoWesupport from "../../components/WhoWeSupport/WhoWeSupport";
 
 const Services = () => {
   return <>

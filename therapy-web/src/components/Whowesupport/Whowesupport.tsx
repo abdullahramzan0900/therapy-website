@@ -60,7 +60,7 @@ const groups: SupportGroup[] = [
   },
 ];
 
-const WhoWesupport = () => {
+const WhoWeSupport = () => {
   const navigate = useNavigate();
 
   return (
@@ -95,4 +95,4 @@ const WhoWesupport = () => {
   );
 };
 
-export default WhoWesupport;
+export default WhoWeSupport;
