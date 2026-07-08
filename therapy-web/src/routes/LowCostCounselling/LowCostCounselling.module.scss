@@ -1,176 +1,499 @@
-$primary-green: #6B8D7A;
-$accent-beige: #d2a685;
-$overlay-color: rgba(255, 255, 255, 0.95);
-$light-bg: #fcf9f6;
+$primary-green: #6b8d7a;
+$dark-green: #3f5c4c;
+$accent-gold: rgba(179, 114, 4, 0.9);
+$cream-bg: #f9f0e8;
+$gray-bg: #f4f4f4;
 $text-color: #333;
+$muted-text: #666;
 
-.lowCostWrapper {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  position: relative;
+.page {
+  color: $text-color;
+  overflow-x: hidden;
+}
 
-  .overlay {
-    background-color: $overlay-color;
-    padding: 60px 30px;
-    width: 100%;
-    min-height: 100vh;
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.25rem;
   }
+}
 
-  .container {
-    max-width: 1300px;
-    margin: auto;
-    font-family: 'Roboto', sans-serif;
-
-    color: $text-color;
-  }
-
+.heroText {
   h1 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 30px;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin: 0 0 1.25rem;
+    color: #2c3e50;
+
     span {
-      color: $accent-beige;
+      color: $accent-gold;
     }
   }
 
-  .intro {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.7;
-    margin: 0 auto 50px;
-    max-width: 800px;
+  p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: $muted-text;
+    margin-bottom: 1.75rem;
+    max-width: 480px;
   }
+}
 
-  .card {
-    background-color: $light-bg;
-    padding: 40px 30px;
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.textLink {
+  color: $dark-green;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.heroImageWrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     border-radius: 16px;
-    margin-bottom: 50px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+    min-height: 320px;
+  }
+}
 
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
+.quoteCard {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  max-width: 220px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  text-align: left;
 
-    h2 {
-      color: $accent-beige;
-      font-size: 24px;
-      margin-bottom: 15px;
-    }
+  p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.25rem 0 0.75rem;
+    color: #2c3e50;
+  }
+}
 
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
+.quoteMark {
+  font-size: 1.8rem;
+  color: $accent-gold;
+  line-height: 1;
+}
 
-    strong {
+.quoteHeart {
+  color: $accent-gold;
+}
+
+/* ---------- Trust badges ---------- */
+.badgesSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.badgesRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.25rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-right: 1px solid #eee;
+  justify-content: center;
+  text-align: left;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: 900px) {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.badgeIcon {
+  color: $primary-green;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ---------- What is Low-Cost Counselling ---------- */
+.infoSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.infoCard {
+  background-color: $cream-bg;
+  border-radius: 16px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.infoLeft {
+  h2 {
+    color: $accent-gold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: $muted-text;
+  }
+}
+
+.infoRight {
+  h3 {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+}
+
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    color: $text-color;
+
+    svg {
       color: $primary-green;
+      flex-shrink: 0;
     }
   }
+}
 
-  .gridBlock {
-    margin-bottom: 50px;
+/* ---------- Centered section heading (shared) ---------- */
+.centeredHeading {
+  text-align: center;
+  font-size: 1.9rem;
+  color: #2c3e50;
+  margin-bottom: 2.5rem;
+}
 
-    h2 {
-      color: $accent-beige;
-      font-size: 24px;
-      margin-bottom: 25px;
-    }
+/* ---------- Who Can Benefit ---------- */
+.benefitSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+}
+
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.benefitCard {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  h4 {
+    font-size: 1.05rem;
+    margin: 1rem 0 0.5rem;
+    color: #2c3e50;
   }
 
-  .featuresGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+  p {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: $muted-text;
+  }
+}
 
-    div {
-      background-color: white;
-      border-radius: 12px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      transition: transform 0.3s ease;
+.circleIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: rgba(107, 141, 122, 0.15);
+  color: $primary-green;
+  font-size: 1.4rem;
+}
 
-      &:hover {
-        transform: translateY(-4px);
-      }
+/* ---------- What to Expect ---------- */
+.expectSection {
+  background-color: $gray-bg;
+  padding: 4rem 1.5rem;
+}
 
-      h4 {
-        color: $primary-green;
-        margin: 12px 0;
-        font-size: 18px;
-      }
+.expectGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 
-      p {
-        font-size: 15px;
-      }
-
-      .icon {
-        font-size: 32px;
-        color: $accent-beige;
-      }
-    }
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .checkList {
-    list-style: none;
-    padding: 0;
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+  }
+}
 
-    li {
-      display: flex;
-      align-items: center;
-      font-size: 16px;
-      margin: 10px 0;
+.expectCard {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 1.75rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 
-      svg {
-        color: $primary-green;
-        margin-right: 10px;
-        flex-shrink: 0;
-      }
-    }
+  h4 {
+    font-size: 1rem;
+    margin: 1rem 0 0.5rem;
+    color: #2c3e50;
   }
 
-  .stepList {
-    list-style: decimal;
-    padding-left: 20px;
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: $muted-text;
+  }
+}
 
-    li {
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
+/* ---------- Pricing & Why Choose Nura ---------- */
+.pricingSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pricingCard,
+.whyCard {
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.pricingCard {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    color: $accent-gold;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
   }
 
-  .button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 24px;
-    background-color: $primary-green;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-
-    &:hover {
-      background-color: darken($primary-green, 8%);
-    }
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: $muted-text;
+    margin-bottom: 1rem;
   }
 
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 30px;
-    }
+  a {
+    margin-top: 0.5rem;
+  }
+}
 
-    .intro {
-      font-size: 16px;
-    }
+.priceLine {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #2c3e50 !important;
+}
 
-    .card h2 {
-      font-size: 20px;
-    }
+.whyCard {
+  position: relative;
+  background-color: $cream-bg;
+  overflow: hidden;
+
+  h2 {
+    color: $accent-gold;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.whyHeart {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  font-size: 1.3rem;
+  color: $accent-gold;
+}
+
+/* ---------- How to Begin ---------- */
+.beginSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+}
+
+.beginGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.beginStep {
+  text-align: center;
+
+  h4 {
+    font-size: 1.05rem;
+    margin: 1rem 0 0.5rem;
+    color: #2c3e50;
+  }
+
+  p {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: $muted-text;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: $dark-green;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ---------- Footer CTA ---------- */
+.footerCta {
+  background-color: $dark-green;
+  color: #fff;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footerIcon {
+  font-size: 2rem;
+}
+
+.footerHeadline {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.footerSub {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.footerButton {
+  background-color: #fff;
+  color: $dark-green;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $cream-bg;
   }
 }

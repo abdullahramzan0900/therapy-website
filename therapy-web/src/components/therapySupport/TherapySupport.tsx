@@ -1,27 +1,121 @@
-// pages/TherapySupport/TherapySupport.tsx
+import styles from "./TherapySupport.module.scss";
+import services from "../../assets/services.jpg";
 
-import styles from './TherapySupport.module.scss';
-import services from '../../assets/services.jpg';
+import {
+  FaShieldAlt,
+  FaHeart,
+  FaUsers
+} from "react-icons/fa";
+
 
 const TherapySupport = () => {
+
   return (
+
     <section className={styles.therapySection}>
+
       <div className={styles.container}>
+
+
+        {/* LEFT CONTENT */}
+
         <div className={styles.textContent}>
-          <h1>Services – Nura Counselling and Psychotherapy</h1>
+
+          <span className={styles.subtitle}>
+            OUR SERVICES
+          </span>
+
+
+          <h1>
+            Therapy That Meets
+            <br />
+            You Where You Are
+          </h1>
+
+
           <p>
-            At <strong>Nura Counselling and Psychotherapy</strong>, we offer individual therapy tailored to support you through life’s challenges.
-            Our services are designed to provide a <strong>safe</strong>, <strong>confidential</strong>, and <strong>non-judgemental</strong> space 
-            where you can explore your thoughts and emotions, develop coping strategies, and work towards improved well-being.
+            At <strong>Nura Counselling and Psychotherapy</strong>, we offer
+            individual therapy tailored to support your life's challenges.
+            Our services provide a safe, confidential, and non-judgemental
+            space where you can explore, heal, and grow.
           </p>
-          {/* <Link to="/services" className={styles.servicesBtn}>View Therapy Services</Link> */}
+
+
+
+          <div className={styles.features}>
+
+
+            <div className={styles.feature}>
+
+              <FaShieldAlt />
+
+              <span>
+                Safe &<br />
+                Confidential
+              </span>
+
+            </div>
+
+
+
+            <div className={styles.feature}>
+
+              <FaHeart />
+
+              <span>
+                Trauma-Informed
+                <br />
+                Approach
+              </span>
+
+            </div>
+
+
+
+
+            <div className={styles.feature}>
+
+              <FaUsers />
+
+              <span>
+                Culturally Sensitive
+                <br />
+                & Inclusive
+              </span>
+
+            </div>
+
+
+          </div>
+
+
         </div>
+
+
+
+
+        {/* IMAGE */}
+
+
         <div className={styles.imageContent}>
-          <img src={services} alt="Therapy Support" />
+
+          <img
+            src={services}
+            alt="Therapy session"
+          />
+
         </div>
+
+
+
       </div>
+
+
     </section>
+
   );
+
 };
+
 
 export default TherapySupport;

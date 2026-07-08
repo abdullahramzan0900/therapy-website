@@ -1,18 +1,20 @@
 import AppointmentForm from "../../components/AppointmentForm/AppointmentForm";
-import GuidingPrinciples from "../../components/GuidingPrinciples/GuidingPrinciples";
 import JourneySection from "../../components/JourneySection/JourneySection";
 import IndividualTherapy from "../../components/OurServices/OurServices";
 import "./Services.scss";
 import TherapySupport from "../../components/therapySupport/TherapySupport";
+import WhoWeSupport from "../../components/Whowesupport/Whowesupport";
+import TherapyProcess from "../../components/GuidingPrinciples/GuidingPrinciples";
 
 const Services = () => {
   return <>
 <TherapySupport/>
    {/* <HomeCareSection/> */}
   <IndividualTherapy/>
+  <WhoWeSupport/>
    {/* <OurServices/> */}
    {/* <ServicesSection isCarousel ={false}/> */}
-   <GuidingPrinciples/>
+   <TherapyProcess/>
    <AppointmentForm/> 
    < JourneySection/>
 

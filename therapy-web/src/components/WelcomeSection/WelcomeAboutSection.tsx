@@ -1,29 +1,33 @@
 import React from "react";
 import styles from "./WelcomeAboutSection.module.scss";
-import trauma from '../../assets/trauma.jpeg'
+import aboutImage from "../../assets/image1.jpeg";
 
 const WelcomeSection: React.FC = () => {
   return (
-    <section className={styles.welcomeContainer}>
-      <div className={styles.overlay}></div>
+    <section className={styles.aboutSection}>
+      <div className={styles.container}>
 
-      <div className={styles.content}>
-        <h1>
-          Welcome to <span>Nura Counselling and Psychotherapy</span>
-        </h1>
+        {/* Left Content */}
+        <div className={styles.content}>
 
-        {/* Trauma Informed Badge */}
-        <div className={styles.badge}>
-          <img src={trauma} alt="Trauma-informed Practice" />
-          <span>Trauma-informed Practice</span>
-        </div>
+          <span className={styles.label}>
+            ABOUT NURA
+          </span>
 
-        {/* About Content */}
-        <div className={styles.aboutText}>
+          <h1>
+            About Nura Counselling
+            <br />
+            & Psychotherapy
+          </h1>
+
+          <h3>
+            Compassionate care. Meaningful change.
+          </h3>
+
           <p>
             At Nura Counselling and Psychotherapy, we provide compassionate,
-            professional therapy that is accessible, culturally sensitive, and
-            grounded in understanding.
+            professional therapy that is accessible, culturally sensitive,
+            and grounded in understanding.
           </p>
 
           <p>
@@ -33,21 +37,67 @@ const WelcomeSection: React.FC = () => {
             their own pace without judgement or pressure.
           </p>
 
-          <p>
-            We offer a confidential and supportive space to explore anxiety,
-            depression, bereavement, stress, and self-esteem, with a focus on
-            helping you feel heard, understood, and empowered.
-          </p>
 
-          <p className={styles.highlight}>
-            With affordable pricing and low-cost counselling options, we are
-            committed to making meaningful mental health support available to
-            those who need it most.
-          </p>
+          {/* Features */}
+          <div className={styles.features}>
+
+            <div className={styles.feature}>
+              <div className={styles.icon}>
+                ♡
+              </div>
+
+              <span>
+                Trauma-Informed
+                <br />
+                Practice
+              </span>
+            </div>
+
+
+            <div className={styles.feature}>
+              <div className={styles.icon}>
+                ♧
+              </div>
+
+              <span>
+                Safe, Confidential
+                <br />
+                & Supportive
+              </span>
+            </div>
+
+
+            <div className={styles.feature}>
+              <div className={styles.icon}>
+                ♧
+              </div>
+
+              <span>
+                Culturally Sensitive
+                <br />
+                & Inclusive
+              </span>
+            </div>
+
+
+          </div>
+
         </div>
+
+
+        {/* Right Image */}
+        <div className={styles.imageWrapper}>
+          <img
+            src={aboutImage}
+            alt="Counselling session"
+          />
+        </div>
+
+
       </div>
     </section>
   );
 };
+
 
 export default WelcomeSection;

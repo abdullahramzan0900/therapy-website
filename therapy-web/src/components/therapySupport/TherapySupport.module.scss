@@ -1,93 +1,289 @@
 .therapySection {
-    width: 100%;
-    // min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background-color: #f7f9fc;
-    padding: 3rem 4rem;
-  
-    @media (max-width: 1024px) {
-      padding: 2rem;
-    }
-  
-    @media (max-width: 768px) {
-      padding: 2rem 1.5rem;
-    }
-  }
-  
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    gap: 2rem;
-  
-    @media (max-width: 768px) {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-  
-  .textContent {
-    flex: 1;
-    margin-left: 2rem;
-  
-    h1 {
-      font-size: 2rem;
-      color: #6B8D7A;
-      margin-bottom: 1.2rem;
-  
-      @media (max-width: 768px) {
-        font-size: 2rem;
-      }
-    }
-  
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #444;
-      margin-bottom: 1.5rem;
-  
-      strong {
-        color: #333;
-      }
-    }
-  }
-  
-  .servicesBtn {
-    display: inline-block;
-    padding: 0.75rem 1.75rem;
-    background-color: #375a7f;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: #2c3e50;
-    }
-  }
-  
-  .imageContent {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  
-    img {
-      max-width: 100%;
-      width: 80%;
-      max-height: 450px;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-      object-fit: cover;
-  
-      @media (max-width: 768px) {
-        width: 100%;
-        max-height: 350px;
-      }
-    }
-  }
-  
+
+  width:100%;
+  padding:70px 30px;
+  background:#f8f7f2;
+
+}
+
+
+
+.container {
+
+  max-width:1200px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:0;
+
+  align-items:stretch;
+
+
+}
+
+
+
+
+
+.textContent {
+
+
+  background:#fcfaf6;
+
+  padding:55px 50px;
+
+  border-radius:18px 0 0 18px;
+
+
+}
+
+
+
+
+
+.subtitle {
+
+
+  color:#b39255;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  letter-spacing:1px;
+
+  display:block;
+
+  margin-bottom:18px;
+
+
+}
+
+
+
+
+h1 {
+
+
+  font-family:Georgia, serif;
+
+  font-weight:400;
+
+  color:#244338;
+
+  font-size:42px;
+
+  line-height:1.15;
+
+  margin:0 0 20px;
+
+
+}
+
+
+
+
+
+p {
+
+
+  color:#444;
+
+  font-size:16px;
+
+  line-height:1.7;
+
+  max-width:430px;
+
+  margin-bottom:35px;
+
+
+}
+
+
+
+strong {
+
+  color:#333;
+
+}
+
+
+
+
+.features {
+
+
+  display:flex;
+
+  gap:28px;
+
+  align-items:center;
+
+
+}
+
+
+
+
+.feature {
+
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  color:#34463e;
+
+  font-size:14px;
+
+  line-height:1.4;
+
+
+}
+
+
+
+
+.feature svg {
+
+
+  font-size:34px;
+
+  color:#51695b;
+
+  stroke-width:1;
+
+
+}
+
+
+
+
+
+.imageContent {
+
+
+  height:100%;
+
+
+}
+
+
+
+.imageContent img {
+
+
+  width:100%;
+
+  height:100%;
+
+  min-height:340px;
+
+  object-fit:cover;
+
+  border-radius:0 18px 18px 0;
+
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.container {
+
+  grid-template-columns:1fr;
+
+}
+
+
+
+.textContent {
+
+  border-radius:18px 18px 0 0;
+
+  padding:40px 30px;
+
+}
+
+
+
+.imageContent img {
+
+  border-radius:0 0 18px 18px;
+
+}
+
+
+
+h1 {
+
+ font-size:34px;
+
+}
+
+
+
+.features {
+
+ flex-direction:column;
+
+ align-items:flex-start;
+
+ gap:20px;
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:500px){
+
+
+.therapySection {
+
+ padding:40px 15px;
+
+}
+
+
+
+.textContent {
+
+ padding:30px 20px;
+
+}
+
+
+
+h1 {
+
+ font-size:30px;
+
+}
+
+
+
+p {
+
+ font-size:15px;
+
+}
+
+
+
+}

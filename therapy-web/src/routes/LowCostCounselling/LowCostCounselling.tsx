@@ -1,96 +1,280 @@
+// pages/LowCostCounselling/LowCostCounselling.tsx
+
 import React from 'react';
 import styles from './LowCostCounselling.module.scss';
-import { FaCheckCircle, FaUserCheck, FaComments, FaLaptopHouse, FaHandshake } from 'react-icons/fa';
+import buttonstyles from '../../components/styles/button.module.scss';
 import { Link } from 'react-router-dom';
+import {
+  FaHeart,
+  FaShieldAlt,
+  FaLaptop,
+  FaPoundSign,
+  FaUsers,
+  FaGraduationCap,
+  FaCoins,
+  FaUserFriends,
+  FaUserCheck,
+  FaLock,
+  FaCheckCircle,
+} from 'react-icons/fa';
+
+import heroImage from '../../assets/image1.jpeg';
+
+const trustBadges = [
+  { icon: <FaHeart />, label: 'Trauma-Informed Approach' },
+  { icon: <FaShieldAlt />, label: 'Confidential Support' },
+  { icon: <FaLaptop />, label: 'Online Therapy Available' },
+  { icon: <FaPoundSign />, label: 'Low-Cost Options' },
+  { icon: <FaUsers />, label: 'Culturally Sensitive Care' },
+];
+
+const whoBenefits = [
+  {
+    icon: <FaGraduationCap />,
+    title: 'Students & Young Adults',
+    description: 'Support during stress, transitions, emotional overwhelm, and identity development.',
+  },
+  {
+    icon: <FaCoins />,
+    title: 'Individuals Facing Financial Hardship',
+    description: 'Accessible therapy options for those unable to afford standard private fees.',
+  },
+  {
+    icon: <FaUserFriends />,
+    title: 'Community Members Seeking Support',
+    description: 'Safe emotional support without judgement or pressure.',
+  },
+];
+
+const whatToExpect = [
+  {
+    icon: <FaUserCheck />,
+    title: 'Qualified Therapists',
+    description: 'Sessions provided by trainee or newly qualified therapists under professional supervision.',
+  },
+  {
+    icon: <FaLock />,
+    title: 'Safe & Confidential',
+    description: 'A non-judgemental space where you can speak openly and feel heard.',
+  },
+  {
+    icon: <FaLaptop />,
+    title: 'Flexible Online Support',
+    description: 'Attend sessions from the comfort and privacy of your own space.',
+  },
+  {
+    icon: <FaHeart />,
+    title: 'Personalised Care',
+    description: 'Support tailored to your emotional needs, experiences, and goals.',
+  },
+];
+
+const whoMayHelp = [
+  'Anxiety or stress',
+  'Low mood or overwhelm',
+  'Grief or loss',
+  'Emotional burnout',
+  'Life transitions',
+  'Relationship difficulties',
+];
+
+const whyChooseNura = [
+  'Emotionally safe environment',
+  'Trauma-informed approach',
+  'Compassionate and human support',
+  'Affordable without judgement',
+  'Culturally sensitive care',
+  'Flexible online therapy',
+  'Support that meets you where you are',
+];
+
+const howToBegin = [
+  {
+    number: '1',
+    title: 'Complete a short enquiry form',
+    description: 'Tell us a little about your needs so we can understand best how to support you.',
+  },
+  {
+    number: '2',
+    title: "We'll explore your needs and availability",
+    description: "We'll reach out by phone or email, guiding you through the next steps.",
+  },
+  {
+    number: '3',
+    title: 'Begin sessions with a matched therapist',
+    description: "You'll be matched with a therapist and begin your sessions, safe and supported.",
+  },
+];
 
 const LowCostCounselling: React.FC = () => {
   return (
-    <section
-      className={styles.lowCostWrapper}
-    >
-      <div className={styles.overlay}>
-        <div className={styles.container}>
+    <div className={styles.page}>
+      {/* Hero */}
+      <section className={styles.hero}>
+        <div className={styles.heroText}>
           <h1>
-            Affordable Therapy at <span>Nura Counselling</span>
+            Affordable Emotional Support That Feels Safe, Human &amp;{' '}
+            <span>Accessible</span>
           </h1>
-          <p className={styles.intro}>
-            At Nura, we make mental wellness accessible. Our low-cost counselling provides confidential and compassionate care tailored to your needs—without financial barriers.
+          <p>
+            We believe emotional support should never be out of reach. NURA offers
+            compassionate, low-cost counselling that is safe, confidential, and
+            non-judgemental.
           </p>
+          <div className={styles.heroActions}>
+            <Link to="/contact-us" className={buttonstyles.primary}>
+              Apply for Support
+            </Link>
+            <Link to="/about-us" className={styles.textLink}>
+              Learn More <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
 
-          <div className={styles.card}>
+        <div className={styles.heroImageWrap}>
+          <img src={heroImage} alt="A calm, warmly lit reading corner" />
+          <div className={styles.quoteCard}>
+            {/* <span className={styles.quoteMark}>&ldquo;</span> */}
+            <p>You do not need to be in crisis to deserve support.</p>
+            <span className={styles.quoteHeart} aria-hidden="true">
+              ♡
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust badges */}
+      <section className={styles.badgesSection}>
+        <div className={styles.badgesRow}>
+          {trustBadges.map((badge) => (
+            <div className={styles.badge} key={badge.label}>
+              <span className={styles.badgeIcon}>{badge.icon}</span>
+              <span>{badge.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* What is Low-Cost Counselling */}
+      <section className={styles.infoSection}>
+        <div className={styles.infoCard}>
+          <div className={styles.infoLeft}>
             <h2>What is Low-Cost Counselling?</h2>
             <p>
-              Sessions are conducted by advanced trainee therapists under expert clinical supervision. This ensures quality care that is safe, supportive, and confidential.
-            </p>
-            <Link to="/contact-us " className={styles.button}>Apply for Support</Link>
-          </div>
-
-          <div className={styles.card}>
-            <h2>Who Can Benefit?</h2>
-            <ul className={styles.checkList}>
-              <li><FaCheckCircle /> Individuals with limited income</li>
-              <li><FaCheckCircle /> Students and young adults</li>
-              <li><FaCheckCircle /> Those in financial difficulty</li>
-              <li><FaCheckCircle /> Anyone seeking affordable mental health care</li>
-            </ul>
-          </div>
-
-          <div className={styles.gridBlock}>
-            <h2>What to Expect</h2>
-            <div className={styles.featuresGrid}>
-              <div>
-                <FaUserCheck className={styles.icon} />
-                <h4>Qualified Trainees</h4>
-                <p>Sessions led by skilled trainees under supervision.</p>
-              </div>
-              <div>
-                <FaComments className={styles.icon} />
-                <h4>Confidential Space</h4>
-                <p>Your sessions are private, judgment-free, and secure.</p>
-              </div>
-              <div>
-                <FaLaptopHouse className={styles.icon} />
-                <h4>Virtual Convenience</h4>
-                <p>Therapy from the comfort of your own space.</p>
-              </div>
-              <div>
-                <FaHandshake className={styles.icon} />
-                <h4>Personalised Support</h4>
-                <p>Care that fits your emotional needs and life journey.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.card}>
-            <h2>Pricing</h2>
-            <p>
-              Sessions range between <strong>£15 to £25</strong>. Fees are income-based—ensuring no one is turned away due to cost.
+              NURA&apos;s low-cost counselling service provides accessible emotional
+              support for individuals who may not otherwise be able to access private
+              therapy. Sessions are led by carefully selected trainee or newly
+              qualified therapists under professional clinical supervision, ensuring
+              support remains safe, ethical, and compassionate.
             </p>
           </div>
-
-          <div className={styles.card}>
-            <h2>How to Begin</h2>
-            <ol className={styles.stepList}>
-              <li>Complete our simple enquiry form</li>
-              <li>We’ll reach out to understand your needs</li>
-              <li>Start your sessions with a matched therapist</li>
-            </ol>
-            <Link to="/contact-us" className={styles.button}>Start Now</Link>
-          </div>
-
-          <div className={styles.card}>
-            <h2>Why Nura?</h2>
+          <div className={styles.infoRight}>
+            <h3>This support may feel helpful if you are experiencing:</h3>
             <ul className={styles.checkList}>
-              <li><FaCheckCircle /> Respectful, inclusive care</li>
-              <li><FaCheckCircle /> Affordable mental health support</li>
-              <li><FaCheckCircle /> Safe and nurturing sessions</li>
-              <li><FaCheckCircle /> Culturally sensitive practitioners</li>
-              <li><FaCheckCircle /> Flexible online appointments</li>
+              {whoMayHelp.map((item) => (
+                <li key={item}>
+                  <FaCheckCircle /> {item}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Who Can Benefit */}
+      <section className={styles.benefitSection}>
+        <h2 className={styles.centeredHeading}>Who Can Benefit?</h2>
+        <div className={styles.benefitGrid}>
+          {whoBenefits.map((item) => (
+            <div className={styles.benefitCard} key={item.title}>
+              <span className={styles.circleIcon}>{item.icon}</span>
+              <h4>{item.title}</h4>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* What to Expect */}
+      <section className={styles.expectSection}>
+        <h2 className={styles.centeredHeading}>What to Expect</h2>
+        <div className={styles.expectGrid}>
+          {whatToExpect.map((item) => (
+            <div className={styles.expectCard} key={item.title}>
+              <span className={styles.circleIcon}>{item.icon}</span>
+              <h4>{item.title}</h4>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Pricing & Why Choose Nura */}
+      <section className={styles.pricingSection}>
+        <div className={styles.pricingGrid}>
+          <div className={styles.pricingCard}>
+            <h2>Pricing</h2>
+            <p className={styles.priceLine}>Sessions from £15 – £25</p>
+            <p>
+              Pricing is offered on a sliding scale based on individual circumstances.
+            </p>
+            <p>
+              We aim to ensure emotional support remains accessible, without
+              compromising compassionate care.
+            </p>
+            <Link to="/contact-us" className={buttonstyles.primary}>
+              Apply for Support
+            </Link>
+          </div>
+
+          <div className={styles.whyCard}>
+            <h2>Why People Choose NURA</h2>
+            <ul className={styles.checkList}>
+              {whyChooseNura.map((item) => (
+                <li key={item}>
+                  <FaCheckCircle /> {item}
+                </li>
+              ))}
+            </ul>
+            <span className={styles.whyHeart} aria-hidden="true">
+              ♡
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Begin */}
+      <section className={styles.beginSection}>
+        <h2 className={styles.centeredHeading}>How to Begin</h2>
+        <div className={styles.beginGrid}>
+          {howToBegin.map((step) => (
+            <div className={styles.beginStep} key={step.number}>
+              <span className={styles.stepNumber}>{step.number}</span>
+              <h4>{step.title}</h4>
+              <p>{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer CTA */}
+      <section className={styles.footerCta}>
+        <div className={styles.footerContent}>
+          <span className={styles.footerIcon} aria-hidden="true">
+            🌱
+          </span>
+          <div className={styles.footerText}>
+            <p className={styles.footerHeadline}>
+              Support should feel safe, accessible, and within reach.
+            </p>
+            <p className={styles.footerSub}>We are here whenever you&apos;re ready.</p>
+          </div>
+        </div>
+        <Link to="/contact-us" className={styles.footerButton}>
+          Take the First Step <span aria-hidden="true">→</span>
+        </Link>
+      </section>
+    </div>
   );
 };
 
