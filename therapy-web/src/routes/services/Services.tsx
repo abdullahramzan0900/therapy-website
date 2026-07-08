@@ -3,15 +3,15 @@ import JourneySection from "../../components/JourneySection/JourneySection";
 import IndividualTherapy from "../../components/OurServices/OurServices";
 import "./Services.scss";
 import TherapySupport from "../../components/therapySupport/TherapySupport";
-import WhoWeSupport from "../../components/Whowesupport/Whowesupport";
 import TherapyProcess from "../../components/GuidingPrinciples/GuidingPrinciples";
+import WhoWeSupport from "../../components/Whowesupport/WhoWeSupport";
 
 const Services = () => {
   return <>
 <TherapySupport/>
    {/* <HomeCareSection/> */}
   <IndividualTherapy/>
-  <WhoWeSupport/>
+ <WhoWeSupport/>
    {/* <OurServices/> */}
    {/* <ServicesSection isCarousel ={false}/> */}
    <TherapyProcess/>
