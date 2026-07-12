@@ -1,7 +1,7 @@
 // pages/ForOrganisations/ForOrganisations.tsx
 
 import React from 'react';
-import styles from './ForOrganisations.module.scss';
+import styles from './Fororganisations.module.scss';
 import buttonstyles from '../../components/styles/button.module.scss';
 import { Link } from 'react-router-dom';
 import {
