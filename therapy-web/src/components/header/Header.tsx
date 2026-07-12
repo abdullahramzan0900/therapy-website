@@ -11,6 +11,7 @@ import headerlogo from "../../assets/headerlogoNew.svg";
 
 const Header = () => {
   const navigate = useNavigate();
+  
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -100,7 +101,9 @@ const Header = () => {
           <p onClick={() => navigate("/PartnershipsOutreach")}>
           Partnerships
           </p>
-
+    <p onClick={() => navigate("/organisations")}>
+          Organisations
+          </p>
         
 
           <p onClick={() => navigate("/contact-us")}>

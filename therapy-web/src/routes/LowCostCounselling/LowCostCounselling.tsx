@@ -78,15 +78,15 @@ const whoMayHelp = [
   'Relationship difficulties',
 ];
 
-const whyChooseNura = [
-  'Emotionally safe environment',
-  'Trauma-informed approach',
-  'Compassionate and human support',
-  'Affordable without judgement',
-  'Culturally sensitive care',
-  'Flexible online therapy',
-  'Support that meets you where you are',
-];
+// const whyChooseNura = [
+//   'Emotionally safe environment',
+//   'Trauma-informed approach',
+//   'Compassionate and human support',
+//   'Affordable without judgement',
+//   'Culturally sensitive care',
+//   'Flexible online therapy',
+//   'Support that meets you where you are',
+// ];
 
 const howToBegin = [
   {
@@ -210,7 +210,7 @@ const LowCostCounselling: React.FC = () => {
       </section>
 
       {/* Pricing & Why Choose Nura */}
-      <section className={styles.pricingSection}>
+      {/* <section className={styles.pricingSection}>
         <div className={styles.pricingGrid}>
           <div className={styles.pricingCard}>
             <h2>Pricing</h2>
@@ -241,7 +241,7 @@ const LowCostCounselling: React.FC = () => {
             </span>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* How to Begin */}
       <section className={styles.beginSection}>

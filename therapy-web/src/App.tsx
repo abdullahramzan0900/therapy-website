@@ -19,7 +19,8 @@ const routeComponents: any = {
   "/privacy-policy": lazy(() => import("./routes/PrivacySection/PrivacySection")),
   "/low-cost-counselling": lazy(() => import("./routes/LowCostCounselling/LowCostCounselling")),
   "/Workshops": lazy(() => import("./components/Workshops/Workshops")),
-  "/PartnershipsOutreach": lazy(() => import("./routes/PartnershipsOutreach/PartnershipsOutreach"))
+  "/PartnershipsOutreach": lazy(() => import("./routes/PartnershipsOutreach/PartnershipsOutreach")),
+    "/organisations": lazy(() => import("./routes/Fororganisations/Fororganisations")),
 };
  
 const loadComponent = (path: string) => routeComponents[path] || null;
