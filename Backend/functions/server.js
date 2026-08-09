@@ -32,7 +32,8 @@ router.post("/send-email", async (req, res) => {
 
   try {
     const supportEmail = {
-      from: Email,
+      from: process.env.EMAIL_USER, // FIXED: must match authenticated domain
+      replyTo: Email, // reply button still goes to the client
       to: process.env.EMAIL_USER,
       subject: `New Contact Request from ${YourName}`,
       html: `<p><strong>Name:</strong> ${YourName}</p>
@@ -84,7 +85,8 @@ router.post("/contact", async (req, res) => {
     };
 
     const adminNotification = {
-      from: email,
+      from: process.env.EMAIL_USER, // FIXED: must match authenticated domain
+      replyTo: email, // reply button still goes to the client
       to: process.env.EMAIL_USER,
       subject: "New Contact Request",
       html: `<p><strong>New Contact Request</strong></p>
