@@ -5,6 +5,7 @@ import "@fontsource/poppins";
 import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
 import Header from "./components/header/Header";
 import Footer from "./components/Footer/Footer";
+import AccreditationBadge from "./components/AccreditationBadge/AccreditationBadge";
 import { getToken } from "./auth/oauth";
 import { Suspense, lazy } from "react";
 import data from "./data/data.json"
@@ -41,6 +42,7 @@ function App() {
 })}
         </Routes>
       </Suspense>
+      <AccreditationBadge />
       <Footer />
     </BrowserRouter>
   );

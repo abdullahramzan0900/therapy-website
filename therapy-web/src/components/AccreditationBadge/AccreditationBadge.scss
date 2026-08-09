@@ -1,0 +1,22 @@
+.accreditation-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 24px 16px;
+
+  &__image {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px 12px;
+
+    &__image {
+      max-width: 320px;
+    }
+  }
+}
