@@ -28,8 +28,10 @@ margin: 0 15px;
 /* LOGO */
 
 .logo {
+  flex-shrink: 0;
+
   img {
-    width: 230px;
+    width: clamp(160px, 16vw, 230px);
     cursor: pointer;
     object-fit: contain;
   }
@@ -40,15 +42,16 @@ margin: 0 15px;
 .links {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: clamp(18px, 2.2vw, 35px);
 
   p {
+    white-space: nowrap;
     font-size: 14px;
     font-weight: 500;
     color: #222;
     cursor: pointer;
     transition: 0.3s;
-    margin: 0 15px;
+    margin: 0;
     color: #000;
     font-weight: 700;
     font-size: 16px;
@@ -102,6 +105,7 @@ margin: 0 15px;
 .contact {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .bookBtn {
@@ -117,6 +121,7 @@ margin: 0 15px;
 
   font-size: 13px;
   font-weight: 600;
+  white-space: nowrap;
 
   cursor: pointer;
 
@@ -175,7 +180,7 @@ margin: 0 15px;
   cursor: pointer;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1180px) {
   .navbar {
     padding: 0 20px;
   }

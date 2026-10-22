@@ -137,7 +137,7 @@ const ForOrganisations: React.FC = () => {
           </p>
           <div className={styles.heroActions}>
             <Link to="/contact-us" className={buttonstyles.primary}>
-              Enquire About Working With NURA <span aria-hidden="true">→</span>
+              Enquire About Working With NURA&nbsp;<span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -233,7 +233,7 @@ const ForOrganisations: React.FC = () => {
             community.
           </p>
           <Link to="/contact-us" className={styles.workTogetherButton}>
-            Enquire About Partnerships <span aria-hidden="true">→</span>
+            Enquire About Partnerships&nbsp;<span aria-hidden="true">→</span>
           </Link>
         </div>
       </section>
