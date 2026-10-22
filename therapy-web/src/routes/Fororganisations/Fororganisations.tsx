@@ -4,60 +4,30 @@ import React from 'react';
 import styles from './Fororganisations.module.scss';
 import buttonstyles from '../../components/styles/button.module.scss';
 import { Link } from 'react-router-dom';
-import {
-  FaGraduationCap,
-  FaBriefcase,
-  FaUniversity,
-  FaUsers,
-  FaShieldAlt,
-  FaChalkboardTeacher,
-  FaHandsHelping,
-  FaMapMarkerAlt,
-  FaBrain,
-  FaHeart,
-  FaCheckCircle,
-  FaClock,
-  FaSchool,
-  FaLandmark,
-  FaUserFriends,
-  FaChild,
-} from 'react-icons/fa';
-
 import heroImage from '../../assets/mansitting.jpg';
-import workshopUnderPressure from '../../assets/mansitting.jpg';
-import workshopSafeSpaces from '../../assets/mansitting.jpg';
-import workshopTraumaInformed from '../../assets//image1.jpeg';
-import workshopTraumaBonds from '../../assets/image1.jpeg';
+import workshopUnderPressure from '../../assets/workshop-under-pressure.jpg';
+import workshopSafeSpaces from '../../assets/workshop-safe-spaces.jpg';
+import workshopTraumaInformed from '../../assets/workshop-trauma-informed-workplaces.jpg';
+import workshopTraumaBonds from '../../assets/workshop-trauma-bonds.jpg';
 import workTogetherImage from '../../assets/image1.jpeg';
-
-const heroBadges = [
-  { icon: <FaShieldAlt />, label: 'Trauma-Informed Approach' },
-  { icon: <FaChalkboardTeacher />, label: 'Workshops & Training' },
-  { icon: <FaUsers />, label: 'Community Partnerships' },
-  { icon: <FaMapMarkerAlt />, label: 'Online & In-Person Delivery' },
-];
 
 const whoWeWorkWith = [
   {
-    icon: <FaGraduationCap />,
     title: 'Schools & Colleges',
     description:
       'Emotional wellbeing workshops, exam stress support, emotional literacy, and safe-space discussions for students and staff.',
   },
   {
-    icon: <FaBriefcase />,
     title: 'Workplaces & Organisations',
     description:
       'Trauma-informed wellbeing workshops focused on burnout, emotional fatigue, communication, and resilience.',
   },
   {
-    icon: <FaUniversity />,
     title: 'Councils & Community Services',
     description:
       'Accessible emotional wellbeing support, referral pathways, outreach sessions, and community wellbeing programmes.',
   },
   {
-    icon: <FaUserFriends />,
     title: 'Individuals & Groups',
     description:
       'Trauma bond workshops, emotional awareness groups, self-esteem, boundaries, and personal growth spaces.',
@@ -67,7 +37,6 @@ const whoWeWorkWith = [
 const workshops = [
   {
     image: workshopUnderPressure,
-    icon: <FaBrain />,
     title: 'Under Pressure',
     subtitle: 'Exam Stress & Emotional Wellbeing Workshops',
     description: 'For Year 6, GCSE, A-Level and college students.',
@@ -80,7 +49,6 @@ const workshops = [
   },
   {
     image: workshopSafeSpaces,
-    icon: <FaHeart />,
     title: 'Safe Spaces',
     subtitle: 'Emotional Awareness, Boundaries & Self-Expression',
     description: 'Interactive sessions helping young people and adults to:',
@@ -93,7 +61,6 @@ const workshops = [
   },
   {
     image: workshopTraumaInformed,
-    icon: <FaUsers />,
     title: 'Trauma-Informed Workplaces',
     subtitle: 'Burnout, Emotional Fatigue & Sustainable Wellbeing',
     description:
@@ -107,7 +74,6 @@ const workshops = [
   },
   {
     image: workshopTraumaBonds,
-    icon: <FaHeart />,
     title: 'Trauma Bonds & Emotional Attachment',
     subtitle: 'Understanding Unhealthy Emotional Cycles',
     description: 'For individuals and groups exploring:',
@@ -120,14 +86,19 @@ const workshops = [
   },
 ];
 
-const wePartnerWith = [
-  { icon: <FaSchool />, label: 'Schools & Colleges' },
-  { icon: <FaLandmark />, label: 'Local Authorities' },
-  { icon: <FaUniversity />, label: 'Councils' },
-  { icon: <FaHandsHelping />, label: 'Charities' },
-  { icon: <FaUsers />, label: 'Community Organisations' },
-  { icon: <FaBriefcase />, label: 'Corporate Teams' },
-  { icon: <FaChild />, label: 'Youth Services' },
+const referralCategories = [
+  {
+    title: 'Parents & Carers',
+    description: 'Guidance and emotional support for those caring for others.',
+  },
+  {
+    title: 'Young People & Students',
+    description: 'Safe, age-appropriate support through school, college and beyond.',
+  },
+  {
+    title: 'Adults in the Community',
+    description: 'Accessible wellbeing support close to home, online or in person.',
+  },
 ];
 
 const weSupportThrough = [
@@ -140,12 +111,12 @@ const weSupportThrough = [
 ];
 
 const whyChooseNura = [
-  { icon: <FaBrain />, label: 'Trauma-informed approach' },
-  { icon: <FaUserFriends />, label: 'Human, culturally aware support' },
-  { icon: <FaUsers />, label: 'Accessible & community focused' },
-  { icon: <FaClock />, label: 'Flexible online & in-person delivery' },
-  { icon: <FaShieldAlt />, label: 'Emotionally safe workshop environments' },
-  { icon: <FaHeart />, label: 'Low-barrier emotional wellbeing support' },
+  'Trauma-informed approach',
+  'Human, culturally aware support',
+  'Accessible & community focused',
+  'Flexible online & in-person delivery',
+  'Emotionally safe workshop environments',
+  'Low-barrier emotional wellbeing support',
 ];
 
 const ForOrganisations: React.FC = () => {
@@ -169,15 +140,6 @@ const ForOrganisations: React.FC = () => {
               Enquire About Working With NURA <span aria-hidden="true">→</span>
             </Link>
           </div>
-
-          <div className={styles.heroBadges}>
-            {heroBadges.map((badge) => (
-              <div className={styles.heroBadge} key={badge.label}>
-                <span className={styles.heroBadgeIcon}>{badge.icon}</span>
-                <span>{badge.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className={styles.heroImageWrap}>
@@ -190,8 +152,7 @@ const ForOrganisations: React.FC = () => {
         <h2 className={styles.centeredHeading}>Who We Work With</h2>
         <div className={styles.workWithGrid}>
           {whoWeWorkWith.map((item) => (
-            <div className={styles.workWithCard} key={item.title}>
-              <span className={styles.circleIcon}>{item.icon}</span>
+            <div className={styles.workWithColumn} key={item.title}>
               <h4>{item.title}</h4>
               <p>{item.description}</p>
             </div>
@@ -206,17 +167,14 @@ const ForOrganisations: React.FC = () => {
           {workshops.map((workshop) => (
             <div className={styles.workshopCard} key={workshop.title}>
               <div className={styles.workshopImageWrap}>
-                <img src={workshop.image} alt={workshop.title} />
-                <span className={styles.workshopIcon}>{workshop.icon}</span>
+                <img src={workshop.image} alt="" loading="lazy" />
               </div>
               <h4>{workshop.title}</h4>
               <p className={styles.workshopSubtitle}>{workshop.subtitle}</p>
               <p className={styles.workshopDescription}>{workshop.description}</p>
-              <ul className={styles.checkList}>
+              <ul className={styles.textList}>
                 {workshop.points.map((point) => (
-                  <li key={point}>
-                    <FaCheckCircle /> {point}
-                  </li>
+                  <li key={point}>{point}</li>
                 ))}
               </ul>
             </div>
@@ -230,22 +188,20 @@ const ForOrganisations: React.FC = () => {
           <div className={styles.partnershipLeft}>
             <h2>Partnership &amp; Referral Support</h2>
             <h3>We Partner With:</h3>
-            <div className={styles.partnerIcons}>
-              {wePartnerWith.map((item) => (
-                <div className={styles.partnerIcon} key={item.label}>
-                  <span className={styles.circleIcon}>{item.icon}</span>
-                  <span>{item.label}</span>
+            <div className={styles.referralColumns}>
+              {referralCategories.map((item) => (
+                <div className={styles.referralColumn} key={item.title}>
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
                 </div>
               ))}
             </div>
           </div>
           <div className={styles.partnershipRight}>
             <h3>We Can Support Through:</h3>
-            <ul className={styles.checkList}>
+            <ul className={styles.textList}>
               {weSupportThrough.map((item) => (
-                <li key={item}>
-                  <FaCheckCircle /> {item}
-                </li>
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
@@ -257,9 +213,8 @@ const ForOrganisations: React.FC = () => {
         <h2 className={styles.centeredHeading}>Why Organisations Choose NURA</h2>
         <div className={styles.whyGrid}>
           {whyChooseNura.map((item) => (
-            <div className={styles.whyItem} key={item.label}>
-              <span className={styles.whyIcon}>{item.icon}</span>
-              <p>{item.label}</p>
+            <div className={styles.whyItem} key={item}>
+              <p>{item}</p>
             </div>
           ))}
         </div>

@@ -1,22 +1,35 @@
 .accreditation-badge {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem 2.5rem;
   width: 100%;
-  padding: 24px 16px;
+  padding: 1.5rem 1rem;
+  background-color: #f6f7f2;
 
   &__image {
-    width: 100%;
-    max-width: 480px;
-    height: auto;
+    height: 64px;
+    width: auto;
+    max-width: 100%;
     object-fit: contain;
+    display: block;
+  }
+
+  &__image--bacp {
+    height: 56px;
   }
 
   @media (max-width: 768px) {
-    padding: 16px 12px;
+    gap: 1rem 1.5rem;
+    padding: 1.25rem 1rem;
 
     &__image {
-      max-width: 320px;
+      height: 48px;
+    }
+
+    &__image--bacp {
+      height: 42px;
     }
   }
 }

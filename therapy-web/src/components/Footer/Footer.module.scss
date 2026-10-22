@@ -3,12 +3,13 @@ $primary-color: rgba(179, 114, 4, 0.9);
 $secondary-color: #a29bfe;
 $text-color: #2d3436;
 $light-text: #636e72;
-$background: #f5f6fa;
+$background: #f6f7f2; // warm off-white / pale sage
 $white: #ffffff;
 $hover-color: #6B8D7A;
 
 .footer {
-  background-color: darken($background, 5%);
+  background-color: $background;
+  border-top: 1px solid rgba(63, 92, 76, 0.12);
   color: $text-color;
   padding: 3rem 0 0;
   font-family: 'Roboto', sans-serif;
