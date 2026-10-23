@@ -19,7 +19,7 @@ const Home = () => {
 {/* <ServicesSection isCarousel ={true}/> */}
 <WhyChooseUs/>
 <LowCostCounselling/>
-<Testimonials/>
+{/* <Testimonials/> */}
 <FAQSection/>
 <AppointmentForm/>
 <JourneySection/>
